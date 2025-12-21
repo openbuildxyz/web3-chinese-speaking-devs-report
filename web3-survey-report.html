@@ -1,0 +1,1559 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <title>2025 华语 Web3 开发者与开源参与调研报告</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "PingFang SC",
+                    "Helvetica Neue", Arial, "Microsoft YaHei", sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #f5f5f5;
+                color: #222;
+                line-height: 1.7;
+            }
+            main {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 16px 16px 40px;
+            }
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-weight: 600;
+                line-height: 1.4;
+            }
+            h1 {
+                font-size: 26px;
+                margin: 12px 0 10px;
+            }
+            h2 {
+                font-size: 20px;
+                margin: 28px 0 12px;
+            }
+            h3 {
+                font-size: 17px;
+                margin: 18px 0 8px;
+            }
+            h4 {
+                font-size: 15px;
+                margin: 14px 0 6px;
+            }
+            p {
+                margin: 8px 0;
+            }
+            .section {
+                background: #fff;
+                border-radius: 14px;
+                padding: 18px 16px 20px;
+                margin-bottom: 18px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            }
+            .section-header {
+                border-left: 4px solid #2563eb;
+                padding-left: 10px;
+                margin-bottom: 10px;
+            }
+            .chart-wrap {
+                margin: 10px auto 4px;
+                width: 60%;
+            }
+            .chart-box {
+                background: #fafafa;
+                border-radius: 12px;
+                padding: 10px 10px 14px;
+                margin: 10px 0;
+            }
+            canvas {
+                max-width: 100%;
+            }
+            .caption {
+                font-size: 12px;
+                color: #666;
+                margin-top: 4px;
+            }
+            ul {
+                padding-left: 20px;
+            }
+            li {
+                margin: 4px 0;
+            }
+            blockquote {
+                margin: 10px 0;
+                padding: 8px 12px;
+                border-left: 3px solid #e5e7eb;
+                background: #f9fafb;
+                color: #374151;
+                font-size: 14px;
+            }
+            @media (max-width: 600px) {
+                main {
+                    padding: 12px 10px 30px;
+                }
+                h1 {
+                    font-size: 22px;
+                }
+                h2 {
+                    font-size: 18px;
+                }
+                .section {
+                    padding: 14px 12px 16px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header class="section">
+                <h1>2025 华语 Web3 开发者与开源参与调研报告</h1>
+                <p>
+                    本报告基于 2025 年初在华语技术社区开展的一次问卷调研，共回收
+                    <strong>220 份有效样本</strong>，样本主要来自 Web2/Web3
+                    开发者社群、黑客松与相关活动。为帮助理解数据，我们在部分关键指标上参考了
+                    GitHub Octoverse、Stack Overflow、JetBrains
+                    等开发者报告做横向对比，以获得更全面的视角。
+                </p>
+                <blockquote>
+                    提示：所有具体百分比均在图表中呈现，正文只给出趋势与洞察，方便你在公众号中用图片承载数据、用文字承载观点。
+                </blockquote>
+            </header>
+
+            <!-- 一、样本概况 -->
+            <section class="section" id="sec1">
+                <div class="section-header">
+                    <h2>一、样本概况：一半观望，一半已经「上车」</h2>
+                </div>
+
+                <div class="chart-box">
+                    <h3>1.1 样本按「目前状态」分布</h3>
+                    <div class="chart-wrap">
+                        <canvas id="statusChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 1：220 份有效样本按「目前状态」划分的占比。
+                    </p>
+                </div>
+
+                <p>从图 1 可以看到，本次样本大致分成三块：</p>
+                <ul>
+                    <li>
+                        最大的一块是仍在 Web2 或校园，但持续观望 Web3
+                        的人，接近一半。
+                    </li>
+                    <li>
+                        其次是一批已经在 Web3
+                        全职或长期投入的开发者，规模也不小。
+                    </li>
+                    <li>还有一个小但重要的群体：已经或准备退坑 Web3 的人。</li>
+                </ul>
+                <p>
+                    这更像很多新技术进入「冷静期」时的结构：<strong>多数人在看，少数人已经冲进去，极少数人体验过再离开</strong>。
+                </p>
+                <p>也意味着两点：</p>
+                <ul>
+                    <li>
+                        对开发者而言，Web3
+                        已经从单纯的投机叙事，回到了「可以被认真评估的一种技术/职业选项」。
+                    </li>
+                    <li>
+                        对生态建设者而言，真正要争取的是那一大半「观望但未决」的人，他们愿意填这份问卷，说明认知门槛已过，只差可信的路径和机会。
+                    </li>
+                </ul>
+
+                <div class="chart-box">
+                    <h3>1.2 整体年龄结构</h3>
+                    <div class="chart-wrap">
+                        <canvas id="ageOverallChart"></canvas>
+                    </div>
+                    <p class="caption">图 2：样本整体年龄分布。</p>
+                </div>
+
+                <div class="chart-box">
+                    <h3>1.3 年龄 × 目前状态（结构示意）</h3>
+                    <div class="chart-wrap">
+                        <canvas id="ageStatusChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 3：不同「目前状态」下的年龄段结构。
+                    </p>
+                </div>
+
+                <p>
+                    整体来看，年龄集中在 20–35
+                    岁，与全球开发者画像高度一致。但相比 Stack Overflow
+                    等通用调研：
+                </p>
+                <ul>
+                    <li>
+                        学生和应届生的比例略高，说明新一代开发者会更早把 Web3
+                        视为职业选择之一。
+                    </li>
+                    <li>
+                        35
+                        岁以上的资深工程师比例也不低，其中既有人正在尝试，也有人已经退场，对趋势的判断更冷静。
+                    </li>
+                </ul>
+
+                <blockquote>
+                    洞察一：Web3
+                    对开发者而言，已经不再是「信不信」的问题，而是「值不值得押职业筹码」的问题。
+                </blockquote>
+            </section>
+
+            <!-- 二、教育与英语 -->
+            <section class="section" id="sec2">
+                <div class="section-header">
+                    <h2>
+                        二、教育与英语：门槛不在学历，而在能否玩转英文一手生态
+                    </h2>
+                </div>
+
+                <div class="chart-box">
+                    <h3>2.1 最高学历与院校类型</h3>
+                    <div class="chart-wrap">
+                        <canvas id="eduChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="schoolChart"></canvas>
+                    </div>
+                    <p class="caption">图 4–5：最高学历与毕业院校类型分布。</p>
+                </div>
+
+                <p>从学历和院校分布可以看到：</p>
+                <ul>
+                    <li>
+                        本科与硕士合计接近九成，与全球开发者的学历结构相当。
+                    </li>
+                    <li>
+                        近一半来自普通本科院校，说明 Web3
+                        并不是只发生在「清北+海外名校」的小圈子。
+                    </li>
+                    <li>
+                        世界一流大学的占比略高，部分原因在于：顶尖学校学生更容易参与黑客松、研究项目，也更愿意在新领域试水。
+                    </li>
+                </ul>
+                <p>
+                    对项目方来说，一个现实建议是：<strong>如果你只盯着极少数名校，就会错过一大半潜在的优秀贡献者</strong>。
+                </p>
+
+                <div class="chart-box">
+                    <h3>2.2 英语能力结构（归类示意）</h3>
+                    <div class="chart-wrap">
+                        <canvas id="englishChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 6：根据原问卷多个选项归并后的英语能力层级示意。
+                    </p>
+                </div>
+
+                <p>可以粗略分成三档人：</p>
+                <ul>
+                    <li>
+                        <strong>高度依赖翻译工具</strong
+                        >：能使用英文生态，但同步信息和参与讨论时永远慢半拍。
+                    </li>
+                    <li>
+                        <strong>能独立阅读文档和源码</strong>：是当前 Web3
+                        的主力建设者，能看懂讨论、但未必敢写长文或主持会议。
+                    </li>
+                    <li>
+                        <strong>能流畅协作甚至接近母语</strong
+                        >：比例不高，却决定了谁能进入协议团队、核心客户端和国际社区。
+                    </li>
+                </ul>
+
+                <blockquote>
+                    洞察二：在 Web3
+                    这种高度国际化的生态里，英语不再是简历上的“加分项”，而是决定你能否接入全球一手信息与机会的地基。
+                </blockquote>
+            </section>
+
+            <!-- 三、收入结构 -->
+            <section class="section" id="sec3">
+                <div class="section-header">
+                    <h2>
+                        三、Web3
+                        收入结构与薪资感受：多元收入带来想象力，也带来不确定性
+                    </h2>
+                </div>
+
+                <p>本节只统计已经在 Web3 全职 / 长期兼职的受访者。</p>
+
+                <div class="chart-box">
+                    <h3>3.1 固定年薪 vs 非固定收入</h3>
+                    <div class="chart-wrap">
+                        <canvas id="salaryFixedChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="salaryVarChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 7–8：固定年薪与非固定收入区间分布。
+                    </p>
+                </div>
+
+                <p>
+                    从固定年薪看，多数 Web3 工程师的收入水平与本地中高级 Web2
+                    工程师相近，略偏上；
+                    从非固定收入看，大多数人有一些额外收入，但只有少数人达到了「神话级」水平。
+                </p>
+                <p>和传统互联网相比：</p>
+                <ul>
+                    <li>
+                        Web2 开发者的收入主要锁定在「固定工资 + 年终奖」上。
+                    </li>
+                    <li>
+                        Web3 开发者则更像拿着一张「稳定底薪 +
+                        少量高波动期权」的组合券。
+                    </li>
+                </ul>
+
+                <div class="chart-box">
+                    <h3>3.2 收入来源构成与薪资感受</h3>
+                    <div class="chart-wrap">
+                        <canvas id="incomeSourceChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="salarySatisChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 9–10：收入来源构成与对 Web3 薪资的主观感受。
+                    </p>
+                </div>
+
+                <p>
+                    大多数人的主心骨仍然是固定薪资，但近半数有交易收入，约五分之一通过外包、Airdrop、Grant
+                    等方式获得补充收入。
+                </p>
+                <p>
+                    在薪资满意度上，分布与 JetBrains、Stack Overflow
+                    等通用调查非常接近：
+                    多数人觉得「还可以」，一小部分非常满意，也有一部分明确不满意。
+                </p>
+
+                <blockquote>
+                    洞察三：Web3
+                    的高收益故事更多发生在极少数人身上，而对应的代价是整个群体需要承受更高波动与不确定性。对大多数人来说，它更像一份「中等偏上、但没有神话那么夸张」的工作。
+                </blockquote>
+            </section>
+
+            <!-- 四、技术栈与公链 -->
+            <section class="section" id="sec4">
+                <div class="section-header">
+                    <h2>
+                        四、技术栈与公链偏好：没有脱离
+                        Web2，只是在主战场旁边开了块新地
+                    </h2>
+                </div>
+
+                <div class="chart-box">
+                    <h3>4.1 主要技术栈</h3>
+                    <div class="chart-wrap">
+                        <canvas id="techStackChart"></canvas>
+                    </div>
+                    <p class="caption">图 11：受访开发者的主要 Web2 技术栈。</p>
+                </div>
+
+                <p>技术栈分布非常接近全球趋势：</p>
+                <ul>
+                    <li>
+                        前端 + 全栈 JS 是绝对主力，为
+                        DApp、钱包和控制台提供基础。
+                    </li>
+                    <li>
+                        Python、Java、Go
+                        构成后端阵营，支撑交易、数据和基础设施。
+                    </li>
+                    <li>Rust 和少量 C/C++ 集中在高性能和底层协议开发中。</li>
+                </ul>
+                <p>
+                    从这一点看，Web3
+                    更像是在熟悉的技术地基上，额外叠加了一层“共识机制 + 安全 +
+                    经济机制”。
+                </p>
+
+                <div class="chart-box">
+                    <h3>4.2 公链偏好（整体 & 观望者）</h3>
+                    <div class="chart-wrap">
+                        <canvas id="chainsOverallChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="chainsWeb2ObserveChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 12–13：整体样本与 Web2 观望者的公链关注度。
+                    </p>
+                </div>
+
+                <p>
+                    以 Ethereum 为中心的格局，在华语样本中与全球数据高度一致：
+                    它几乎是所有开发者进入 Web3 的「默认选项」。 Solana 与
+                    Bitcoin 构成明显的第二梯队，BNB、Sui、各种 L2
+                    和新公链紧随其后。
+                </p>
+
+                <div class="chart-box">
+                    <h3>4.3 学生观望群体的公链兴趣</h3>
+                    <div class="chart-wrap">
+                        <canvas id="chainsStudentObserveChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 14：观望 Web3 的学生样本在各公链上的关注度。
+                    </p>
+                </div>
+
+                <p>
+                    相比在职 Web2 开发者，学生群体对 BNB、Sui
+                    等新公链的兴趣更高，生态更分散，也更愿意追随新叙事。
+                </p>
+
+                <blockquote>
+                    洞察四：从技术到生态，Web3 并不是平行宇宙，而是与 Web2
+                    共享绝大部分工程基础，只是在「共识 +
+                    激励」层重新设计了一次。
+                </blockquote>
+            </section>
+
+            <!-- 五、动机与挑战 -->
+            <section class="section" id="sec5">
+                <div class="section-header">
+                    <h2>
+                        五、动机、入门路径与挑战：从理想化叙事回归到工程师的算账逻辑
+                    </h2>
+                </div>
+
+                <div class="chart-box">
+                    <h3>5.1 进入 / 想进入 Web3 的主要动机</h3>
+                    <div class="chart-wrap">
+                        <canvas id="motiveWeb3Chart"></canvas>
+                    </div>
+                    <p class="caption">图 15：受访者选择 Web3 的主要原因。</p>
+                </div>
+
+                <p>和几年前「信仰与暴富」主导叙事不同，如今排在前面的，是：</p>
+                <ul>
+                    <li><strong>远程工作与灵活生活方式</strong>；</li>
+                    <li>其次才是「听说薪资更高」；</li>
+                    <li>「信仰去中心化」只占少数。</li>
+                </ul>
+                <p>
+                    这说明多数工程师已经把 Web3
+                    当作一种务实的工作方式选择，而不是意识形态投票。
+                </p>
+
+                <div class="chart-box">
+                    <h3>5.2 了解 / 入门 Web3 的路径</h3>
+                    <div class="chart-wrap">
+                        <canvas id="learnWeb3Chart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="entryHelpChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 16–17：了解 Web3 的渠道与认为最有效的入门方式。
+                    </p>
+                </div>
+
+                <p>与传统技术更多依赖「课程 + 官方文档」不同，这里的主角是：</p>
+                <ul>
+                    <li>黑客松、Hackerhouse 等线下/线上社区活动；</li>
+                    <li>
+                        交易行为——很多人是先在二级市场接触
+                        Web3，再反向进入技术世界。
+                    </li>
+                </ul>
+                <p>
+                    当问到「什么方式最有助于你真正入门 Web3
+                    开发？」时，最多人选择的是：
+                </p>
+                <ul>
+                    <li>参与开源项目；</li>
+                    <li>参与社区贡献；</li>
+                    <li>做真实项目（外包、黑客松、实习等）。</li>
+                </ul>
+
+                <div class="chart-box">
+                    <h3>5.3 转型挑战与退坑原因</h3>
+                    <div class="chart-wrap">
+                        <canvas id="challengeTransitionChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="exitReasonChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 18–19：从 Web2 转型 Web3
+                        的主要挑战，以及已经退坑人群的原因结构。
+                    </p>
+                </div>
+
+                <p>挑战主要集中在四类：</p>
+                <ul>
+                    <li>不熟悉区块链技术栈，缺乏系统学习路径。</li>
+                    <li>不知道从哪里找 Web3 工作，对职业前景缺乏安全感。</li>
+                    <li>对合规/法律问题心存忧虑。</li>
+                    <li>英语与理念理解存在门槛。</li>
+                </ul>
+                <p>
+                    退坑样本虽少，但结构非常典型：转去做
+                    AI、工作不稳定和法律风险等位居前列，
+                    「不如想象中挣钱」只是其中一项，而不是全部。
+                </p>
+
+                <blockquote>
+                    洞察五：从动机到退坑，工程师的算账逻辑越来越清晰——是否值得把有限的职业筹码押在
+                    Web3
+                    上，取决于：学习成本、机会密度、合规风险，以及与其他赛道（尤其是
+                    AI）的对比。
+                </blockquote>
+            </section>
+
+            <!-- 六、开源参与 -->
+            <section class="section" id="sec6">
+                <div class="section-header">
+                    <h2>六、开源参与：高度依赖，参与深度仍有巨大上升空间</h2>
+                </div>
+
+                <div class="chart-box">
+                    <h3>6.1 对开源的认知与使用比例</h3>
+                    <div class="chart-wrap">
+                        <canvas id="osKnowChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="osUseRatioChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 20–21：对开源的了解程度与日常使用比例。
+                    </p>
+                </div>
+
+                <p>和任何一份全球开发者报告一样：</p>
+                <ul>
+                    <li>几乎所有人都在不同程度上依赖开源。</li>
+                    <li>大多数项目中，超过一半的代码都建立在开源组件之上。</li>
+                </ul>
+
+                <div class="chart-box">
+                    <h3>6.2 参与方式、动机与阻碍</h3>
+                    <div class="chart-wrap">
+                        <canvas id="osWayChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="osMotiveChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="osBlockerChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 22–24：参与开源的方式、动机及主要阻碍因素。
+                    </p>
+                </div>
+
+                <p>
+                    参与方式上，提 Issue 最常见，写 PR
+                    的人明显减少，长期维护项目的核心贡献者更少。
+                </p>
+                <p>
+                    动机几乎被「学习与技能提升」支配，其次才是兴趣、声誉和工作需求；
+                    而真正阻碍大家的是：缺乏时间、不知道如何开始、不够自信、找不到合适项目。
+                </p>
+
+                <div class="chart-box">
+                    <h3>6.3 项目开源程度与对未来的判断</h3>
+                    <div class="chart-wrap">
+                        <canvas id="osLicenseChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="projectOpenChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="osFutureChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图
+                        25–27：对开源许可证的理解、当前项目开源程度与对未来五年的判断。
+                    </p>
+                </div>
+
+                <p>现实状况是：</p>
+                <ul>
+                    <li>大多数人知道开源重要，但对许可证只「大概知道」。</li>
+                    <li>
+                        自己参与的项目未必真正完全开源，部分处在「半开半闭」状态。
+                    </li>
+                    <li>
+                        当问到未来五年开源的作用时，绝大多数人仍然认为会更重要甚至成为主流基础设施。
+                    </li>
+                </ul>
+
+                <blockquote>
+                    洞察六：当前 Web3
+                    更像是「站在开源巨人肩膀上，但自身在如何以开源方式行走上还不成熟」的阶段。要真正继承开源精神，需要在许可证理解、项目开放策略和治理结构上补更多课。
+                </blockquote>
+            </section>
+
+            <!-- 七、社区与环境 -->
+            <section class="section" id="sec7">
+                <div class="section-header">
+                    <h2>七、社区与从业环境：黑客松、机会和安全感</h2>
+                </div>
+
+                <div class="chart-box">
+                    <h3>7.1 社区参与与技术活动</h3>
+                    <div class="chart-wrap">
+                        <canvas id="communityChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="eventsChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="eventTypeChart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 28–30：是否参与社区 / 技术活动及偏好类型。
+                    </p>
+                </div>
+
+                <p>
+                    多数开发者至少偶尔参与社区，有相当一部分积极参加黑客松和技术分享会。
+                    对很多人而言，这既是学习场景，也是结识同伴、寻找工作和合作机会的入口。
+                </p>
+
+                <div class="chart-box">
+                    <h3>7.2 对社区支持的期待</h3>
+                    <div class="chart-wrap">
+                        <canvas id="communityNeedChart"></canvas>
+                    </div>
+                    <p class="caption">图 31：希望社区提供的额外支持。</p>
+                </div>
+
+                <p>
+                    在众多选项中，「就业/合作机会」和「项目孵化/资助」遥遥领先，其次才是课程和工具。
+                    这与很多通用技术社区侧重「知识与工具」不同，Web3
+                    社区被期待提供的是<strong>更直接的机会与资源链接</strong>。
+                </p>
+
+                <div class="chart-box">
+                    <h3>7.3 对 Web3 从业环境的感受与是否回 Web2</h3>
+                    <div class="chart-wrap">
+                        <canvas id="envSatisChart"></canvas>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="backWeb2Chart"></canvas>
+                    </div>
+                    <p class="caption">
+                        图 32–33：在职 Web3 人群的环境满意度与是否考虑回 Web2。
+                    </p>
+                </div>
+
+                <p>
+                    从环境满意度来看，大多数人集中在「一般」和「满意」两档；
+                    对是否回 Web2 的问题，大部分 Web3
+                    从业者短期内并不考虑，但也有大约四分之一处于摇摆状态。
+                </p>
+
+                <blockquote>
+                    洞察七：Web3
+                    从业环境的核心矛盾并不在于绝对收入，而在于「机会密度 ×
+                    不确定性」。谁能在本地构建更稳健、可持续的职业通道，谁就更能留住开发者。
+                </blockquote>
+            </section>
+
+            <!-- 结语 -->
+            <section class="section" id="sec8">
+                <div class="section-header">
+                    <h2>结语：2025 年，Web3 对华语开发者意味着什么？</h2>
+                </div>
+                <p>
+                    综合本次调研与 GitHub、Stack Overflow、JetBrains
+                    等公开报告，我们大致可以给出三个判断：
+                </p>
+                <ul>
+                    <li>
+                        <strong
+                            >在开发者画像上，Web3
+                            开发者与「普通工程师」高度重叠。</strong
+                        >
+                        年龄、学历和技术栈都非常接近，这不是一个神秘的亚文化圈层。
+                    </li>
+                    <li>
+                        <strong
+                            >在职业路径上，Web3
+                            又和传统互联网有显著不同。</strong
+                        >
+                        多元收入、远程办公和高波动，让它更接近一种「工程师自由职业/创客」模式。
+                    </li>
+                    <li>
+                        <strong
+                            >在风险与竞争上，Web3 面对的不只是监管，还有 AI
+                            等更强力的人才收割机。</strong
+                        >
+                        谁能在真实应用和开发体验上拿出更好的答案，谁就更可能赢得下一阶段的工程师时间。
+                    </li>
+                    <li>
+                        <strong
+                            >在开源与社区上，Web3 继承了全球开源运动的大框架，但还没有完全兑现「一切开源」的理想。</strong
+                        >
+                    </li>
+                </ul>
+                <p>
+                    也许可以这样总结 2025 年华语开发者眼中的 Web3：
+                </p>
+                <blockquote>
+                    <strong>它不是注定伟大的乌托邦，也不是已经终结的泡沫，而是一个仍在试验中的工程师乐园与资本试验场。</strong><br>
+                    对愿意长期学习、拥抱不确定性、乐于在开源中成长的人来说，这里依然有值得下注的未来。
+                </blockquote>
+            </section>
+        </main>
+
+        <script>
+            // 配色
+            const palette = {
+                blue: "#2563eb",
+                green: "#16a34a",
+                amber: "#f59e0b",
+                red: "#ef4444",
+                purple: "#8b5cf6",
+                cyan: "#06b6d4",
+                slate: "#64748b",
+                gray: "#9ca3af",
+            };
+
+            // 1.1 状态分布
+            new Chart(document.getElementById("statusChart"), {
+                type: "pie",
+                data: {
+                    labels: [
+                        "现 Web2，观望 Web3 中",
+                        "前 Web2 开发，现 Web3 中",
+                        "现学生已 Web3 或毕业就直接 Web3 中",
+                        "现学生，观望 Web3 中",
+                        "已经 / 准备退坑 Web3",
+                    ],
+                    datasets: [
+                        {
+                            data: [40.0, 25.5, 16.8, 10.9, 6.8],
+                            backgroundColor: [
+                                palette.blue,
+                                palette.amber,
+                                palette.green,
+                                palette.purple,
+                                palette.red,
+                            ],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+
+            // 1.2 年龄整体
+            new Chart(document.getElementById("ageOverallChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "20 岁以下",
+                        "20–25",
+                        "26–30",
+                        "31–35",
+                        "35–40",
+                        "41–50",
+                        "50 岁+",
+                    ],
+                    datasets: [
+                        {
+                            label: "占比 %",
+                            data: [2.7, 29.1, 33.2, 19.1, 8.2, 7.3, 0.5],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: { scales: { y: { beginAtZero: true, max: 40 } } },
+            });
+
+            // 1.3 年龄 × 状态
+            new Chart(document.getElementById("ageStatusChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "前 Web2 开发，现 Web3 中",
+                        "已经 / 准备退坑 Web3",
+                        "现 Web2，观望 Web3 中",
+                        "现学生已 Web3 或毕业就直接 Web3 中",
+                        "现学生，观望 Web3 中",
+                    ],
+                    datasets: [
+                        {
+                            label: "20 岁以下",
+                            data: [1.8, 0.0, 2.3, 5.4, 4.2],
+                            backgroundColor: palette.slate,
+                        },
+                        {
+                            label: "20–25",
+                            data: [12.5, 13.3, 15.9, 59.5, 79.2],
+                            backgroundColor: palette.blue,
+                        },
+                        {
+                            label: "26–30",
+                            data: [41.1, 40.0, 38.6, 21.6, 8.3],
+                            backgroundColor: palette.green,
+                        },
+                        {
+                            label: "31–35",
+                            data: [21.4, 6.7, 27.3, 10.8, 4.2],
+                            backgroundColor: palette.amber,
+                        },
+                        {
+                            label: "35–40",
+                            data: [12.5, 6.7, 10.2, 0.0, 4.2],
+                            backgroundColor: palette.red,
+                        },
+                        {
+                            label: "41–50",
+                            data: [10.7, 33.3, 4.5, 2.7, 0.0],
+                            backgroundColor: palette.purple,
+                        },
+                        {
+                            label: "50 岁+",
+                            data: [0.0, 0.0, 1.1, 0.0, 0.0],
+                            backgroundColor: palette.gray,
+                        },
+                    ],
+                },
+                options: {
+                    plugins: { legend: { position: "right" } },
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, beginAtZero: true, max: 100 },
+                    },
+                },
+            });
+
+            // 2.1 学历
+            new Chart(document.getElementById("eduChart"), {
+                type: "pie",
+                data: {
+                    labels: [
+                        "大学本科",
+                        "硕士研究生",
+                        "大学专科",
+                        "博士及以上",
+                        "高中以下",
+                        "高中/中专/技校",
+                    ],
+                    datasets: [
+                        {
+                            data: [66.4, 23.2, 7.3, 1.8, 0.9, 0.5],
+                            backgroundColor: [
+                                palette.blue,
+                                palette.green,
+                                palette.amber,
+                                palette.purple,
+                                palette.red,
+                                palette.gray,
+                            ],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+
+            // 2.1 院校类型
+            new Chart(document.getElementById("schoolChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "区域性本科",
+                        "国内知名大学",
+                        "世界一流大学",
+                        "职业/技术学院",
+                        "其他",
+                    ],
+                    datasets: [
+                        {
+                            label: "占比 %",
+                            data: [48.8, 24.9, 16.6, 6.0, 3.7],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: { scales: { y: { beginAtZero: true, max: 60 } } },
+            });
+
+            // 2.2 英语能力（归类示意）
+            new Chart(document.getElementById("englishChart"), {
+                type: "doughnut",
+                data: {
+                    labels: [
+                        "主要依赖翻译",
+                        "能独立阅读文档",
+                        "能流畅协作/接近母语",
+                    ],
+                    datasets: [
+                        {
+                            data: [40, 43, 17], // 近似归类
+                            backgroundColor: [
+                                palette.red,
+                                palette.blue,
+                                palette.green,
+                            ],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+
+            // 3.1 固定年薪
+            new Chart(document.getElementById("salaryFixedChart"), {
+                type: "bar",
+                data: {
+                    labels: ["< 5W 美金", "5–10W 美金", "10–20W 美金"],
+                    datasets: [
+                        {
+                            label: "占比 %",
+                            data: [53.4, 31.0, 15.5],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: { scales: { y: { beginAtZero: true, max: 60 } } },
+            });
+
+            // 3.1 非固定收入
+            new Chart(document.getElementById("salaryVarChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "< 5W 美金",
+                        "5–10W 美金",
+                        "10–20W 美金",
+                        "30–40W 美金",
+                    ],
+                    datasets: [
+                        {
+                            label: "占比 %",
+                            data: [83.9, 11.8, 3.2, 1.1],
+                            backgroundColor: palette.green,
+                        },
+                    ],
+                },
+                options: { scales: { y: { beginAtZero: true, max: 100 } } },
+            });
+
+            // 3.2 收入来源
+            new Chart(document.getElementById("incomeSourceChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "固定薪资",
+                        "交易收入",
+                        "外包",
+                        "Airdrop",
+                        "Grant",
+                        "其他",
+                        "捐赠",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [62.4, 46.2, 21.5, 21.5, 15.1, 8.6, 2.2],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 70 } },
+                },
+            });
+
+            // 3.2 薪资满意度
+            new Chart(document.getElementById("salarySatisChart"), {
+                type: "pie",
+                data: {
+                    labels: ["一般", "满意", "不满意"],
+                    datasets: [
+                        {
+                            data: [61.3, 32.3, 6.5],
+                            backgroundColor: [
+                                palette.amber,
+                                palette.green,
+                                palette.red,
+                            ],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+
+            // 4.1 技术栈
+            new Chart(document.getElementById("techStackChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "HTML/CSS/JS",
+                        "React/Vue/Angular",
+                        "Node.js",
+                        "Python",
+                        "Java",
+                        "Go",
+                        "全栈/DevOps",
+                        "Rust",
+                        "移动端",
+                        ".NET/C#",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [
+                                66.1, 50.9, 46.4, 45.5, 34.8, 23.2, 11.6, 10.7,
+                                8.0, 8.0,
+                            ],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 70 } },
+                },
+            });
+
+            // 4.2 公链整体
+            new Chart(document.getElementById("chainsOverallChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "Ethereum",
+                        "Solana",
+                        "Bitcoin",
+                        "BNB",
+                        "Sui",
+                        "Monad",
+                        "Tron",
+                        "Aptos",
+                        "Avalanche",
+                        "Optimism",
+                        "Cosmos",
+                        "Polygon",
+                        "Cardano",
+                        "Polkadot",
+                        "Arbitrum",
+                        "zkSync",
+                        "Base",
+                        "TON",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [
+                                75.0, 47.3, 38.4, 25.0, 20.5, 8.9, 4.5, 4.5,
+                                3.6, 2.7, 2.7, 2.7, 1.8, 1.8, 1.8, 1.8, 1.8,
+                                1.8,
+                            ],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 80 } },
+                },
+            });
+
+            // 4.2 Web2 观望者链偏好
+            new Chart(document.getElementById("chainsWeb2ObserveChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "Ethereum",
+                        "Solana",
+                        "Bitcoin",
+                        "BNB",
+                        "Sui",
+                        "Monad",
+                        "Optimism",
+                        "Avalanche",
+                        "Polygon",
+                        "Cardano",
+                        "zkSync",
+                        "Arbitrum",
+                        "Polkadot",
+                        "Cosmos",
+                        "Aptos",
+                        "Tron",
+                        "TON",
+                        "Base",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [
+                                79.5, 51.1, 42.0, 22.7, 18.2, 9.1, 3.4, 3.4,
+                                2.3, 2.3, 2.3, 2.3, 2.3, 2.3, 2.3, 1.1, 1.1,
+                                1.1,
+                            ],
+                            backgroundColor: palette.green,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 85 } },
+                },
+            });
+
+            // 4.3 学生观望链偏好
+            new Chart(document.getElementById("chainsStudentObserveChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "Ethereum",
+                        "BNB",
+                        "Solana",
+                        "Sui",
+                        "Bitcoin",
+                        "Tron",
+                        "Aptos",
+                        "Monad",
+                        "Base",
+                        "TON",
+                        "Cosmos",
+                        "Avalanche",
+                        "Polygon",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [
+                                58.3, 33.3, 33.3, 29.2, 25.0, 16.7, 12.5, 8.3,
+                                4.2, 4.2, 4.2, 4.2, 4.2,
+                            ],
+                            backgroundColor: palette.purple,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 65 } },
+                },
+            });
+
+            // 5.1 动机
+            new Chart(document.getElementById("motiveWeb3Chart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "远程工作优势",
+                        "更高薪资",
+                        "信仰去中心化",
+                        "Web2 找不到工作/被裁员",
+                        "在炒币",
+                        "其他",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [51.8, 26.8, 11.6, 2.7, 2.7, 0.9],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 60 } },
+                },
+            });
+
+            // 5.2 入门 & 帮助
+            new Chart(document.getElementById("learnWeb3Chart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "社区活动",
+                        "炒币/交易",
+                        "项目需求/工作机会",
+                        "在线教程/课程",
+                        "朋友/同事推荐",
+                        "学校课程",
+                        "其他",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [29.6, 27.8, 14.8, 11.1, 8.3, 4.6, 0.9],
+                            backgroundColor: palette.green,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 35 } },
+                },
+            });
+
+            new Chart(document.getElementById("entryHelpChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "参与开源项目",
+                        "参与社区贡献",
+                        "看视频",
+                        "看文档",
+                        "做外包项目",
+                        "看书",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [58.3, 56.5, 46.3, 45.4, 30.6, 15.7],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 65 } },
+                },
+            });
+
+            // 5.3 转型挑战
+            new Chart(document.getElementById("challengeTransitionChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "不熟悉区块链技术栈",
+                        "缺乏学习资源或指导",
+                        "不知道在哪找到工作",
+                        "合规/法规顾虑",
+                        "英语水平",
+                        "适应新工具",
+                        "理解去中心化理念",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [50.9, 38.4, 35.7, 33.9, 31.2, 19.6, 15.2],
+                            backgroundColor: palette.red,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 60 } },
+                },
+            });
+
+            // 5.3 退坑原因
+            new Chart(document.getElementById("exitReasonChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "参与 AI 去了",
+                        "工作不稳定",
+                        "担心法律风险",
+                        "不如想象中挣钱",
+                        "尝试其他行业机会",
+                        "其他",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %（退坑样本）",
+                            data: [46.7, 33.3, 26.7, 20.0, 20.0, 6.7],
+                            backgroundColor: palette.purple,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 55 } },
+                },
+            });
+
+            // 6.1 开源认知 & 使用
+            new Chart(document.getElementById("osKnowChart"), {
+                type: "pie",
+                data: {
+                    labels: ["略有了解", "熟悉", "非常熟悉/经常参与", "不了解"],
+                    datasets: [
+                        {
+                            data: [43.6, 41.8, 10.0, 4.5],
+                            backgroundColor: [
+                                palette.blue,
+                                palette.green,
+                                palette.purple,
+                                palette.gray,
+                            ],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+
+            new Chart(document.getElementById("osUseRatioChart"), {
+                type: "bar",
+                data: {
+                    labels: ["少于 25%", "25–50%", "50–75%", "超过 75%"],
+                    datasets: [
+                        {
+                            label: "受访者比例 %",
+                            data: [18.8, 34.4, 21.9, 25.0],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: { scales: { y: { beginAtZero: true, max: 40 } } },
+            });
+
+            // 6.2 开源方式 & 动机 & 阻碍
+            new Chart(document.getElementById("osWayChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "偶尔提交 Issue",
+                        "代码/文档 PR",
+                        "从未参与",
+                        "维护或主导项目",
+                    ],
+                    datasets: [
+                        {
+                            label: "受访者比例 %",
+                            data: [45.7, 26.7, 23.8, 2.9],
+                            backgroundColor: palette.green,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 55 } },
+                },
+            });
+
+            new Chart(document.getElementById("osMotiveChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "学习与技能提升",
+                        "兴趣/乐趣",
+                        "建立声誉",
+                        "工作需求",
+                        "贡献社会",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [92.5, 56.2, 46.2, 40.0, 12.5],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 100 } },
+                },
+            });
+
+            new Chart(document.getElementById("osBlockerChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "缺乏时间",
+                        "不知道从何入手",
+                        "不够自信/门槛高",
+                        "没找到合适项目",
+                        "公司政策限制",
+                        "其他",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [65.0, 48.8, 42.5, 40.0, 10.0, 1.2],
+                            backgroundColor: palette.red,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 70 } },
+                },
+            });
+
+            // 6.3 许可证、项目开源、未来
+            new Chart(document.getElementById("osLicenseChart"), {
+                type: "pie",
+                data: {
+                    labels: ["基本了解", "能选择合适许可证", "不清楚"],
+                    datasets: [
+                        {
+                            data: [71.9, 18.8, 9.4],
+                            backgroundColor: [
+                                palette.blue,
+                                palette.green,
+                                palette.red,
+                            ],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+
+            new Chart(document.getElementById("projectOpenChart"), {
+                type: "doughnut",
+                data: {
+                    labels: ["否", "是"],
+                    datasets: [
+                        {
+                            data: [60.2, 39.8],
+                            backgroundColor: [palette.red, palette.green],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+
+            new Chart(document.getElementById("osFutureChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "越来越重要",
+                        "成为主流基础设施",
+                        "保持现状",
+                        "会逐渐式微",
+                    ],
+                    datasets: [
+                        {
+                            label: "受访者比例 %",
+                            data: [42.5, 27.5, 23.8, 6.2],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: { scales: { y: { beginAtZero: true, max: 50 } } },
+            });
+
+            // 7.1 社区参与 & 活动
+            new Chart(document.getElementById("communityChart"), {
+                type: "pie",
+                data: {
+                    labels: ["偶尔参与", "积极参与", "基本不参与"],
+                    datasets: [
+                        {
+                            data: [53.7, 25.9, 20.4],
+                            backgroundColor: [
+                                palette.blue,
+                                palette.green,
+                                palette.gray,
+                            ],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+
+            new Chart(document.getElementById("eventsChart"), {
+                type: "pie",
+                data: {
+                    labels: ["会", "不会", "组织过"],
+                    datasets: [
+                        {
+                            data: [66.7, 21.3, 11.1],
+                            backgroundColor: [
+                                palette.green,
+                                palette.red,
+                                palette.blue,
+                            ],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+
+            new Chart(document.getElementById("eventTypeChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "黑客松/大赛",
+                        "技术分享会",
+                        "Meetup",
+                        "项目路演",
+                        "Workshop",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [45.2, 35.7, 8.3, 6.0, 4.8],
+                            backgroundColor: palette.blue,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 50 } },
+                },
+            });
+
+            // 7.2 社区需求
+            new Chart(document.getElementById("communityNeedChart"), {
+                type: "bar",
+                data: {
+                    labels: [
+                        "就业/合作机会",
+                        "项目孵化和资助",
+                        "黑客松奖励机制",
+                        "技术教育资源",
+                        "专属工具/环境",
+                        "其他",
+                    ],
+                    datasets: [
+                        {
+                            label: "选择比例 %",
+                            data: [37.2, 22.1, 18.6, 16.3, 4.7, 1.2],
+                            backgroundColor: palette.green,
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: "y",
+                    scales: { x: { beginAtZero: true, max: 40 } },
+                },
+            });
+
+            // 7.3 环境满意度 & 回 Web2
+            new Chart(document.getElementById("envSatisChart"), {
+                type: "pie",
+                data: {
+                    labels: ["一般", "满意", "不满意", "十分满意"],
+                    datasets: [
+                        {
+                            data: [48.3, 33.7, 16.9, 1.1],
+                            backgroundColor: [
+                                palette.amber,
+                                palette.green,
+                                palette.red,
+                                palette.purple,
+                            ],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+
+            new Chart(document.getElementById("backWeb2Chart"), {
+                type: "doughnut",
+                data: {
+                    labels: ["不考虑", "正在考虑"],
+                    datasets: [
+                        {
+                            data: [77.4, 22.6],
+                            backgroundColor: [palette.blue, palette.red],
+                        },
+                    ],
+                },
+                options: { plugins: { legend: { position: "right" } } },
+            });
+        </script>
+    </body>
+</html>

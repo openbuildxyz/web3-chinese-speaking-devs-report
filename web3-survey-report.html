@@ -359,22 +359,77 @@
                     <p class="caption">图 11：受访开发者的主要 Web2 技术栈。</p>
                 </div>
 
+                <p>
+                    （说明：图 11 重点展示的是语言 / 框架维度的 Web2 通用技术栈。
+                    关于 EVM / Move / Solana / ZK 等更偏 Web3 生态栈的情况，我们在下文 4.1.1
+                    单独做了汇总与解读。）
+                </p>
+
                 <p>技术栈分布非常接近全球趋势：</p>
                 <ul>
                     <li>
-                        前端 + 全栈 JS 是绝对主力，为
-                        DApp、钱包和控制台提供基础。
+                        前端 + 全栈 JS 是绝对主力，为 DApp、钱包和控制台提供基础。
                     </li>
                     <li>
-                        Python、Java、Go
-                        构成后端阵营，支撑交易、数据和基础设施。
+                        Python、Java、Go 构成后端阵营，支撑交易、数据和基础设施。
                     </li>
                     <li>Rust 和少量 C/C++ 集中在高性能和底层协议开发中。</li>
                 </ul>
                 <p>
-                    从这一点看，Web3
-                    更像是在熟悉的技术地基上，额外叠加了一层“共识机制 + 安全 +
-                    经济机制”。
+                    从这一点看，Web3 更像是在熟悉的技术地基上，额外叠加了一层「共识机制 + 安全 +
+                    经济机制」。
+                </p>
+
+                <h3>4.1.1 Web3 专向技术栈与 Solidity 学习路径</h3>
+                
+                <p>
+                    在问卷设计中，我们没有把「Solidity / web3.js / ethers.js」这类具体语言或库单独列成一个个选项，
+                    而是采用更贴近真实工作的「生态栈」维度来统计 Web3 技术栈，例如：
+                </p>
+                <ul>
+                    <li>EVM 生态栈（Ethereum、Polygon、BNB Chain、Base 等）</li>
+                    <li>Move 生态栈（Aptos、Sui）</li>
+                    <li>Solana / Rust 生态栈</li>
+                    <li>ZK 技术栈（zkSync、Starknet、Scroll、Linea 等）</li>
+                    <li>各类 Layer2 / Rollup 扩展栈（Arbitrum、Optimism、Base 等）</li>
+                    <li>Cosmos 生态栈，以及 Bitcoin / Lightning / Ordinals 等相关生态</li>
+                    <li>去中心化存储（IPFS、Filecoin、Arweave）与跨链 / 互操作栈（LayerZero、Axelar、Wormhole 等）</li>
+                </ul>
+                <p>
+                    少数受访者在开放题中直接填写了「Solidity」等关键词，我们在分析时也统一归入对应的
+                    EVM 生态栈。因此，你在图表中看到的是「EVM / Move / Solana / ZK 等生态栈」，
+                    而不是单独的「Solidity」选项——这并不代表大家不用 Solidity，而是出于统计口径的选择。
+                </p>
+                <p>结合样本，可以看到一条比较清晰的 Web3 技术路径：</p>
+                <ul>
+                    <li>
+                        <strong>EVM 生态几乎是默认起点。</strong>
+                        大部分有链上开发经验的受访者，都在使用 EVM 生态栈。在开放回答中，「Solidity」多次被点名；
+                        现实中的学习路径往往是：<em>先打牢 React / Node / 后端基础 → 再学 Solidity +
+                        Hardhat/Foundry → 逐步接触 DeFi / NFT / MEV 等协议层。</em>
+                    </li>
+                    <li>
+                        <strong>Move、Solana、ZK 等新栈，是进阶而非起点。</strong>
+                        Move 生态栈（Aptos、Sui）、Solana / Rust 生态栈，以及 ZK 技术栈在样本中都有可见但相对较小的比例，
+                        通常出现在已经有一定 EVM / Solidity 经验之后，或由游戏、社交、L2、隐私等专项需求倒逼产生。
+                    </li>
+                    <li>
+                        <strong>观望者阶段：技术栈几乎完全是 Web2。</strong>
+                        在仍在 Web2 或校园、尚未真正入职 Web3 的人群中，技术栈几乎清一色是
+                        HTML/CSS/JavaScript + React/Vue + Node.js + Python/Java/Go。真正已经在用
+                        Solidity、Move、Solana Rust 写生产代码的，只是已经「下场」的少数人。
+                    </li>
+                    <li>
+                        <strong>Solidity 的角色：从「显性标签」变成「默认能力」。</strong>
+                        很多已经在 Web3 的开发者，在问卷中选择的是「EVM 生态栈」，而不是单独写「Solidity」。
+                        在他们的认知里，Solidity 更像是 EVM 开发的一项基础技能，不再需要单独作为身份标签；
+                        真正拉开差距的，往往是对协议设计、安全审计、跨链与基础设施的理解，而不仅仅是会写语法。
+                    </li>
+                </ul>
+                <p>
+                    换句话说：对观望者而言，门槛不在「会不会 Solidity」，而在能否在熟悉的 Web2
+                    栈之上跨出那一步，写出第一个真正跑在链上的项目；对已经入场的人而言，EVM + Solidity
+                    仍然是机会密度最高的主战场，而 Move、Solana、ZK 等新栈，则更像是在此基础上的「第二外语」。
                 </p>
 
                 <div class="chart-box">
@@ -392,7 +447,7 @@
 
                 <p>
                     以 Ethereum 为中心的格局，在华语样本中与全球数据高度一致：
-                    它几乎是所有开发者进入 Web3 的「默认选项」。 Solana 与
+                    它几乎是所有开发者进入 Web3 的「默认选项」。Solana 与
                     Bitcoin 构成明显的第二梯队，BNB、Sui、各种 L2
                     和新公链紧随其后。
                 </p>

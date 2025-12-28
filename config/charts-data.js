@@ -215,6 +215,16 @@ const chartDataConfig = {
     color: "#8b5cf6"
   },
 
+  githubContribChart: {
+    type: "bar",
+    labels: {
+      zh: ["Ethereum", "Solana", "Sui", "Polygon", "BNB Chain", "Bitcoin", "Base", "Polkadot Network", "Cosmos Network", "Arbitrum", "Optimism", "Walrus", "Hardhat", "Aptos", "Tron"],
+      en: ["Ethereum", "Solana", "Sui", "Polygon", "BNB Chain", "Bitcoin", "Base", "Polkadot Network", "Cosmos Network", "Arbitrum", "Optimism", "Walrus", "Hardhat", "Aptos", "Tron"]
+    },
+    data: [30.9, 16.0, 6.9, 5.8, 5.4, 5.0, 4.8, 4.5, 3.9, 3.8, 3.5, 2.5, 2.5, 2.3, 2.2],
+    color: "#f59e0b"
+  },
+
   // 5. 动机与学习
   motiveWeb3Chart: {
     type: "bar",
@@ -297,6 +307,26 @@ const chartDataConfig = {
     color: "#16a34a"
   },
 
+  osWayWeb3Chart: {
+    type: "pie",
+    labels: {
+      zh: ["仅提 Issue/偶尔贡献", "从未参与", "维护/主导", "提交 PR"],
+      en: ["Issues Only / Occasional", "Never Participated", "Maintain / Lead", "Submit PRs"]
+    },
+    data: [50.0, 24.5, 13.2, 12.3],
+    colors: ["#2563eb", "#9ca3af", "#16a34a", "#f59e0b"]
+  },
+
+  osWayWeb2Chart: {
+    type: "pie",
+    labels: {
+      zh: ["仅提 Issue/偶尔贡献", "从未参与", "提交 PR", "维护/主导"],
+      en: ["Issues Only / Occasional", "Never Participated", "Submit PRs", "Maintain / Lead"]
+    },
+    data: [43.8, 28.6, 25.0, 2.7],
+    colors: ["#2563eb", "#9ca3af", "#f59e0b", "#16a34a"]
+  },
+
   osMotiveChart: {
     type: "bar",
     labels: {
@@ -345,6 +375,37 @@ const chartDataConfig = {
     },
     data: [42.5, 27.5, 23.8, 6.2],
     color: "#2563eb"
+  },
+
+  // 4. 地理分布
+  workModelChart: {
+    type: "pie",
+    labels: {
+      zh: ["远程办公模式", "坐班", "数字游民", "混合", "其他"],
+      en: ["Remote Work", "In-Office", "Digital Nomad", "Hybrid", "Other"]
+    },
+    data: [53.8, 18.9, 11.3, 9.4, 6.6],
+    colors: ["#2563eb", "#16a34a", "#8b5cf6", "#f59e0b", "#9ca3af"]
+  },
+
+  geoRegionChart: {
+    type: "pie",
+    labels: {
+      zh: ["中国大陆", "海外", "港澳台"],
+      en: ["Mainland China", "Overseas", "Hong Kong/Macau/Taiwan"]
+    },
+    data: [89.9, 7.3, 2.8],
+    colors: ["#2563eb", "#16a34a", "#f59e0b"]
+  },
+
+  geoCityLevelChart: {
+    type: "pie",
+    labels: {
+      zh: ["三线及以下/其他", "一线城市", "二线城市", "海外"],
+      en: ["Tier-3 & Below / Other", "Tier-1 Cities", "Tier-2 Cities", "Overseas"]
+    },
+    data: [47.7, 29.8, 13.3, 9.2],
+    colors: ["#9ca3af", "#2563eb", "#16a34a", "#f59e0b"]
   },
 
   // 7. 社区参与

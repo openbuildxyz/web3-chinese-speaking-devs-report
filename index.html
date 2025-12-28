@@ -138,6 +138,7 @@
                 cursor: pointer;
                 font-size: 14px;
                 transition: all 0.2s;
+                box-sizing: border-box;
             }
 
             .sidebar-control-btn:hover {
@@ -146,9 +147,26 @@
                 border-color: var(--accent-color);
             }
 
+            .sidebar-control-btn.github-link {
+                text-decoration: none;
+                color: var(--text-primary);
+            }
+
+            .sidebar-control-btn.github-link:hover {
+                color: white;
+            }
+
             .btn-icon {
                 font-size: 18px;
                 line-height: 1;
+                flex-shrink: 0;
+                min-width: 18px;
+            }
+
+            .btn-icon svg {
+                width: 18px;
+                height: 18px;
+                display: block;
             }
 
             .btn-text {
@@ -205,6 +223,19 @@
             .chart-wrap-small { width: 75%; }
             .chart-wrap-tiny { width: 55%; }
 
+            .charts-row {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: nowrap;
+            }
+
+            .charts-row .chart-wrap-tiny {
+                flex: 0 0 auto;
+                width: auto;
+                min-width: 250px;
+            }
+
             .chart-box {
                 background: var(--chart-box-bg);
                 border-radius: 12px;
@@ -220,6 +251,14 @@
                 font-size: 12px;
                 color: var(--text-secondary);
                 margin-top: 4px;
+            }
+
+            .chart-description {
+                margin: 10px 0;
+                padding: 0;
+                font-size: 14px;
+                line-height: 1.6;
+                color: var(--text-primary);
             }
 
             ul { padding-left: 20px; }
@@ -314,25 +353,31 @@
             <div class="sidebar-nav">
                 <div class="sidebar-title" id="nav-report-title">报告内容</div>
                 <ul class="nav-links">
-                    <li><a href="#header" data-i18n="overview">概况</a></li>
+                    <li><a href="#sec0" data-i18n="sec0">调研设计与样本说明</a></li>
                     <li><a href="#sec1" data-i18n="sec1">一、样本概况</a></li>
                     <li><a href="#sec2" data-i18n="sec2">二、教育与英语</a></li>
-                    <li><a href="#sec3" data-i18n="sec3">三、收入结构</a></li>
-                    <li><a href="#sec4" data-i18n="sec4">四、技术栈</a></li>
-                    <li><a href="#sec5" data-i18n="sec5">五、动机与挑战</a></li>
-                    <li><a href="#sec6" data-i18n="sec6">六、开源参与</a></li>
-                    <li><a href="#sec7" data-i18n="sec7">七、社区环境</a></li>
+                    <li><a href="#sec3" data-i18n="sec3">三、地理分布</a></li>
+                    <li><a href="#sec4" data-i18n="sec4">四、收入结构</a></li>
+                    <li><a href="#sec5" data-i18n="sec5">五、技术栈</a></li>
+                    <li><a href="#sec6" data-i18n="sec6">六、动机与挑战</a></li>
+                    <li><a href="#sec7" data-i18n="sec7">七、开源参与</a></li>
+                    <li><a href="#sec8" data-i18n="sec8">八、社区环境</a></li>
                     <li><a href="#conclusion" data-i18n="conclusion">结语</a></li>
                 </ul>
                 <div class="sidebar-title" id="nav-about-title">关于</div>
                 <ul class="nav-links">
-                    <li><a href="#contributors" data-i18n="contributors">贡献者</a></li>
                     <li><a href="#how-to-contribute" data-i18n="how-to-contribute">如何贡献</a></li>
                     <li><a href="#acknowledgments" data-i18n="acknowledgments">致谢</a></li>
                 </ul>
 
                 <!-- 控制按钮 -->
                 <div class="sidebar-controls">
+                    <a href="https://github.com/openbuildxyz/web3-chinese-speaking-devs-report" target="_blank" class="sidebar-control-btn github-link">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        <span class="btn-text">GitHub</span>
+                    </a>
                     <button class="sidebar-control-btn" id="themeToggle">
                         <span class="btn-icon">🌙</span>
                         <span class="btn-text">暗色模式</span>
@@ -356,9 +401,15 @@
             <!-- 头部 -->
             <header class="section" id="header">
                 <h1></h1>
-                <p></p>
-                <blockquote></blockquote>
             </header>
+
+            <!-- 调研设计与样本说明 -->
+            <section class="section" id="sec0">
+                <div class="section-header">
+                    <h2></h2>
+                </div>
+                <!-- 内容将由渲染器动态生成 -->
+            </section>
 
             <!-- 第一部分：样本概况 -->
             <section class="section" id="sec1">
@@ -426,8 +477,38 @@
                 <!-- 内容将由渲染器动态生成 -->
             </section>
 
-            <!-- 第三部分：收入结构 -->
+            <!-- 第三部分：地理分布与全球化生存 -->
             <section class="section" id="sec3">
+                <div class="section-header">
+                    <h2></h2>
+                </div>
+
+                <div class="chart-box">
+                    <h3></h3>
+                    <div class="chart-wrap-tiny">
+                        <canvas id="workModelChart"></canvas>
+                    </div>
+                    <p class="caption"></p>
+                </div>
+
+                <div class="chart-box">
+                    <h3></h3>
+                    <div class="charts-row">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="geoRegionChart"></canvas>
+                        </div>
+                        <div class="chart-wrap-tiny">
+                            <canvas id="geoCityLevelChart"></canvas>
+                        </div>
+                    </div>
+                    <p class="caption"></p>
+                </div>
+
+                <!-- 内容将由渲染器动态生成 -->
+            </section>
+
+            <!-- 第四部分：收入结构 -->
+            <section class="section" id="sec4">
                 <div class="section-header">
                     <h2></h2>
                 </div>
@@ -457,8 +538,8 @@
                 <!-- 内容将由渲染器动态生成 -->
             </section>
 
-            <!-- 第四部分：技术栈与公链 -->
-            <section class="section" id="sec4">
+            <!-- 第五部分：技术栈与公链 -->
+            <section class="section" id="sec5">
                 <div class="section-header">
                     <h2></h2>
                 </div>
@@ -487,13 +568,11 @@
                     <div class="chart-wrap-wide">
                         <canvas id="chainsWeb2ObserveChart"></canvas>
                     </div>
-                    <p class="caption"></p>
-                </div>
-
-                <div class="chart-box">
-                    <h3></h3>
                     <div class="chart-wrap-wide">
                         <canvas id="chainsStudentObserveChart"></canvas>
+                    </div>
+                    <div class="chart-wrap-wide">
+                        <canvas id="githubContribChart"></canvas>
                     </div>
                     <p class="caption"></p>
                 </div>
@@ -501,8 +580,8 @@
                 <!-- 内容将由渲染器动态生成 -->
             </section>
 
-            <!-- 第五部分：动机与挑战 -->
-            <section class="section" id="sec5">
+            <!-- 第六部分：动机与挑战 -->
+            <section class="section" id="sec6">
                 <div class="section-header">
                     <h2></h2>
                 </div>
@@ -540,8 +619,8 @@
                 <!-- 内容将由渲染器动态生成 -->
             </section>
 
-            <!-- 第六部分：开源参与 -->
-            <section class="section" id="sec6">
+            <!-- 第七部分：开源参与 -->
+            <section class="section" id="sec7">
                 <div class="section-header">
                     <h2></h2>
                 </div>
@@ -559,14 +638,21 @@
 
                 <div class="chart-box">
                     <h3></h3>
-                    <div class="chart-wrap">
-                        <canvas id="osWayChart"></canvas>
+                    <div class="charts-row">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="osWayWeb3Chart"></canvas>
+                        </div>
+                        <div class="chart-wrap-tiny">
+                            <canvas id="osWayWeb2Chart"></canvas>
+                        </div>
                     </div>
-                    <div class="chart-wrap">
-                        <canvas id="osMotiveChart"></canvas>
-                    </div>
-                    <div class="chart-wrap">
-                        <canvas id="osBlockerChart"></canvas>
+                    <div class="charts-row">
+                        <div class="chart-wrap">
+                            <canvas id="osMotiveChart"></canvas>
+                        </div>
+                        <div class="chart-wrap">
+                            <canvas id="osBlockerChart"></canvas>
+                        </div>
                     </div>
                     <p class="caption"></p>
                 </div>
@@ -588,8 +674,8 @@
                 <!-- 内容将由渲染器动态生成 -->
             </section>
 
-            <!-- 第七部分：社区与环境 -->
-            <section class="section" id="sec7">
+            <!-- 第八部分：社区与环境 -->
+            <section class="section" id="sec8">
                 <div class="section-header">
                     <h2></h2>
                 </div>
@@ -638,14 +724,6 @@
                 <!-- 内容将由渲染器动态生成 -->
             </section>
 
-            <!-- 贡献者 -->
-            <section class="section" id="contributors">
-                <div class="section-header">
-                    <h2></h2>
-                </div>
-                <!-- 内容将由渲染器动态生成 -->
-            </section>
-
             <!-- 如何贡献 -->
             <section class="section" id="how-to-contribute">
                 <div class="section-header">
@@ -670,7 +748,17 @@
 
             // 页面加载完成后初始化
             document.addEventListener('DOMContentLoaded', () => {
+                console.log('=== 开始渲染 ===');
+                console.log('sec0配置:', contentZh.sections.find(s => s.id === 'sec0'));
                 reportRenderer.init();
+
+                // 检查渲染结果
+                setTimeout(() => {
+                    const sec0El = document.getElementById('sec0');
+                    const dynamicContent = sec0El.querySelectorAll('.dynamic-content');
+                    console.log('sec0渲染结果 - 动态内容数量:', dynamicContent.length);
+                    console.log('sec0 HTML内容长度:', sec0El.innerHTML.length);
+                }, 100);
 
                 // 主题切换
                 const themeToggle = document.getElementById('themeToggle');

@@ -11,7 +11,6 @@ class ReportRenderer {
     this.renderHeader();
     this.renderSections();
     this.renderConclusion();
-    this.renderContributors();
     this.renderHowToContribute();
     this.renderAcknowledgments();
     this.initCharts();
@@ -38,12 +37,21 @@ class ReportRenderer {
       const sectionEl = document.getElementById(section.id);
       if (!sectionEl) return;
 
+      // 如果是介绍性章节(没有图表)
+      if (section.isIntro) {
+        const titleEl = sectionEl.querySelector('.section-header h2');
+        if (titleEl) titleEl.textContent = section.title;
+        this.renderSectionContent(sectionEl, section.content);
+        return;
+      }
+
       // 更新标题
       const titleEl = sectionEl.querySelector('.section-header h2');
       if (titleEl) titleEl.textContent = section.title;
 
-      // 更新图表标题和说明
-      section.charts.forEach(chart => {
+      // 更新图表标题和说明（如果章节有图表）
+      if (section.charts && Array.isArray(section.charts)) {
+        section.charts.forEach(chart => {
         // 如果是图表组（包含 charts 数组）
         if (chart.charts && Array.isArray(chart.charts)) {
           // 使用组中第一个图表的 chart-box
@@ -55,6 +63,19 @@ class ReportRenderer {
               const captionEl = chartBox.querySelector('.caption');
               if (titleEl) titleEl.textContent = chart.title;
               if (captionEl) captionEl.textContent = chart.caption;
+
+              // 如果有 description，在标题后插入描述文字
+              if (chart.description) {
+                // 检查是否已有描述元素，如果有则更新，没有则创建
+                let descEl = chartBox.querySelector('.chart-description');
+                if (!descEl) {
+                  descEl = document.createElement('div');
+                  descEl.className = 'chart-description';
+                  // 在标题后插入
+                  titleEl.parentNode.insertBefore(descEl, titleEl.nextSibling);
+                }
+                descEl.innerHTML = chart.description;
+              }
             }
           }
         } else {
@@ -71,6 +92,7 @@ class ReportRenderer {
           }
         }
       });
+      }
 
       // 更新内容段落
       this.renderSectionContent(sectionEl, section.content);
@@ -183,6 +205,11 @@ class ReportRenderer {
       blockquote.innerHTML = item.text;
       blockquote.classList.add('dynamic-content');
       return blockquote;
+    } else if (item.type === 'heading') {
+      const heading = document.createElement(`h${item.level || 3}`);
+      heading.textContent = item.text;
+      heading.classList.add('dynamic-content');
+      return heading;
     }
     return null;
   }
@@ -198,19 +225,6 @@ class ReportRenderer {
     if (titleEl) titleEl.textContent = conclusion.title;
 
     this.renderSectionContent(conclusionEl, conclusion.content);
-  }
-
-  // 渲染贡献者
-  renderContributors() {
-    const contributors = this.content[this.currentLang].contributors;
-    const contributorsEl = document.querySelector('#contributors');
-
-    if (!contributorsEl || !contributors) return;
-
-    const titleEl = contributorsEl.querySelector('.section-header h2');
-    if (titleEl) titleEl.textContent = contributors.title;
-
-    this.renderSectionContent(contributorsEl, contributors.content);
   }
 
   // 渲染如何贡献
@@ -334,7 +348,6 @@ class ReportRenderer {
     this.renderHeader();
     this.renderSections();
     this.renderConclusion();
-    this.renderContributors();
     this.renderHowToContribute();
     this.renderAcknowledgments();
     this.updateSidebarLanguage();
@@ -388,16 +401,16 @@ class ReportRenderer {
       zh: {
         'nav-report-title': '报告内容',
         'nav-about-title': '关于',
-        'overview': '概况',
+        'sec0': '调研设计与样本说明',
         'sec1': '一、样本概况',
         'sec2': '二、教育与英语',
-        'sec3': '三、收入结构',
-        'sec4': '四、技术栈',
-        'sec5': '五、动机与挑战',
-        'sec6': '六、开源参与',
-        'sec7': '七、社区环境',
+        'sec3': '三、地理分布',
+        'sec4': '四、收入结构',
+        'sec5': '五、技术栈',
+        'sec6': '六、动机与挑战',
+        'sec7': '七、开源参与',
+        'sec8': '八、社区环境',
         'conclusion': '结语',
-        'contributors': '贡献者',
         'how-to-contribute': '如何贡献',
         'acknowledgments': '致谢',
         'language': 'English'
@@ -405,16 +418,16 @@ class ReportRenderer {
       en: {
         'nav-report-title': 'Report Contents',
         'nav-about-title': 'About',
-        'overview': 'Overview',
+        'sec0': 'Survey Design & Sample',
         'sec1': '1. Sample Overview',
         'sec2': '2. Education & English',
-        'sec3': '3. Income Structure',
-        'sec4': '4. Tech Stack',
-        'sec5': '5. Motivations & Challenges',
-        'sec6': '6. Open Source',
-        'sec7': '7. Community',
+        'sec3': '3. Geographic Distribution',
+        'sec4': '4. Income Structure',
+        'sec5': '5. Tech Stack',
+        'sec6': '6. Motivations & Challenges',
+        'sec7': '7. Open Source',
+        'sec8': '8. Community',
         'conclusion': 'Conclusion',
-        'contributors': 'Contributors',
         'how-to-contribute': 'How to Contribute',
         'acknowledgments': 'Acknowledgments',
         'language': '中文'
@@ -464,21 +477,32 @@ class ReportRenderer {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${id}`) {
-              link.classList.add('active');
-            }
-          });
+    // 使用滚动事件监听而不是 IntersectionObserver
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 150; // 偏移量，考虑到header的高度
+
+      let currentSection = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
         }
       });
-    }, { threshold: 0.3 });
 
-    sections.forEach(section => observer.observe(section));
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    };
+
+    // 监听滚动事件
+    window.addEventListener('scroll', handleScroll);
+    // 初始化时执行一次
+    handleScroll();
   }
 
   // 切换主题

@@ -1,10 +1,103 @@
 // English content configuration
 const contentEn = {
   title: "2025 Chinese-Speaking Web3 Developer & Open Source Survey Report",
-  subtitle: `This report is based on a survey conducted in Chinese-speaking tech communities in early 2025, with <strong>220 valid responses</strong>. The sample comes primarily from Web2/Web3 developer communities, hackathons, and related events. To help understand the data, we referenced GitHub Octoverse, Stack Overflow, JetBrains, and other developer reports on key metrics for comparative analysis.`,
-  note: "Note: All specific percentages are shown in the charts, while the text focuses on trends and insights, making it easy to use images for data and text for viewpoints in your articles.",
+  subtitle: ``,
+  note: "",
 
   sections: [
+    {
+      id: "sec0",
+      title: "Survey Design & Sample Description",
+      isIntro: true,
+      content: [
+        {
+          type: "heading",
+          level: 3,
+          text: "1.1 Survey Objectives",
+        },
+        {
+          type: "paragraph",
+          text: "The \"2025 Web3 Chinese-Speaking Developer Report\" (hereinafter referred to as the Report) is based on a questionnaire survey conducted in Chinese-speaking tech communities in late 2025, with a total of 220 valid samples.",
+        },
+        {
+          type: "paragraph",
+          text: "The samples primarily come from Web2/Web3 developer communities, hackathons, and related events. To help understand the data, we referenced GitHub Octoverse, Stack Overflow, JetBrains, and other developer reports on key metrics for horizontal comparison to obtain a more comprehensive perspective.",
+        },
+        {
+          type: "paragraph",
+          text: "This report attempts to answer three core questions:",
+        },
+        {
+          type: "list",
+          items: [
+            "First, who constitutes the current and potential Chinese-speaking Web3 developer community?",
+            "Second, what commonalities and differentiations do they exhibit in terms of transition paths, tech stacks, income and career development, and open source participation?",
+            "Third, how do these characteristics compare with conclusions from global developer surveys like GitHub, JetBrains, and Stack Overflow regarding Web2/open source ecosystems, and what do they mean for projects, communities, and policymakers?",
+          ],
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "1.2 Sample Overview and Structure",
+        },
+        {
+          type: "paragraph",
+          text: "A total of 220 valid questionnaires were collected, covering the period from November to December 2025. In terms of distribution, the largest group consists of people still in Web2 or on campus but continuously observing Web3, nearly half. The second group consists of developers already working full-time or long-term in Web3, also a significant number. There's also a small but important group: those who have left or are preparing to leave Web3.",
+        },
+        {
+          type: "paragraph",
+          text: "This resembles the structure when new technologies enter a \"cooling-off period\": most are observing, a few have jumped in, and a very small number have experienced it and left.",
+        },
+        {
+          type: "paragraph",
+          text: "This implies two things:",
+        },
+        {
+          type: "list",
+          items: [
+            "For developers, Web3 has evolved from pure speculative narrative to \"a technical/career option that can be seriously evaluated\";",
+            "For ecosystem builders, the real challenge is winning over that large majority of \"observers who haven't decided yet.\" Their willingness to fill out this survey shows they've passed the awareness threshold and just need credible paths and opportunities.",
+          ],
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "1.4 Survey Design Features and Limitations",
+        },
+        {
+          type: "paragraph",
+          text: "This questionnaire has several design features:",
+        },
+        {
+          type: "list",
+          items: [
+            "Rather than simply segmenting by \"languages/frameworks used,\" it branches questions based on career paths and current status;",
+            "Targeted modules were designed for different stages (already in Web3, observing, students, exited), covering income, job seeking, learning methods, open source participation, community involvement, and views on the future;",
+            "A relatively complete chain was designed for open source: awareness → participation methods → quantity → motivations → barriers → license understanding → usage ratio → judgments on the future;",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "In addition, single-choice, multiple-choice, and open-text questions were combined, collecting a large amount of qualitative feedback that can be used to construct \"developer quotes\" and typical persona profiles.",
+        },
+        {
+          type: "paragraph",
+          text: "Main limitations include:",
+        },
+        {
+          type: "list",
+          items: [
+            "The sample size is limited and not strictly random, primarily from Web3 communities, WeChat groups, TG groups, recruitment channels, hackathons, etc., with self-selection bias;",
+            "The questionnaire logic is complex, some questions are only displayed for specific subsets, and the valid sample sizes for different branched questions are inconsistent;",
+            "Currency and income ranges are primarily in USD, subjective satisfaction is greatly affected by market conditions, the survey time is concentrated in late 2025, and optimistic or pessimistic sentiments in responses may be influenced by market trend expectations.",
+          ],
+        },
+        {
+          type: "blockquote",
+          text: "Note: All specific percentages are shown in the charts, while the text focuses on trends and insights.",
+        },
+      ],
+    },
     {
       id: "sec1",
       title: "1. Sample Overview: Half Observing, Half Already Onboard",
@@ -28,6 +121,24 @@ const contentEn = {
         },
       ],
       content: [
+        {
+          type: "paragraph",
+          text: "To better understand the different positions and mindsets of developers in Web3, we further aggregated the \"current status\" from the questionnaire into <strong>five developer personas</strong>:",
+        },
+        {
+          type: "list",
+          items: [
+            "<strong>Ex-Web2, now in Web3</strong>;",
+            "<strong>Students already/directly in Web3</strong>;",
+            "<strong>Web2 observers</strong>;",
+            "<strong>Student observers</strong>;",
+            "<strong>Left or preparing to leave Web3</strong>.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "This grouping is not intended to apply labels, but to more authentically reflect: who has already jumped in, who is hesitating, and who has experienced it and chosen to leave. The subsequent analysis of tech stacks, income, open source participation, and community behavior is based on this grouping.",
+        },
         {
           type: "paragraph",
           text: "As shown in Figure 1, the sample can be roughly divided into three groups:",
@@ -134,6 +245,21 @@ const contentEn = {
           afterChart: "englishChart",
         },
         {
+          type: "paragraph",
+          text: "In a highly international technical ecosystem like Web3, English is no longer just a \"bonus\" on resumes, but the infrastructure that determines whether you can access first-hand information and core opportunities.",
+          afterChart: "englishChart",
+        },
+        {
+          type: "paragraph",
+          text: "The sample feedback shows that English proficiency does not significantly affect \"whether one can enter the industry,\" but it significantly affects how far one can go: whether one can participate in protocol-level discussions, maintain core open source projects, join international teams, or consistently receive grants and fellowships.",
+          afterChart: "englishChart",
+        },
+        {
+          type: "paragraph",
+          text: "In other words, English is not a short-term barrier, but a long-term watershed in Web3 career development.",
+          afterChart: "englishChart",
+        },
+        {
           type: "blockquote",
           text: 'Insight 2: In the highly international ecosystem of Web3, English is no longer a "bonus" on resumes, but the foundation that determines whether you can access global first-hand information and opportunities.',
           afterChart: "englishChart",
@@ -194,6 +320,21 @@ const contentEn = {
           afterChart: "incomeSatisGroup",
         },
         {
+          type: "paragraph",
+          text: "Diverse income doesn't mean \"earning more money,\" but rather a change in risk structure.",
+          afterChart: "incomeSatisGroup",
+        },
+        {
+          type: "paragraph",
+          text: "Compared to Web2, Web3 transfers some uncertainty originally borne by companies to individuals: project cycles, token volatility, compliance and taxation, labor relationships—all need to be absorbed by developers themselves.",
+          afterChart: "incomeSatisGroup",
+        },
+        {
+          type: "paragraph",
+          text: "This is also why, among those who left, \"job instability\" and \"legal and compliance risks\" are frequently mentioned—the real hesitation isn't just about how much one earns, but whether one can work on technology long-term with peace of mind.",
+          afterChart: "incomeSatisGroup",
+        },
+        {
           type: "blockquote",
           text: "Insight 3: Web3's high-yield stories happen mostly to a very small minority, while the corresponding cost is that the entire group must bear higher volatility and uncertainty. For most people, it's more like an \"above-average but not as mythical as the legends\" job.",
           afterChart: "incomeSatisGroup",
@@ -202,12 +343,257 @@ const contentEn = {
     },
     {
       id: "sec4",
+      title: "4. Geographic Distribution & Global Survival — The Real Spatial Structure of Web3 Developers",
+      charts: [
+        {
+          id: "workModelChart",
+          title: "Web3 Developer Work Models",
+          caption: "Figure: Distribution of Web3 developer work models.",
+        },
+        {
+          id: "geoDistGroup",
+          title: "Developer Regional and City Level Distribution",
+          caption: "Figure: Distribution of surveyed developers by region and city tier.",
+          charts: ["geoRegionChart", "geoCityLevelChart"],
+        },
+      ],
+      content: [
+        {
+          type: "paragraph",
+          text: "Before discussing Web3's income, technology, and career paths, there's an unavoidable but often overlooked question:",
+          afterChart: "workModelChart",
+        },
+        {
+          type: "paragraph",
+          text: "Where do Chinese-speaking Web3 developers actually live, who do they work for, and why are they distributed this way?",
+          afterChart: "workModelChart",
+        },
+        {
+          type: "paragraph",
+          text: "Unlike traditional internet companies that are highly concentrated in first-tier cities, Web3 developers show a clear spatial dispersion characteristic. This is not accidental, but the result of remote collaboration, stablecoin salaries, and regulatory differences working together.",
+          afterChart: "workModelChart",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "4.1 Geo-Arbitrage: Based in China, Coding for the World",
+          afterChart: "workModelChart",
+        },
+        {
+          type: "paragraph",
+          text: "In this survey sample, a very prominent phenomenon is:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "A significant proportion of Web3 developers live in second-tier and new first-tier cities in mainland China, yet serve overseas projects for the long term.",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "Common cities for these developers include Chengdu, Hangzhou, Changsha, Dali, and others, where living costs are relatively controllable, but income is denominated in USD or stablecoins. This model is often referred to in the community as <strong>\"Geo-Arbitrage\"</strong>:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "list",
+          items: [
+            "<strong>Cost side</strong>: Using domestic living costs, medical, and family support systems;",
+            "<strong>Income side</strong>: Taking overseas Web3 projects and earning USD or stablecoin salaries;",
+            "<strong>Result</strong>: Actual purchasing power is often higher than equivalent Web2 positions in first-tier cities.",
+          ],
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "For many developers, this is an attractive and relatively \"rational\" choice.",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "It doesn't require immigration or entering core financial centers, yet can significantly improve cash flow in the short term.",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "But what needs to be seen is:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "Geo-arbitrage solves \"current income,\" not \"long-term ceiling.\"",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "In this model, developers often:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "list",
+          items: [
+            "Work remotely long-term, lacking offline networks;",
+            "Are more likely to stay in execution or mid-level engineering roles;",
+            "Have limited influence on project decisions, direction, and governance.",
+          ],
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "4.2 Global Hub Cities: Singapore / Hong Kong / Dubai",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "In contrast to the \"geo-arbitrageurs\" are another group of developers and managers who choose to actively enter global Web3 hub cities.",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "In the Chinese-speaking Web3 ecosystem, Singapore, Hong Kong, and Dubai are frequently mentioned, and the reasons are not mysterious:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "list",
+          items: [
+            "Regulation is relatively clearer, more friendly to crypto assets and Web3 projects;",
+            "High density of capital, projects, and talent;",
+            "Frequent offline activities, conferences, and informal social interactions.",
+          ],
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "The survey and interviews clearly show a trend:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "The closer to management, core protocols, or startup roles, the more developers tend to cluster in these cities.",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "The reason is that high-level Web3 positions—such as CTOs, partners, core maintainers—",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "Highly depend on offline trust and long-term relationship building.",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "Remote collaboration can complete code, but it's hard to fully replace:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "list",
+          items: [
+            "Trust in architectural decisions;",
+            "Early-stage negotiations and consensus in projects;",
+            "Informal interactions between investors, partners, and core contributors.",
+          ],
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "4.3 Digital Nomads: Freedom, Legality, and Tax Boundaries",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "There's also a group of developers who choose a seemingly freer but fuzzier path—digital nomads.",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "They often travel to:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "list",
+          items: [
+            "Southeast Asia (Chiang Mai, Bangkok, Bali);",
+            "Some Japanese cities;",
+            "Occasional short-term moves between different countries.",
+          ],
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "These developers typically pursue:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "list",
+          items: [
+            "Lower living costs;",
+            "Higher quality of life;",
+            "Maximum freedom over location and time.",
+          ],
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "But the survey also frequently reveals concerns:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "list",
+          items: [
+            "Visa legality is ambiguous;",
+            "Tax resident status is unclear;",
+            "Lack of medical, social security, and long-term security.",
+          ],
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "This means the digital nomad model requires extremely high personal discipline and risk awareness.",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "It's suitable for a minority who can clearly manage legal and financial boundaries, not a \"default safe option.\"",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "heading",
+          level: 3,
+          text: "4.4 How Does Geographic Location Affect Career Ceiling?",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "paragraph",
+          text: "Overall, geographic choice is not a lifestyle issue, but part of career strategy:",
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "list",
+          items: [
+            "<strong>Geo-arbitrageurs</strong>:\nAdvantages: Cash flow, cost-effectiveness\nRisks: Limited ceiling and network",
+            "<strong>Hub city entrants</strong>:\nAdvantages: Influence, long-term opportunities\nCosts: Living costs and uncertainty",
+            "<strong>Digital nomads</strong>:\nAdvantages: Freedom\nRisks: Compliance and sustainability",
+          ],
+          afterChart: "geoDistGroup",
+        },
+        {
+          type: "blockquote",
+          text: "Insight 4: Web3's globalization hasn't eliminated the significance of \"location,\" but has redefined it.",
+          afterChart: "geoDistGroup",
+        },
+      ],
+    },
+    {
+      id: "sec5",
       title:
-        "4. Tech Stack & Public Chain Preferences: Not Separated from Web2, Just Opening New Territory Beside the Main Battlefield",
+        "5. Tech Stack & Public Chain Preferences: Not Separated from Web2, Just Opening New Territory Beside the Main Battlefield",
       charts: [
         {
           id: "techStackChart",
-          title: "4.1 Primary Tech Stack",
+          title: "5.1 Primary Tech Stack",
           caption: "Figure 11: Primary Web2 tech stack of surveyed developers.",
         },
         {
@@ -218,16 +604,10 @@ const contentEn = {
         },
         {
           id: "chainsObserveGroup",
-          title: "4.2 Public Chain Preferences (Overall & Observers)",
+          title: "5.2 Public Chain Preferences & GitHub Contributions",
           caption:
-            "Figures 12–13: Public chain attention among overall sample and Web2 observers.",
-          charts: ["chainsOverallChart", "chainsWeb2ObserveChart"],
-        },
-        {
-          id: "chainsStudentObserveChart",
-          title: "4.3 Public Chain Interest Among Student Observers",
-          caption:
-            "Figure 14: Public chain attention among student samples observing Web3.",
+            "Figures 12–15: Public chain attention among overall sample and Web2 observers, student interest in public chains, and Chinese-speaking developer ecosystem contributions on Github (Web3Insight data).",
+          charts: ["chainsOverallChart", "chainsWeb2ObserveChart", "chainsStudentObserveChart", "githubContribChart"],
         },
       ],
       content: [
@@ -257,20 +637,7 @@ const contentEn = {
         },
         {
           type: "paragraph",
-          text: 'In the survey design, we didn\'t list specific languages or libraries like "Solidity / web3.js / ethers.js" as separate options. Instead, we used the more realistic "ecosystem stack" dimension to categorize Web3 tech stacks, such as:',
-          afterChart: "web3StackChart",
-        },
-        {
-          type: "list",
-          items: [
-            "EVM ecosystem stack (Ethereum, Polygon, BNB Chain, Base, etc.)",
-            "Move ecosystem stack (Aptos, Sui)",
-            "Solana / Rust ecosystem stack",
-            "ZK tech stack (zkSync, Starknet, Scroll, Linea, etc.)",
-            "Various Layer2 / Rollup expansion stacks (Arbitrum, Optimism, Base, etc.)",
-            "Cosmos ecosystem stack, and Bitcoin / Lightning / Ordinals related ecosystems",
-            "Decentralized storage (IPFS, Filecoin, Arweave) and cross-chain / interoperability stacks (LayerZero, Axelar, Wormhole, etc.)",
-          ],
+          text: 'In the survey design, we didn\'t list specific languages or libraries like "Solidity / web3.js / ethers.js" as separate options. Instead, as shown in Figure 11.1, we used the more realistic "ecosystem stack" dimension to categorize Web3 tech stacks.',
           afterChart: "web3StackChart",
         },
         {
@@ -295,46 +662,46 @@ const contentEn = {
         },
         {
           type: "paragraph",
-          text: 'In other words: For observers, the barrier isn\'t "knowing Solidity," but whether they can take that step beyond familiar Web2 stacks to write the first project that truly runs on-chain; for those already in the game, EVM + Solidity remains the main battlefield with the highest opportunity density, while Move, Solana, ZK and other new stacks are more like "second languages" on top of that foundation.',
+          text: 'In other words: For observers, the barrier isn\'t "knowing Solidity," but whether they can take that step beyond familiar Web2 stacks to write the first project that truly runs on-chain; for those already in the game, EVM + Solidity remains the main battlefield with the highest opportunity density, while Move, Solana, ZK and other new stacks are more like "second languages" on top of that foundation, bringing more technical premiums.',
           afterChart: "web3StackChart",
         },
         {
           type: "paragraph",
           text: 'The Ethereum-centric pattern in the Chinese-speaking sample is highly consistent with global data: it\'s almost the "default option" for all developers entering Web3. Solana and Bitcoin form a clear second tier, with BNB, Sui, various L2s and new chains following closely.',
-          afterChart: "chainsObserveGroup",
+          afterChart: "githubContribChart",
         },
         {
           type: "paragraph",
           text: "Compared to working Web2 developers, students show higher interest in BNB, Sui and other new chains, with more dispersed ecosystems and greater willingness to follow new narratives.",
-          afterChart: "chainsStudentObserveChart",
+          afterChart: "githubContribChart",
         },
         {
           type: "blockquote",
-          text: 'Insight 4: From technology to ecosystem, Web3 isn\'t a parallel universe, but shares most engineering foundations with Web2, only redesigned at the "consensus + incentives" layer.',
-          afterChart: "chainsStudentObserveChart",
+          text: 'Insight 5: From technology to ecosystem, Web3 isn\'t a parallel universe, but shares most engineering foundations with Web2, only redesigned at the "consensus + incentives" layer.',
+          afterChart: "githubContribChart",
         },
       ],
     },
     {
-      id: "sec5",
+      id: "sec6",
       title:
-        "5. Motivations, Entry Paths & Challenges: From Idealized Narratives to Engineers' Pragmatic Calculus",
+        "6. Motivations, Entry Paths & Challenges: From Idealized Narratives to Engineers' Pragmatic Calculus",
       charts: [
         {
           id: "motiveWeb3Chart",
-          title: "5.1 Primary Motivations for Entering/Wanting to Enter Web3",
+          title: "6.1 Primary Motivations for Entering/Wanting to Enter Web3",
           caption: "Figure 15: Primary reasons respondents chose Web3.",
         },
         {
           id: "learnEntryGroup",
-          title: "5.2 Paths to Learn/Enter Web3",
+          title: "6.2 Paths to Learn/Enter Web3",
           caption:
             "Figures 16–17: Channels to learn about Web3 and most effective entry methods.",
           charts: ["learnWeb3Chart", "entryHelpChart"],
         },
         {
           id: "challengesExitGroup",
-          title: "5.3 Transition Challenges & Exit Reasons",
+          title: "6.3 Transition Challenges & Exit Reasons",
           caption:
             "Figures 18–19: Main challenges transitioning from Web2 to Web3 and reasons structure among those who exited.",
           charts: ["challengeTransitionChart", "exitReasonChart"],
@@ -393,6 +760,21 @@ const contentEn = {
         },
         {
           type: "paragraph",
+          text: "For many developers, the real entry path isn't \"finish courses → get an offer,\" but a more fragmented and community-driven process:",
+          afterChart: "entryHelpChart",
+        },
+        {
+          type: "paragraph",
+          text: "Reading documentation and source code → Participating in open source or hackathons → Building trust in the community → Getting the first opportunity.",
+          afterChart: "entryHelpChart",
+        },
+        {
+          type: "paragraph",
+          text: "This is also why, in Web3, the weight of community, open source, and personal portfolios often exceeds that of a resume.",
+          afterChart: "entryHelpChart",
+        },
+        {
+          type: "paragraph",
           text: "Challenges mainly fall into four categories:",
           afterChart: "exitReasonChart",
         },
@@ -412,34 +794,48 @@ const contentEn = {
           afterChart: "exitReasonChart",
         },
         {
+          type: "paragraph",
+          text: "It's worth noting that most who left haven't rejected blockchain technology or the value of open source itself.",
+          afterChart: "exitReasonChart",
+        },
+        {
+          type: "paragraph",
+          text: "What they left is more about disappointment with the current industry form, project stability, and job security, rather than a rejection of \"decentralization\" or \"open source collaboration.\"",
+          afterChart: "exitReasonChart",
+        },
+        {
+          type: "paragraph",
+          text: "This means: leaving doesn't equal ending—it's more like a phased exit. Many are still watching and don't rule out returning in the future.",
+          afterChart: "exitReasonChart",
+        },
+        {
           type: "blockquote",
-          text: "Insight 5: From motivation to exit, engineers' calculus becomes clearer—whether it's worth betting limited career capital on Web3 depends on: learning costs, opportunity density, compliance risks, and comparison with other tracks (especially AI).",
+          text: "Insight 6: From motivation to exit, engineers' calculus becomes clearer—whether it's worth betting limited career capital on Web3 depends on: learning costs, opportunity density, compliance risks, and comparison with other tracks (especially AI).",
           afterChart: "exitReasonChart",
         },
       ],
     },
     {
-      id: "sec6",
+      id: "sec7",
       title:
-        "6. Open Source Participation: Highly Dependent, But Participation Depth Has Huge Room to Grow",
+        "7. Open Source Participation: Highly Dependent, But Participation Depth Has Huge Room to Grow",
       charts: [
         {
           id: "osKnowUseGroup",
-          title: "6.1 Open Source Awareness & Usage Ratio",
+          title: "7.1 Open Source Awareness & Usage Ratio",
           caption:
             "Figures 20–21: Level of open source awareness and daily usage ratio.",
           charts: ["osKnowChart", "osUseRatioChart"],
         },
         {
           id: "osParticipationGroup",
-          title: "6.2 Participation Methods, Motivations & Barriers",
-          caption:
-            "Figures 22–24: Methods, motivations, and main barriers to participating in open source.",
-          charts: ["osWayChart", "osMotiveChart", "osBlockerChart"],
+          title: "7.2 Methods, Motivations & Barriers to Open Source Participation",
+          caption: "Figures 22–24: Comparison of open source participation, motivations, and main barriers.",
+          charts: ["osWayWeb3Chart", "osWayWeb2Chart", "osMotiveChart", "osBlockerChart"],
         },
         {
           id: "osProjectFutureGroup",
-          title: "6.3 Project Openness Level & Future Outlook",
+          title: "7.3 Project Openness Level & Future Outlook",
           caption:
             "Figures 25–27: Understanding of open source licenses, project openness level, and judgment on open source's role in the next five years.",
           charts: ["osLicenseChart", "projectOpenChart", "osFutureChart"],
@@ -484,33 +880,48 @@ const contentEn = {
           afterChart: "osProjectFutureGroup",
         },
         {
+          type: "paragraph",
+          text: "Compared to global developer surveys like GitHub and Stack Overflow, the proportion of this sample who have submitted Issues or PRs is notably higher.",
+          afterChart: "osProjectFutureGroup",
+        },
+        {
+          type: "paragraph",
+          text: "This indicates that Chinese-speaking Web3 developers aren't just \"using open source,\" but are participating in open source collaboration to a significant degree.",
+          afterChart: "osProjectFutureGroup",
+        },
+        {
+          type: "paragraph",
+          text: "At the same time, Web3 is exploring an open source path different from traditional volunteer models: through Grants, Bounties, Tokens, and reputation mechanisms to provide real incentives for sustained contributions. This is both an opportunity and an experiment not yet fully mature.",
+          afterChart: "osProjectFutureGroup",
+        },
+        {
           type: "blockquote",
-          text: 'Insight 6: Current Web3 is more like "standing on the shoulders of open source giants, but not yet mature in how to walk in open source ways." To truly inherit the open source spirit, more work is needed in understanding licenses, project openness strategies, and governance structures.',
+          text: 'Insight 7: Current Web3 is more like "standing on the shoulders of open source giants, but not yet mature in how to walk in open source ways." To truly inherit the open source spirit, more work is needed in understanding licenses, project openness strategies, and governance structures.',
           afterChart: "osProjectFutureGroup",
         },
       ],
     },
     {
-      id: "sec7",
+      id: "sec8",
       title:
-        "7. Community & Work Environment: Hackathons, Opportunities, and Security",
+        "8. Community & Work Environment: Hackathons, Opportunities, and Security",
       charts: [
         {
           id: "communityEventsGroup",
-          title: "7.1 Community Participation & Technical Events",
+          title: "8.1 Community Participation & Technical Events",
           caption:
             "Figures 28–30: Whether participating in community and technical events, and preferred event types.",
           charts: ["communityChart", "eventsChart", "eventTypeChart"],
         },
         {
           id: "communityNeedChart",
-          title: "7.2 Expectations for Community Support",
+          title: "8.2 Expectations for Community Support",
           caption: "Figure 31: Additional support hoped from the community.",
         },
         {
           id: "envBackWeb2Group",
           title:
-            "7.3 Feelings About Web3 Work Environment & Whether to Return to Web2",
+            "8.3 Feelings About Web3 Work Environment & Whether to Return to Web2",
           caption:
             "Figures 32–33: Environment satisfaction among working Web3 professionals and whether considering returning to Web2.",
           charts: ["envSatisChart", "backWeb2Chart"],
@@ -529,12 +940,27 @@ const contentEn = {
         },
         {
           type: "paragraph",
+          text: "For many Chinese-speaking Web3 developers, the value of community is not primarily reflected in \"how much new knowledge is gained,\" but in the connection of opportunities and trust.",
+          afterChart: "communityNeedChart",
+        },
+        {
+          type: "paragraph",
+          text: "Communities are key nodes for them to access projects, filter risks, find partners, and get referrals and feedback.",
+          afterChart: "communityNeedChart",
+        },
+        {
+          type: "paragraph",
+          text: "In a high-uncertainty industry, communities often serve as \"career buffers,\" which is why even those who have left Web3 often choose to stay in the community.",
+          afterChart: "communityNeedChart",
+        },
+        {
+          type: "paragraph",
           text: 'In terms of environment satisfaction, most people fall into "average" and "satisfied" categories; on whether to return to Web2, most Web3 practitioners don\'t consider it in the short term, but about a quarter are in a wavering state.',
           afterChart: "backWeb2Chart",
         },
         {
           type: "blockquote",
-          text: 'Insight 7: The core contradiction of the Web3 work environment isn\'t absolute income, but "opportunity density × uncertainty." Whoever can build more robust and sustainable career paths locally will be better able to retain developers.',
+          text: 'Insight 8: The core contradiction of the Web3 work environment isn\'t absolute income, but "opportunity density × uncertainty." Whoever can build more robust and sustainable career paths locally will be better able to retain developers.',
           afterChart: "backWeb2Chart",
         },
       ],
@@ -560,35 +986,23 @@ const contentEn = {
       },
       {
         type: "paragraph",
-        text: "Perhaps we can summarize Web3 in the eyes of Chinese-speaking developers in 2025 this way:",
-      },
-      {
-        type: "blockquote",
-        text: "It's not a destined utopia, nor a bubble that has already burst, but a testing ground for engineers and capital still in experimentation. For those willing to learn long-term, embrace uncertainty, and grow in open source, there's still a future worth betting on here.",
-      },
-    ],
-  },
-
-  contributors: {
-    title: "Contributors",
-    content: [
-      {
-        type: "paragraph",
-        text: "This report was completed through collaboration within the Chinese-speaking Web3 open source community. Key contributors include:",
+        text: "Looking at the cycle from 2021–2025, an increasingly clear conclusion is:",
       },
       {
         type: "list",
         items: [
-          "<strong>Survey Design & Execution</strong>: Jointly initiated by multiple Chinese-speaking Web3 developer communities, including developer groups, hackathon organizers, and tech media.",
-          "<strong>Data Collection & Cleaning</strong>: The technical team collected data via online surveys in early 2025, spanning 4 weeks, receiving 240+ responses, and finally screening 220 valid samples.",
-          "<strong>Data Analysis & Visualization</strong>: Data analysts used open source tools for data processing, with Chart.js implementing chart visualization.",
-          "<strong>Report Writing & Editing</strong>: The technical writing team drafted the report based on data insights, ensuring objectivity and readability.",
-          "<strong>Open Source Community Contributions</strong>: This report adopts an open collaboration model; community members can submit issues and improvement suggestions via GitHub.",
+          "Web3 still offers opportunities;",
+          "But it no longer rewards participants who \"rely only on luck and short-term narratives\";",
+          "Those with real upside potential are: people who can build reputation in open source, establish trust in communities, and form irreplaceability in technology.",
         ],
       },
       {
         type: "paragraph",
-        text: "Special thanks to all developers who participated in the survey—your genuine feedback made this report possible.",
+        text: "Perhaps we can summarize Web3 in the eyes of Chinese-speaking developers in 2025 this way:",
+      },
+      {
+        type: "blockquote",
+        text: "It's not a destined utopia, nor a bubble that has already burst, but a testing ground for engineers and capital still in experimentation. For those willing to learn long-term, embrace uncertainty, and grow in open source, there's still a future worth betting on here, and community is the true infrastructure connecting these long-term believers.",
       },
     ],
   },
@@ -603,12 +1017,12 @@ const contentEn = {
       {
         type: "list",
         items: [
-          "<strong>Submit Issues and Suggestions</strong>: If you find errors, omissions, or have suggestions for improvement in the report, please submit an Issue on GitHub.",
+          "<strong>Submit Issues and Suggestions</strong>: If you find errors, omissions, or have suggestions for improvement in the report, please submit an Issue on <a href=\"https://github.com/openbuildxyz/web3-chinese-speaking-devs-report\" target=\"_blank\">GitHub</a>.",
           "<strong>Contribute Code</strong>: We accept Pull Requests to fix bugs, add new features, or improve documentation. Please check open Issues first to find areas where you can help.",
           "<strong>Improve Translations</strong>: If you find inaccurate translations or better ways to express something in Chinese or English, your improvements are welcome.",
           "<strong>Share and Spread</strong>: Help share this report to your communities, social media, or technical circles to reach more developers.",
           "<strong>Provide Data Insights</strong>: If you have data analysis experience, you can provide deeper data insights or visualization suggestions.",
-          "<strong>Join Discussions</strong>: Participate in discussions about report content, methodology, or future directions in GitHub Discussions.",
+          "<strong>Join Discussions</strong>: Participate in discussions about report content, methodology, or future directions in <a href=\"https://github.com/openbuildxyz/web3-chinese-speaking-devs-report\" target=\"_blank\">GitHub Discussions</a>.",
         ],
       },
       { type: "paragraph", text: "Contribution Guidelines:" },
@@ -633,12 +1047,16 @@ const contentEn = {
     content: [
       {
         type: "paragraph",
+        text: "This report is jointly initiated by OpenBuild, GCC, 登链, Creators, and OpenCAS, with data analysis services provided by Web3insight.",
+      },
+      {
+        type: "paragraph",
         text: "The completion of this report would not have been possible without support from the following organizations and individuals:",
       },
       {
         type: "list",
         items: [
-          "<strong>Community Partners</strong>: Thanks to major Chinese-speaking Web3 developer communities, hackathon organizers, and tech Meetup organizers for assistance with promotion.",
+          "<strong>Community Partners (in no particular order)</strong>: Thanks to Monad Chinese, Solana Chinese, HOH, Starknet Chinese, Starknet Astro, KeyMapDAO, Alcove, Vana Chinese, Victor Zhang (SmartToken), Maggie (ETHGlobal), Defihack Labs, Henry Lee (KiteAI), and other communities/projects/contributors for their support.",
           "<strong>Technical Support</strong>: Thanks to GitHub, Stack Overflow, JetBrains, and other platforms for providing public developer report data, which provided important references for our comparative analysis.",
           "<strong>Open Source Projects</strong>: The main tech stack used in this report includes Chart.js (charts), ChartDataLabels (data labels plugin), and other open source projects. Thanks to the maintainers of these projects.",
           "<strong>All Participants</strong>: Thanks to the 220 developers who took the time to fill out the survey—each of your responses contributed value to this report.",

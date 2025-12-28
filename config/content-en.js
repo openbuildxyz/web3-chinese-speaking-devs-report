@@ -30,9 +30,9 @@ const contentEn = {
         {
           type: "list",
           items: [
-            "First, who constitutes the current and potential Chinese-speaking Web3 developer community?",
-            "Second, what commonalities and differentiations do they exhibit in terms of transition paths, tech stacks, income and career development, and open source participation?",
-            "Third, how do these characteristics compare with conclusions from global developer surveys like GitHub, JetBrains, and Stack Overflow regarding Web2/open source ecosystems, and what do they mean for projects, communities, and policymakers?",
+            "Who constitutes the current and potential Chinese-speaking Web3 developer community?",
+            "What commonalities and differentiations do they exhibit in terms of transition paths, tech stacks, income and career development, and open source participation?",
+            "How do these characteristics compare with conclusions from global developer surveys like GitHub, JetBrains, and Stack Overflow regarding Web2/open source ecosystems, and what do they mean for projects, communities, and policymakers?",
           ],
         },
         {
@@ -42,11 +42,19 @@ const contentEn = {
         },
         {
           type: "paragraph",
-          text: "A total of 220 valid questionnaires were collected, covering the period from November to December 2025. In terms of distribution, the largest group consists of people still in Web2 or on campus but continuously observing Web3, nearly half. The second group consists of developers already working full-time or long-term in Web3, also a significant number. There's also a small but important group: those who have left or are preparing to leave Web3.",
+          text: "A total of 220 valid questionnaires were collected. In terms of overall distribution:",
+        },
+        {
+          type: "list",
+          items: [
+            "The largest group consists of people still in Web2 or on campus but continuously observing Web3, nearly half;",
+            "The second group consists of developers already working full-time or long-term in Web3, also a significant number;",
+            "There's also a small but important group: those who have left or are preparing to leave Web3.",
+          ],
         },
         {
           type: "paragraph",
-          text: "This resembles the structure when new technologies enter a \"cooling-off period\": most are observing, a few have jumped in, and a very small number have experienced it and left.",
+          text: "This closely resembles the typical structure when new technologies enter a \"cooling-off period\": most are observing, a few have jumped in, and a very small number have experienced it and left.",
         },
         {
           type: "paragraph",
@@ -104,17 +112,23 @@ const contentEn = {
       charts: [
         {
           id: "statusChart",
+
+          name: "Current Status",
           title: "1.1 Distribution by Current Status",
           caption:
             "Figure 1: Distribution of 220 valid samples by current status.",
         },
         {
           id: "ageOverallChart",
+
+          name: "Overall Age",
           title: "1.2 Overall Age Structure",
           caption: "Figure 2: Overall age distribution of the sample.",
         },
         {
           id: "ageStatusChart",
+
+          name: "Age by Status",
           title: "1.3 Age × Current Status (Structural Overview)",
           caption:
             'Figure 3: Age group structure under different "current status" categories.',
@@ -128,11 +142,11 @@ const contentEn = {
         {
           type: "list",
           items: [
-            "<strong>Ex-Web2, now in Web3</strong>;",
-            "<strong>Students already/directly in Web3</strong>;",
-            "<strong>Web2 observers</strong>;",
-            "<strong>Student observers</strong>;",
-            "<strong>Left or preparing to leave Web3</strong>.",
+            "<strong>Transitioned from Web2 to Web3</strong>;",
+            "<strong>Student stage already/entering Web3 directly</strong>;",
+            "<strong>Working in Web2, observing Web3</strong>;",
+            "<strong>Current student, observing Web3</strong>;",
+            "<strong>Already left or preparing to leave Web3</strong>.",
           ],
         },
         {
@@ -173,14 +187,19 @@ const contentEn = {
         },
         {
           type: "paragraph",
-          text: "Overall, ages are concentrated in the 20–35 range, highly consistent with global developer profiles. However, compared to general surveys like Stack Overflow:",
+          text: "Overall, ages are concentrated in the 20–35 range, highly consistent with global developer profiles.",
+          afterChart: "ageStatusChart",
+        },
+        {
+          type: "paragraph",
+          text: "Compared to general surveys like Stack Overflow:",
           afterChart: "ageStatusChart",
         },
         {
           type: "list",
           items: [
-            "The proportion of students and recent graduates is slightly higher, indicating that the new generation of developers considers Web3 as a career choice earlier.",
-            "The proportion of senior engineers over 35 is also not low—among them, some are trying it out while others have already exited, making more calm judgments about trends.",
+            "The proportion of students and recent graduates is slightly higher, indicating that the new generation of developers considers Web3 as a career choice earlier;",
+            "The sample also includes a certain proportion of senior engineers over 35—among them, some are trying it out while others have already exited, often making more calm judgments about trends.",
           ],
           afterChart: "ageStatusChart",
         },
@@ -198,23 +217,36 @@ const contentEn = {
       charts: [
         {
           id: "eduSchoolGroup",
-          title: "2.1 Highest Education & Institution Types",
-          caption:
-            "Figures 4–5: Distribution of highest education and institution types.",
+          title: "2.1 Highest Education and Institution Types",
           charts: ["eduChart", "schoolChart"],
+          description: true,
+        },
+        {
+          id: "eduChart",
+          name: "Education",
+          caption:
+            "Figure 4: Distribution of highest education of surveyed Web3 developers.",
+        },
+        {
+          id: "schoolChart",
+          name: "Institution",
+          caption:
+            "Figure 5: Distribution of institution types of surveyed Web3 developers.",
         },
         {
           id: "englishChart",
+
+          name: "English Proficiency",
           title: "2.2 English Proficiency (Categorized Overview)",
           caption:
-            "Figure 6: English proficiency levels consolidated from multiple questionnaire options.",
+            "Figure 6: English proficiency levels consolidated from multiple questionnaire options of surveyed Web3 developers.",
         },
       ],
       content: [
         {
           type: "paragraph",
           text: "From the education and institution distribution, we can see:",
-          afterChart: "eduSchoolGroup",
+          afterChart: "schoolChart",
         },
         {
           type: "list",
@@ -223,12 +255,12 @@ const contentEn = {
             'Nearly half come from regular undergraduate institutions, showing that Web3 isn\'t confined to an elite circle of "top domestic + overseas prestigious schools."',
             "The proportion of world-class universities is slightly higher, partly because: students from top schools find it easier to participate in hackathons and research projects, and are more willing to experiment in new fields.",
           ],
-          afterChart: "eduSchoolGroup",
+          afterChart: "schoolChart",
         },
         {
           type: "paragraph",
           text: "For project teams, a practical suggestion: <strong>if you only focus on a tiny number of prestigious schools, you'll miss more than half of potential excellent contributors</strong>.",
-          afterChart: "eduSchoolGroup",
+          afterChart: "schoolChart",
         },
         {
           type: "paragraph",
@@ -275,17 +307,37 @@ const contentEn = {
           id: "salaryIncomeGroup",
           title: "3.1 Fixed Annual Salary vs Variable Income",
           caption:
-            "Figures 7–8: Distribution of fixed annual salary and variable income.",
+            "Figures 10–11: Distribution of fixed annual salary and variable income of surveyed Web3 developers.",
           charts: ["salaryFixedChart", "salaryVarChart"],
         },
+        
         {
+          id: "salaryFixedChart",
+          name: "Fixed Salary",
+        },
+
+        {
+          id: "salaryVarChart",
+          name: "Variable Income",
+        },
+{
           id: "incomeSatisGroup",
           title: "3.2 Income Source Composition & Salary Satisfaction",
           caption:
-            "Figures 9–10: Income source composition and subjective feelings toward Web3 salaries.",
+            "Figures 12–13: Income source composition and subjective feelings toward Web3 salaries of surveyed Web3 developers.",
           charts: ["incomeSourceChart", "salarySatisChart"],
         },
-      ],
+      
+        {
+          id: "incomeSourceChart",
+          name: "Income Sources",
+        },
+
+        {
+          id: "salarySatisChart",
+          name: "Salary Satisfaction",
+        },
+],
       content: [
         {
           type: "paragraph",
@@ -305,7 +357,7 @@ const contentEn = {
           type: "list",
           items: [
             'Web2 developers\' income is mainly locked in "fixed salary + year-end bonus."',
-            'Web3 developers are more like holding a "stable base salary + small high-volatility options" combo ticket.',
+            'Web3 developers are more like holding a "relatively stable base salary + small high-volatility options" combination.',
           ],
           afterChart: "salaryIncomeGroup",
         },
@@ -343,20 +395,32 @@ const contentEn = {
     },
     {
       id: "sec4",
-      title: "4. Geographic Distribution & Global Survival — The Real Spatial Structure of Web3 Developers",
+      title: "4. Geographic Distribution & Global Survival: The Real Spatial Structure of Web3 Developers",
       charts: [
         {
           id: "workModelChart",
+
+          name: "Work Model",
           title: "Web3 Developer Work Models",
-          caption: "Figure: Distribution of Web3 developer work models.",
+          caption: "Figure 14: Distribution of work models of surveyed Web3 developers.",
         },
         {
           id: "geoDistGroup",
           title: "Developer Regional and City Level Distribution",
-          caption: "Figure: Distribution of surveyed developers by region and city tier.",
+          caption: "Figures 15–16: Distribution of surveyed Web3 developers by region and city tier.",
           charts: ["geoRegionChart", "geoCityLevelChart"],
         },
-      ],
+      
+        {
+          id: "geoRegionChart",
+          name: "Regional Distribution",
+        },
+
+        {
+          id: "geoCityLevelChart",
+          name: "City Tier Distribution",
+        },
+],
       content: [
         {
           type: "paragraph",
@@ -593,32 +657,59 @@ const contentEn = {
       charts: [
         {
           id: "techStackChart",
+
+          name: "Web2 Tech Stack",
           title: "5.1 Primary Tech Stack",
-          caption: "Figure 11: Primary Web2 tech stack of surveyed developers.",
+          caption: "Figure 17: Primary Web2 tech stack of surveyed Web3 developers.",
         },
         {
           id: "web3StackChart",
+
+          name: "Web3 Ecosystem",
           title: "Web3 Ecosystem Tech Stack Distribution (Overall Sample)",
           caption:
-            "Figure 11.1: Web3 ecosystem tech stack distribution used by surveyed developers (multiple choice).",
+            "Figure 18: Web3 ecosystem tech stack distribution used by surveyed Web3 developers (multiple choice).",
         },
         {
-          id: "chainsObserveGroup",
-          title: "5.2 Public Chain Preferences & GitHub Contributions",
+          id: "chainsObserveGroup1",
+          title: "5.2 Public Chain Preferences & GitHub Contributions (Part 1)",
           caption:
-            "Figures 12–15: Public chain attention among overall sample and Web2 observers, student interest in public chains, and Chinese-speaking developer ecosystem contributions on Github (Web3Insight data).",
-          charts: ["chainsOverallChart", "chainsWeb2ObserveChart", "chainsStudentObserveChart", "githubContribChart"],
+            "Figures 19–20: Public chain attention among overall sample and Web2 observers.",
+          charts: ["chainsOverallChart", "chainsWeb2ObserveChart"],
         },
-      ],
+
+        {
+          id: "chainsOverallChart",
+          name: "Public Chain Attention",
+        },
+
+        {
+          id: "chainsWeb2ObserveChart",
+          name: "Web2 Observers' Chain Interest",
+        },
+
+        {
+          id: "chainsObserveGroup2",
+          title: "5.2 Public Chain Preferences & GitHub Contributions (Part 2)",
+          caption:
+            "Figures 21–22: Student interest in public chains, and Chinese-speaking developer ecosystem contributions on GitHub (Web3Insight data).",
+          charts: ["chainsStudentObserveChart", "githubContribChart"],
+        },
+
+        {
+          id: "chainsStudentObserveChart",
+          name: "Student Observers' Chain Interest",
+        },
+
+        {
+          id: "githubContribChart",
+          name: "GitHub Ecosystem Contributions",
+        },
+],
       content: [
         {
           type: "paragraph",
-          text: "(Note: Figure 11 focuses on Web2 general tech stack at the language/framework level. For more Web3-specific ecosystem stacks like EVM/Move/Solana/ZK, we provide a separate summary and analysis in section 4.1.1 below.)",
-          afterChart: "techStackChart",
-        },
-        {
-          type: "paragraph",
-          text: "Tech stack distribution closely matches global trends:",
+          text: "Web2 tech stack distribution closely matches global trends:",
           afterChart: "techStackChart",
         },
         {
@@ -689,24 +780,46 @@ const contentEn = {
       charts: [
         {
           id: "motiveWeb3Chart",
+
+          name: "Motivations",
           title: "6.1 Primary Motivations for Entering/Wanting to Enter Web3",
-          caption: "Figure 15: Primary reasons respondents chose Web3.",
+          caption: "Figure 23: Primary reasons surveyed Web3 developers chose Web3.",
         },
         {
           id: "learnEntryGroup",
           title: "6.2 Paths to Learn/Enter Web3",
           caption:
-            "Figures 16–17: Channels to learn about Web3 and most effective entry methods.",
+            "Figures 24–25: Channels to learn about Web3 and most effective entry methods of surveyed Web3 developers.",
           charts: ["learnWeb3Chart", "entryHelpChart"],
         },
+        
         {
+          id: "learnWeb3Chart",
+          name: "Web3 Learning Channels",
+        },
+
+        {
+          id: "entryHelpChart",
+          name: "Effective Entry Methods",
+        },
+{
           id: "challengesExitGroup",
           title: "6.3 Transition Challenges & Exit Reasons",
           caption:
-            "Figures 18–19: Main challenges transitioning from Web2 to Web3 and reasons structure among those who exited.",
+            "Figures 26–27: Main challenges transitioning from Web2 to Web3 and reasons structure among those who exited of surveyed Web3 developers.",
           charts: ["challengeTransitionChart", "exitReasonChart"],
         },
-      ],
+      
+        {
+          id: "challengeTransitionChart",
+          name: "Transition Challenges",
+        },
+
+        {
+          id: "exitReasonChart",
+          name: "Exit Reasons",
+        },
+],
       content: [
         {
           type: "paragraph",
@@ -760,12 +873,7 @@ const contentEn = {
         },
         {
           type: "paragraph",
-          text: "For many developers, the real entry path isn't \"finish courses → get an offer,\" but a more fragmented and community-driven process:",
-          afterChart: "entryHelpChart",
-        },
-        {
-          type: "paragraph",
-          text: "Reading documentation and source code → Participating in open source or hackathons → Building trust in the community → Getting the first opportunity.",
+          text: "For many developers, the real entry path isn't finish courses → get an offer, but a more fragmented and community-driven process: Reading documentation and source code → Participating in open source or hackathons → Building trust in the community → Getting the first opportunity.",
           afterChart: "entryHelpChart",
         },
         {
@@ -824,21 +932,87 @@ const contentEn = {
           id: "osKnowUseGroup",
           title: "7.1 Open Source Awareness & Usage Ratio",
           caption:
-            "Figures 20–21: Level of open source awareness and daily usage ratio.",
+            "Figures 28–29: Level of open source awareness and daily usage ratio of surveyed Web3 developers.",
           charts: ["osKnowChart", "osUseRatioChart"],
         },
+        
         {
-          id: "osParticipationGroup",
-          title: "7.2 Methods, Motivations & Barriers to Open Source Participation",
-          caption: "Figures 22–24: Comparison of open source participation, motivations, and main barriers.",
-          charts: ["osWayWeb3Chart", "osWayWeb2Chart", "osMotiveChart", "osBlockerChart"],
+          id: "osKnowChart",
+          name: "Open Source Awareness",
+        },
+
+        {
+          id: "osUseRatioChart",
+          name: "Open Source Usage",
+        },
+        {
+          id: "osParticipationGroup1",
+          title: "7.2 Methods, Motivations & Barriers to Open Source Participation (Part 1)",
+          caption: "Figures 30–31: Comparison of open source participation of surveyed Web3 and Web2 developers.",
+          charts: ["osWayWeb3Chart", "osWayWeb2Chart"],
+        },
+
+        {
+          id: "osWayWeb3Chart",
+          name: "Web3 Open Source Participation",
+        },
+
+        {
+          id: "osWayWeb2Chart",
+          name: "Web2 Open Source Participation",
+        },
+
+        {
+          id: "osParticipationGroup2",
+          title: "7.2 Methods, Motivations & Barriers to Open Source Participation (Part 2)",
+          caption: "Figures 32–33: Motivations and main barriers to open source participation of surveyed Web3 developers.",
+          charts: ["osMotiveChart", "osBlockerChart"],
+        },
+
+        {
+          id: "osMotiveChart",
+          name: "Participation Motivation",
+        },
+
+        {
+          id: "osBlockerChart",
+          name: "Participation Barriers",
         },
         {
           id: "osProjectFutureGroup",
           title: "7.3 Project Openness Level & Future Outlook",
           caption:
-            "Figures 25–27: Understanding of open source licenses, project openness level, and judgment on open source's role in the next five years.",
-          charts: ["osLicenseChart", "projectOpenChart", "osFutureChart"],
+            "Figures 34–35: Understanding of open source licenses, project openness level of surveyed Web3 developers.",
+          charts: ["osLicenseChart", "projectOpenChart"],
+        },
+        
+        {
+          id: "osLicenseChart",
+          name: "License Understanding",
+        },
+
+        {
+          id: "projectOpenChart",
+          name: "Project Openness",
+        },
+
+        {
+          id: "osFutureChart",
+          name: "Open Source Future",
+        },
+{
+          id: "contribActivityChart",
+
+          name: "Contribution Activity",
+          title: "7.4 Chinese-Speaking Developer Contribution Activity Over 5 Years",
+          caption: "Figure 37: Chinese-speaking developer contribution activity from 2021–2025 (bar: active developers, line: YoY growth rate).",
+        },
+        {
+          id: "coreRepoContribChart",
+
+          name: "Core Repository Contributions",
+          title: "7.5 Chinese-Speaking Developer Contribution to Web3 Core Repositories",
+          caption: "Figure 38: Number and percentage of Chinese-speaking developers in major Web3 project core repositories (hover for details).",
         },
       ],
       content: [
@@ -895,9 +1069,14 @@ const contentEn = {
           afterChart: "osProjectFutureGroup",
         },
         {
+          type: "paragraph",
+          text: "However, according to data provided by Web3Insight, the participation of Chinese-speaking developers in the Web3 open source ecosystem declined significantly in 2025. Meanwhile, due to language barriers, collaboration habits, and other factors, the contribution activity of Chinese-speaking developers to core repositories in the Web3 ecosystem is relatively low compared to the base of Chinese-speaking open source developers. As a naturally open source industry, Chinese-speaking developers still have a long way to go in open source.",
+          afterChart: "coreRepoContribChart",
+        },
+        {
           type: "blockquote",
           text: 'Insight 7: Current Web3 is more like "standing on the shoulders of open source giants, but not yet mature in how to walk in open source ways." To truly inherit the open source spirit, more work is needed in understanding licenses, project openness strategies, and governance structures.',
-          afterChart: "osProjectFutureGroup",
+          afterChart: "coreRepoContribChart",
         },
       ],
     },
@@ -910,23 +1089,50 @@ const contentEn = {
           id: "communityEventsGroup",
           title: "8.1 Community Participation & Technical Events",
           caption:
-            "Figures 28–30: Whether participating in community and technical events, and preferred event types.",
+            "Figures 39–41: Whether participating in community and technical events, and preferred event types of surveyed Web3 developers.",
           charts: ["communityChart", "eventsChart", "eventTypeChart"],
         },
+        
         {
+          id: "communityChart",
+          name: "Community Participation",
+        },
+
+        {
+          id: "eventsChart",
+          name: "Event Attendance",
+        },
+
+        {
+          id: "eventTypeChart",
+          name: "Event Type Preferences",
+        },
+{
           id: "communityNeedChart",
+
+          name: "Community Needs",
           title: "8.2 Expectations for Community Support",
-          caption: "Figure 31: Additional support hoped from the community.",
+          caption: "Figure 42: Additional support hoped from the community of surveyed Web3 developers.",
         },
         {
           id: "envBackWeb2Group",
           title:
             "8.3 Feelings About Web3 Work Environment & Whether to Return to Web2",
           caption:
-            "Figures 32–33: Environment satisfaction among working Web3 professionals and whether considering returning to Web2.",
+            "Figures 43–44: Environment satisfaction among working Web3 professionals and whether considering returning to Web2 of surveyed Web3 developers.",
           charts: ["envSatisChart", "backWeb2Chart"],
         },
-      ],
+      
+        {
+          id: "envSatisChart",
+          name: "Environment Satisfaction",
+        },
+
+        {
+          id: "backWeb2Chart",
+          name: "Return to Web2 Interest",
+        },
+],
       content: [
         {
           type: "paragraph",
@@ -1032,7 +1238,6 @@ const contentEn = {
           "Be friendly and respectful: Community members should treat each other with respect and discuss issues constructively.",
           "Provide context: When submitting Issues or PRs, please describe the problem or improvement in detail.",
           "Follow existing style: Code and text should maintain consistency with existing style.",
-          "Small steps: Prioritize small, independent improvements; large improvements can be discussed first before implementation.",
         ],
       },
       {

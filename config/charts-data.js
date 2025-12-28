@@ -377,6 +377,47 @@ const chartDataConfig = {
     color: "#2563eb"
   },
 
+  contribActivityChart: {
+    type: "bar",
+    labels: {
+      zh: ["2021", "2022", "2023", "2024", "2025"],
+      en: ["2021", "2022", "2023", "2024", "2025"]
+    },
+    datasets: [
+      {
+        label: "活跃开发者",
+        data: [1617, 2219, 1989, 2376, 1711],
+        backgroundColor: "rgba(37, 99, 235, 0.5)",
+        yAxisID: "y"
+      },
+      {
+        label: "同比增长率 (%)",
+        data: [55.93, 37.23, -10.37, 19.46, -27.99],
+        type: "line",
+        borderColor: "#ef4444",
+        backgroundColor: "#ef4444",
+        yAxisID: "y1",
+        pointBackgroundColor: "#ef4444",
+        pointBorderColor: "#fff",
+        pointBorderWidth: 2,
+        pointRadius: 5,
+        pointHoverRadius: 7
+      }
+    ]
+  },
+
+  coreRepoContribChart: {
+    type: "bar",
+    labels: {
+      zh: ["ethereum", "MystenLabs", "bnb-chain", "ethereum-optimism", "paritytech", "ava-labs", "base", "OffchainLabs", "aptos-labs", "bitcoin", "matter-labs", "ton-blockchain"],
+      en: ["ethereum", "MystenLabs", "bnb-chain", "ethereum-optimism", "paritytech", "ava-labs", "base", "OffchainLabs", "aptos-labs", "bitcoin", "matter-labs", "ton-blockchain"]
+    },
+    data: [41, 18, 16, 13, 8, 7, 6, 6, 5, 4, 3, 2],
+    percentages: [2.39, 1.05, 0.93, 0.76, 0.47, 0.41, 0.35, 0.35, 0.29, 0.23, 0.17, 0.12],
+    color: "#16a34a",
+    indexAxis: "y"
+  },
+
   // 4. 地理分布
   workModelChart: {
     type: "pie",

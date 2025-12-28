@@ -20,7 +20,7 @@ const contentZh = {
         },
         {
           type: "paragraph",
-          text: "样本主要来自 Web2/Web3 开发者社群、黑客松与相关活动。为帮助理解数据，我们在部分关键指标上参考了 GitHub Octoverse、Stack Overflow、JetBrains 等开发者报告做横向对比，以获得更全面的视角。",
+          text: "样本主要来自 Web2/Web3 开发者社群、黑客松与相关活动。为帮助理解数据，我们在部分关键指标上参考了 GitHub Octoverse、Stack Overflow、JetBrains 等开发者报告，进行横向对比，以获得更全面的视角。",
         },
         {
           type: "paragraph",
@@ -29,9 +29,9 @@ const contentZh = {
         {
           type: "list",
           items: [
-            "第一，谁在构成当前与潜在的华语 Web3 开发者群体？",
-            "第二，他们在转型路径、技术栈、收入与职业发展、开源参与上呈现出怎样的共性与分化？",
-            "第三，这些特征与 GitHub、JetBrains、Stack Overflow 等全球开发者调研对 Web2/开源生态的结论相比，有哪些相似与不同，对项目方、社区与政策制定者意味着什么？",
+            "当前与潜在的华语 Web3 开发者群体由谁构成？",
+            "在转型路径、技术栈、收入与职业发展、开源参与上，他们有哪些共性与分化？",
+            "这些特征与 GitHub、JetBrains、Stack Overflow 等全球开发者调研中的 Web2/开源生态相比，有何异同，对项目方、社区和政策制定者意味着什么？",
           ],
         },
         {
@@ -41,11 +41,19 @@ const contentZh = {
         },
         {
           type: "paragraph",
-          text: "有效问卷共 220 份。从分布来看，最大的一块是仍在 Web2 或校园但持续观望 Web3 的人，接近一半；其次是一批已经在 Web3 全职或长期投入的开发者，规模也不小；还有一个小但重要的群体是已经或准备退坑 Web3 的人。",
+          text: "有效问卷共 220 份。整体分布上：",
+        },
+        {
+          type: "list",
+          items: [
+            "最大的一块是仍在 Web2 或校园、但持续观望 Web3 的人，接近一半；",
+            "其次是一批已经在 Web3 全职或长期投入的开发者；",
+            "还有一个小但重要的群体：已经或准备退坑 Web3 的人。",
+          ],
         },
         {
           type: "paragraph",
-          text: "这更像很多新技术进入\"冷静期\"时的结构：多数人在看，少数人已经冲进去，极少数人体验过再离开。",
+          text: "这非常接近许多新技术进入「冷静期」时的典型结构：多数人在观望，少数人已经下场，极少数人体验过再离开。",
         },
         {
           type: "paragraph",
@@ -87,7 +95,7 @@ const contentZh = {
           type: "list",
           items: [
             "样本量有限且并非严格随机，主要来自 Web3 社区、微信群、TG 群、招聘渠道、黑客松等，存在自选择偏差；",
-            "问卷逻辑复杂，部分问题只对特定子集展示，不同分支问题的有效样本数不一致；",
+            "问卷逻辑复杂，部分问题只对特定子集展示，不同分支问题对应的有效样本数不一致；",
             "货币与收入区间以美元为主，主观满意度受行情影响较大，调研时间集中在 2025 年底，回答中的乐观或悲观情绪可能掺杂对市场走势的预期。",
           ],
         },
@@ -103,16 +111,22 @@ const contentZh = {
       charts: [
         {
           id: "statusChart",
+
+          name: "目前状态",
           title: "1.1 样本按「目前状态」分布",
           caption: "图 1：220 份有效样本按「目前状态」划分的占比。",
         },
         {
           id: "ageOverallChart",
+
+          name: "整体年龄结构",
           title: "1.2 整体年龄结构",
           caption: "图 2：样本整体年龄分布。",
         },
         {
           id: "ageStatusChart",
+
+          name: "年龄×目前状态",
           title: "1.3 年龄 × 目前状态（结构示意）",
           caption: "图 3：不同「目前状态」下的年龄段结构。",
         },
@@ -125,11 +139,11 @@ const contentZh = {
         {
           type: "list",
           items: [
-            "<strong>前 Web2、现 Web3</strong>；",
-            "<strong>学生已/直入 Web3</strong>；",
-            "<strong>Web2 观望</strong>；",
-            "<strong>学生观望</strong>；",
-            "<strong>已经或准备退坑 Web3</strong>。",
+            "<strong>已从 Web2 转入 Web3</strong>；",
+            "<strong>学生阶段已/正在直接进入 Web3</strong>；",
+            "<strong>在 Web2 工作、观望 Web3</strong>；",
+            "<strong>在校学生、观望 Web3</strong>；",
+            "<strong>已经或准备退坑 Web3</strong>.",
           ],
         },
         {
@@ -170,14 +184,19 @@ const contentZh = {
         },
         {
           type: "paragraph",
-          text: "整体来看，年龄集中在 20–35 岁，与全球开发者画像高度一致。但相比 Stack Overflow 等通用调研：",
+          text: "整体来看，年龄集中在 20–35 岁，与全球开发者画像高度一致。",
+          afterChart: "ageStatusChart",
+        },
+        {
+          type: "paragraph",
+          text: "与 Stack Overflow 等通用调研相比：",
           afterChart: "ageStatusChart",
         },
         {
           type: "list",
           items: [
-            "学生和应届生的比例略高，说明新一代开发者会更早把 Web3 视为职业选择之一。",
-            "35 岁以上的资深工程师比例也不低，其中既有人正在尝试，也有人已经退场，对趋势的判断更冷静。",
+            "学生和应届生比例略高，说明新一代开发者更早把 Web3 视为职业选择之一；",
+            "样本中 35 岁以上的资深工程师也占有一定比例，其中既有人正在尝试，也有人已经退场，对趋势的判断往往更为冷静。",
           ],
           afterChart: "ageStatusChart",
         },
@@ -194,21 +213,33 @@ const contentZh = {
       charts: [
         {
           id: "eduSchoolGroup",
-          title: "2.1 最高学历与院校类型",
-          caption: "图 4–5：最高学历与毕业院校类型分布。",
+          title: "2.1 最高学历和毕业院校类型",
           charts: ["eduChart", "schoolChart"],
+          description: true,
+        },
+        {
+          id: "eduChart",
+          name: "学历分布",
+          caption: "图 4：受访 Web3 开发者的最高学历分布。",
+        },
+        {
+          id: "schoolChart",
+          name: "院校类型",
+          caption: "图 5：受访 Web3 开发者的毕业院校类型分布。",
         },
         {
           id: "englishChart",
+
+          name: "英语能力",
           title: "2.2 英语能力结构（归类示意）",
-          caption: "图 6：根据原问卷多个选项归并后的英语能力层级示意。",
+          caption: "图 6：受访 Web3 开发者的英语能力层级示意。",
         },
       ],
       content: [
         {
           type: "paragraph",
           text: "从学历和院校分布可以看到：",
-          afterChart: "eduSchoolGroup",
+          afterChart: "schoolChart",
         },
         {
           type: "list",
@@ -217,12 +248,12 @@ const contentZh = {
             "近一半来自普通本科院校，说明 Web3 并不是只发生在「清北+海外名校」的小圈子。",
             "世界一流大学的占比略高，部分原因在于：顶尖学校学生更容易参与黑客松、研究项目，也更愿意在新领域试水。",
           ],
-          afterChart: "eduSchoolGroup",
+          afterChart: "schoolChart",
         },
         {
           type: "paragraph",
           text: "对项目方来说，一个现实建议是：<strong>如果你只盯着极少数名校，就会错过一大半潜在的优秀贡献者</strong>。",
-          afterChart: "eduSchoolGroup",
+          afterChart: "schoolChart",
         },
         {
           type: "paragraph",
@@ -262,18 +293,28 @@ const contentZh = {
     },
     {
       id: "sec3",
-      title: "三、地理分布与全球化生存——Web3 开发者的真实空间结构",
+      title: "三、地理分布与全球化生存：Web3 开发者的真实空间结构",
       charts: [
         {
           id: "workModelChart",
+
+          name: "工作模式",
           title: "Web3 开发者的工作模式",
-          caption: "图：Web3 开发者的工作模式分布。",
+          caption: "图 7：受访 Web3 开发者的工作模式分布。",
         },
         {
           id: "geoDistGroup",
           title: "受访开发者地区与城市层级分布",
-          caption: "图：受访开发者地区结构与城市层级分布。",
+          caption: "图 8–9：受访开发者地区结构与城市层级分布。",
           charts: ["geoRegionChart", "geoCityLevelChart"],
+        },
+        {
+          id: "geoRegionChart",
+          name: "地区分布",
+        },
+        {
+          id: "geoCityLevelChart",
+          name: "城市层级",
         },
       ],
       content: [
@@ -500,7 +541,7 @@ const contentZh = {
         },
         {
           type: "blockquote",
-          text: "洞察四：Web3 的全球化，并没有消灭「位置」的意义，而是重新定义了它。",
+          text: "洞察三：Web3 的全球化，并没有消灭「位置」的意义，而是重新定义了它。",
           afterChart: "geoDistGroup",
         },
       ],
@@ -512,14 +553,30 @@ const contentZh = {
         {
           id: "salaryIncomeGroup",
           title: "4.1 固定年薪 vs 非固定收入",
-          caption: "图 7–8：固定年薪与非固定收入区间分布。",
+          caption: "图 10–11：受访 Web3 开发者的固定年薪与非固定收入区间分布。",
           charts: ["salaryFixedChart", "salaryVarChart"],
+        },
+        {
+          id: "salaryFixedChart",
+          name: "固定年薪",
+        },
+        {
+          id: "salaryVarChart",
+          name: "非固定收入",
         },
         {
           id: "incomeSatisGroup",
           title: "4.2 收入来源构成与薪资感受",
-          caption: "图 9–10：收入来源构成与对 Web3 薪资的主观感受。",
+          caption: "图 12–13：受访 Web3 开发者的收入来源构成与对 Web3 薪资的主观感受。",
           charts: ["incomeSourceChart", "salarySatisChart"],
+        },
+        {
+          id: "incomeSourceChart",
+          name: "收入来源",
+        },
+        {
+          id: "salarySatisChart",
+          name: "薪资满意度",
         },
       ],
       content: [
@@ -541,7 +598,7 @@ const contentZh = {
           type: "list",
           items: [
             "Web2 开发者的收入主要锁定在「固定工资 + 年终奖」上。",
-            "Web3 开发者则更像拿着一张「稳定底薪 + 少量高波动期权」的组合券。",
+            "Web3 开发者则更像拿着一份「相对稳定的底薪 + 少量高波动的期权」的组合。",
           ],
           afterChart: "salaryIncomeGroup",
         },
@@ -572,7 +629,7 @@ const contentZh = {
         },
         {
           type: "blockquote",
-          text: "洞察三：Web3 的高收益故事更多发生在极少数人身上，而对应的代价是整个群体需要承受更高波动与不确定性。对大多数人来说，它更像一份「中等偏上、但没有神话那么夸张」的工作。",
+          text: "洞察四：Web3 的高收益故事更多发生在极少数人身上，而对应的代价是整个群体需要承受更高波动与不确定性。对大多数人来说，它更像一份「中等偏上、但没有神话那么夸张」的工作。",
           afterChart: "incomeSatisGroup",
         },
       ],
@@ -583,29 +640,50 @@ const contentZh = {
       charts: [
         {
           id: "techStackChart",
+
+          name: "Web2技术栈",
           title: "5.1 受访者主要 Web2 技术栈",
-          caption: "图 11：受访开发者的主要 Web2 技术栈。",
+          caption: "图 14：受访 Web3 开发者的主要 Web2 技术栈。",
         },
         {
           id: "web3StackChart",
-          caption: "图 11.1：受访开发者使用的 Web3 生态技术栈分布（多选）。",
+
+          name: "Web3生态栈",
+          caption: "图 15：受访 Web3 开发者使用的 Web3 生态技术栈分布（多选）。",
         },
         {
-          id: "chainsObserveGroup",
-          title: "5.2 公链偏好与 GitHub 贡献",
-          caption: "图 12–15：整体样本与 Web2 观望者的公链关注度，学生观望群体的公链兴趣，以及华语开发者在 GitHub 上的生态贡献分布（Web3Insight数据）。",
-          charts: ["chainsOverallChart", "chainsWeb2ObserveChart", "chainsStudentObserveChart", "githubContribChart"],
+          id: "chainsObserveGroup1",
+          title: "5.2 公链偏好与 GitHub 贡献（一）",
+          caption: "图 16–17：整体样本与 Web2 观望者的公链关注度。",
+          charts: ["chainsOverallChart", "chainsWeb2ObserveChart"],
+        },
+        {
+          id: "chainsOverallChart",
+          name: "整体样本",
+        },
+        {
+          id: "chainsWeb2ObserveChart",
+          name: "Web2观望者",
+        },
+        {
+          id: "chainsObserveGroup2",
+          title: "5.2 公链偏好与 GitHub 贡献（二）",
+          caption: "图 18–19：学生观望群体的公链兴趣，以及华语开发者在 GitHub 上的生态贡献分布（Web3Insight 数据）。",
+          charts: ["chainsStudentObserveChart", "githubContribChart"],
+        },
+        {
+          id: "chainsStudentObserveChart",
+          name: "学生观望者",
+        },
+        {
+          id: "githubContribChart",
+          name: "GitHub贡献",
         },
       ],
       content: [
         {
           type: "paragraph",
-          text: "（说明：图 11 重点展示的是语言 / 框架维度的 Web2 通用技术栈。关于 EVM / Move / Solana / ZK 等更偏 Web3 生态栈的情况，我们在图 11.1 单独做了汇总与解读。）",
-          afterChart: "techStackChart",
-        },
-        {
-          type: "paragraph",
-          text: "技术栈分布非常接近全球趋势：",
+          text: "Web2 的技术栈分布非常接近全球趋势：",
           afterChart: "techStackChart",
         },
         {
@@ -675,21 +753,38 @@ const contentZh = {
       charts: [
         {
           id: "motiveWeb3Chart",
+
+          name: "选择Web3原因",
           title: "6.1 进入 / 想进入 Web3 的主要动机",
-          caption: "图 15：受访者选择 Web3 的主要原因。",
+          caption: "图 20：受访 Web3 开发者选择 Web3 的主要原因。",
         },
         {
           id: "learnEntryGroup",
           title: "6.2 了解 / 入门 Web3 的路径",
-          caption: "图 16–17：了解 Web3 的渠道与最有效的入门方式。",
+          caption: "图 21–22：受访 Web3 开发者了解 Web3 的渠道与最有效的入门方式。",
           charts: ["learnWeb3Chart", "entryHelpChart"],
+        },
+        {
+          id: "learnWeb3Chart",
+          name: "了解渠道",
+        },
+        {
+          id: "entryHelpChart",
+          name: "入门方式",
         },
         {
           id: "challengesExitGroup",
           title: "6.3 转型挑战与退坑原因",
-          caption:
-            "图 18–19：从 Web2 转型 Web3 的主要挑战与已经退坑人群的原因结构。",
+          caption: "图 23–24：受访 Web3 开发者从 Web2 转型 Web3 的主要挑战与已经退坑人群的原因结构。",
           charts: ["challengeTransitionChart", "exitReasonChart"],
+        },
+        {
+          id: "challengeTransitionChart",
+          name: "转型挑战",
+        },
+        {
+          id: "exitReasonChart",
+          name: "退坑原因",
         },
       ],
       content: [
@@ -742,12 +837,7 @@ const contentZh = {
         },
         {
           type: "paragraph",
-          text: "很多开发者的真实入场路径，并不是\"上完课 → 拿 Offer\"，而是更碎片化、也更社区化的过程：",
-          afterChart: "entryHelpChart",
-        },
-        {
-          type: "paragraph",
-          text: "看文档与源码 → 参与开源或黑客松 → 在社区中建立信任 → 获得第一份机会。",
+          text: "很多开发者的真实入场路径，并不是上完课 → 拿 Offer，而是更碎片化、也更社区化的过程：看文档和源码 → 参与开源或黑客松 → 在社区中建立信任 → 获得第一份机会。",
           afterChart: "entryHelpChart",
         },
         {
@@ -804,21 +894,76 @@ const contentZh = {
         {
           id: "osKnowUseGroup",
           title: "7.1 对开源的认知与使用比例",
-          caption: "图 20–21：对开源的了解程度与日常使用比例。",
+          caption: "图 25–26：受访 Web3 开发者对开源的了解程度与日常使用比例。",
           charts: ["osKnowChart", "osUseRatioChart"],
         },
         {
-          id: "osParticipationGroup",
-          title: "7.2 参与开源的方式、动机和阻碍",
-          caption: "图 22–24：Web3 与 Web2 开发者的开源参与情况对比，以及参与开源的动机及主要阻碍因素。",
-          charts: ["osWayWeb3Chart", "osWayWeb2Chart", "osMotiveChart", "osBlockerChart"],
+          id: "osKnowChart",
+          name: "了解程度",
+        },
+        {
+          id: "osUseRatioChart",
+          name: "使用比例",
+        },
+        {
+          id: "osParticipationGroup1",
+          title: "7.2 参与开源的方式、动机和阻碍（一）",
+          caption: "图 27–28：受访 Web3 与 Web2 开发者的开源参与情况对比。",
+          charts: ["osWayWeb3Chart", "osWayWeb2Chart"],
+        },
+        {
+          id: "osWayWeb3Chart",
+          name: "Web3开发者",
+        },
+        {
+          id: "osWayWeb2Chart",
+          name: "Web2开发者",
+        },
+        {
+          id: "osParticipationGroup2",
+          title: "7.2 参与开源的方式、动机和阻碍（二）",
+          caption: "图 29–30：受访 Web3 开发者参与开源的动机及主要阻碍因素。",
+          charts: ["osMotiveChart", "osBlockerChart"],
+        },
+        {
+          id: "osMotiveChart",
+          name: "参与动机",
+        },
+        {
+          id: "osBlockerChart",
+          name: "主要阻碍",
         },
         {
           id: "osProjectFutureGroup",
           title: "7.3 项目开源程度与对未来的判断",
-          caption:
-            "图 25–27：对开源许可证的理解、项目开源程度与对未来五年开源作用的判断。",
-          charts: ["osLicenseChart", "projectOpenChart", "osFutureChart"],
+          caption: "图 31–32：受访 Web3 开发者对开源许可证的理解、项目开源程度。",
+          charts: ["osLicenseChart", "projectOpenChart"],
+        },
+        {
+          id: "osLicenseChart",
+          name: "许可证理解",
+        },
+        {
+          id: "projectOpenChart",
+          name: "项目开放度",
+        },
+        {
+          id: "osFutureChart",
+          name: "未来判断",
+        },
+        {
+          id: "contribActivityChart",
+
+          name: "贡献活跃度",
+          title: "7.4 过去 5 年华语开发者贡献活跃度",
+          caption: "图 34：2021–2025 年华语开发者贡献活跃度（柱状图：活跃开发者数，折线图：同比增长率）。",
+        },
+        {
+          id: "coreRepoContribChart",
+
+          name: "核心仓库贡献",
+          title: "7.5 华语开发者对 Web3 生态核心仓库的贡献活跃占比",
+          caption: "图 35：各主要 Web3 项目核心仓库中华语开发者的数量及占比（鼠标悬停查看详细信息）。",
         },
       ],
       content: [
@@ -871,13 +1016,18 @@ const contentZh = {
         },
         {
           type: "paragraph",
-          text: "<strong>同时，Web3 也正在探索一种不同于传统志愿模式的开源路径：通过 Grant、Bounty、Token 和声誉机制，为持续贡献提供现实激励。这既是机会，也是尚未完全成熟的实验。</strong>",
+          text: "同时，Web3 也正在探索一种不同于传统志愿模式的开源路径：通过 Grant、Bounty、Token 和声誉机制，为持续贡献提供现实激励。这既是机会，也是尚未完全成熟的实验。",
           afterChart: "osProjectFutureGroup",
+        },
+        {
+          type: "paragraph",
+          text: "但根据 Web3insight 提供的数据，2025 年华语开发者参与 Web3 开源生态的活跃度出现了大幅下降，同时受制于语言、协作习惯等原因，华语开发者在 Web3 生态中对于核心仓库的贡献活跃占比相比华语开源开发者基数也处于较低位置，作为天然开源的行业，华语开发者的开源道路仍然任重道远。",
+          afterChart: "coreRepoContribChart",
         },
         {
           type: "blockquote",
           text: "洞察七：当前 Web3 更像是「站在开源巨人肩膀上，但自身在如何以开源方式行走上还不成熟」的阶段。要真正继承开源精神，需要在许可证理解、项目开放策略和治理结构上补更多课。",
-          afterChart: "osProjectFutureGroup",
+          afterChart: "coreRepoContribChart",
         },
       ],
     },
@@ -888,19 +1038,41 @@ const contentZh = {
         {
           id: "communityEventsGroup",
           title: "8.1 社区参与与技术活动",
-          caption: "图 28–30：是否参与社区与技术活动，以及偏好的技术活动类型。",
+          caption: "图 36–38：受访 Web3 开发者是否参与社区与技术活动，以及偏好的技术活动类型。",
           charts: ["communityChart", "eventsChart", "eventTypeChart"],
         },
         {
+          id: "communityChart",
+          name: "参与情况",
+        },
+        {
+          id: "eventsChart",
+          name: "活动参与",
+        },
+        {
+          id: "eventTypeChart",
+          name: "活动类型",
+        },
+        {
           id: "communityNeedChart",
+
+          name: "社区支持需求",
           title: "8.2 对社区支持的期待",
-          caption: "图 31：希望社区提供的额外支持。",
+          caption: "图 39：受访 Web3 开发者希望社区提供的额外支持。",
         },
         {
           id: "envBackWeb2Group",
           title: "8.3 对 Web3 从业环境的感受与是否回 Web2",
-          caption: "图 32–33：在职 Web3 人群的环境满意度与是否考虑回 Web2。",
+          caption: "图 40–41：受访 Web3 开发者在职人群的环境满意度与是否考虑回 Web2。",
           charts: ["envSatisChart", "backWeb2Chart"],
+        },
+        {
+          id: "envSatisChart",
+          name: "满意度",
+        },
+        {
+          id: "backWeb2Chart",
+          name: "回Web2意愿",
         },
       ],
       content: [
@@ -1007,7 +1179,6 @@ const contentZh = {
           "保持友善和尊重：社区成员应该相互尊重，建设性地讨论问题。",
           "提供上下文：提交 Issue 或 PR 时，请详细描述问题或改进内容。",
           "遵循现有风格：代码和文本应保持与现有风格一致。",
-          "小步快跑：优先处理小的、独立的改进，大的改进可以先讨论再实施。",
         ],
       },
       {

@@ -228,12 +228,41 @@
                 justify-content: center;
                 gap: 20px;
                 flex-wrap: nowrap;
+                align-items: flex-end;
             }
 
-            .charts-row .chart-wrap-tiny {
+            .charts-row .chart-box {
+                flex: 1;
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* 只在 charts-row 中的 chart-wrap-tiny 才应用这些样式 */
+            .charts-row .chart-box .chart-wrap-tiny {
                 flex: 0 0 auto;
-                width: auto;
+                width: 100%;
                 min-width: 250px;
+                max-height: 300px;
+            }
+
+            /* charts-row 中的其他 chart-wrap 也占满宽度 */
+            .charts-row .chart-box .chart-wrap,
+            .charts-row .chart-box .chart-wrap-wide,
+            .charts-row .chart-box .chart-wrap-small {
+                width: 100%;
+            }
+
+            .charts-row canvas {
+                max-height: 280px;
+            }
+
+            .subsection-title {
+                font-size: 18px;
+                font-weight: 600;
+                color: var(--text-primary);
+                margin: 24px 0 16px;
+                padding: 0;
             }
 
             .chart-box {
@@ -253,12 +282,44 @@
                 margin-top: 4px;
             }
 
+            .chart-name {
+                font-size: 12px;
+                font-weight: 500;
+                color: rgb(74, 74, 74);
+                text-align: center;
+                margin: 6px 0 2px;
+                padding: 0;
+            }
+
             .chart-description {
                 margin: 10px 0;
                 padding: 0;
                 font-size: 14px;
                 line-height: 1.6;
                 color: var(--text-primary);
+            }
+
+            .dynamic-content {
+                display: block;
+                width: 100%;
+                margin: 12px 0;
+                line-height: 1.7;
+            }
+
+            .dynamic-content p {
+                margin: 12px 0;
+            }
+
+            .dynamic-content ul {
+                padding-left: 24px;
+                margin: 12px 0;
+            }
+
+            .dynamic-content blockquote {
+                margin: 16px 0;
+                padding-left: 16px;
+                border-left: 4px solid var(--accent-color);
+                color: var(--text-secondary);
             }
 
             ul { padding-left: 20px; }
@@ -421,6 +482,7 @@
                     <h3></h3>
                     <div class="chart-wrap-tiny">
                         <canvas id="statusChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
@@ -429,6 +491,7 @@
                     <h3></h3>
                     <div class="chart-wrap">
                         <canvas id="ageOverallChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
@@ -437,6 +500,7 @@
                     <h3></h3>
                     <div class="chart-wrap">
                         <canvas id="ageStatusChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
@@ -450,26 +514,30 @@
                     <h2></h2>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="chart-wrap-tiny">
-                        <canvas id="eduChart"></canvas>
+                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="eduChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
-                </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="chart-wrap">
-                        <canvas id="schoolChart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="schoolChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
                 </div>
 
                 <div class="chart-box">
                     <h3></h3>
                     <div class="chart-wrap-tiny">
                         <canvas id="englishChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
@@ -487,21 +555,28 @@
                     <h3></h3>
                     <div class="chart-wrap-tiny">
                         <canvas id="workModelChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="charts-row">
+                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
                         <div class="chart-wrap-tiny">
                             <canvas id="geoRegionChart"></canvas>
                         </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
+                    </div>
+
+                    <div class="chart-box">
                         <div class="chart-wrap-tiny">
                             <canvas id="geoCityLevelChart"></canvas>
                         </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
                 </div>
 
                 <!-- 内容将由渲染器动态生成 -->
@@ -513,26 +588,40 @@
                     <h2></h2>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="chart-wrap">
-                        <canvas id="salaryFixedChart"></canvas>
+                                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap">
+                            <canvas id="salaryFixedChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap">
-                        <canvas id="salaryVarChart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap">
+                            <canvas id="salaryVarChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="chart-wrap">
-                        <canvas id="incomeSourceChart"></canvas>
+                                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="incomeSourceChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap-tiny">
-                        <canvas id="salarySatisChart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="salarySatisChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
                 </div>
 
                 <!-- 内容将由渲染器动态生成 -->
@@ -548,6 +637,7 @@
                     <h3></h3>
                     <div class="chart-wrap">
                         <canvas id="techStackChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
@@ -556,25 +646,45 @@
                     <h3></h3>
                     <div class="chart-wrap-wide">
                         <canvas id="web3StackChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="chart-wrap-wide">
-                        <canvas id="chainsOverallChart"></canvas>
+                                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap">
+                            <canvas id="chainsOverallChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap-wide">
-                        <canvas id="chainsWeb2ObserveChart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap">
+                            <canvas id="chainsWeb2ObserveChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap-wide">
-                        <canvas id="chainsStudentObserveChart"></canvas>
+                </div>
+
+                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap">
+                            <canvas id="chainsStudentObserveChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap-wide">
-                        <canvas id="githubContribChart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap">
+                            <canvas id="githubContribChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
                 </div>
 
                 <!-- 内容将由渲染器动态生成 -->
@@ -590,30 +700,45 @@
                     <h3></h3>
                     <div class="chart-wrap">
                         <canvas id="motiveWeb3Chart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="chart-wrap">
-                        <canvas id="learnWeb3Chart"></canvas>
+                                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap">
+                            <canvas id="learnWeb3Chart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap">
-                        <canvas id="entryHelpChart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap">
+                            <canvas id="entryHelpChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="chart-wrap">
-                        <canvas id="challengeTransitionChart"></canvas>
+                                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap">
+                            <canvas id="challengeTransitionChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap">
-                        <canvas id="exitReasonChart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap">
+                            <canvas id="exitReasonChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
                 </div>
 
                 <!-- 内容将由渲染器动态生成 -->
@@ -625,48 +750,103 @@
                     <h2></h2>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="chart-wrap-tiny">
-                        <canvas id="osKnowChart"></canvas>
+                                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="osKnowChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap">
-                        <canvas id="osUseRatioChart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="osUseRatioChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="charts-row">
+                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
                         <div class="chart-wrap-tiny">
                             <canvas id="osWayWeb3Chart"></canvas>
                         </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
+                    </div>
+
+                    <div class="chart-box">
                         <div class="chart-wrap-tiny">
                             <canvas id="osWayWeb2Chart"></canvas>
                         </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="charts-row">
+                </div>
+
+                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
                         <div class="chart-wrap">
                             <canvas id="osMotiveChart"></canvas>
                         </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
+                    </div>
+
+                    <div class="chart-box">
                         <div class="chart-wrap">
                             <canvas id="osBlockerChart"></canvas>
                         </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
+                    </div>
+                </div>
+
+                                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="osLicenseChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
+                    </div>
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="projectOpenChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
+                    </div>
+                </div>
+
+                <div class="chart-box">
+                    <h3></h3>
+                    <div class="chart-wrap-tiny">
+                        <canvas id="osFutureChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
 
                 <div class="chart-box">
                     <h3></h3>
-                    <div class="chart-wrap-tiny">
-                        <canvas id="osLicenseChart"></canvas>
+                    <div class="chart-wrap-wide">
+                        <canvas id="contribActivityChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
-                    <div class="chart-wrap-tiny">
-                        <canvas id="projectOpenChart"></canvas>
-                    </div>
-                    <div class="chart-wrap">
-                        <canvas id="osFutureChart"></canvas>
+                    <p class="caption"></p>
+                </div>
+
+                <div class="chart-box">
+                    <h3></h3>
+                    <div class="chart-wrap-wide">
+                        <canvas id="coreRepoContribChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
@@ -680,37 +860,56 @@
                     <h2></h2>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="chart-wrap-tiny">
-                        <canvas id="communityChart"></canvas>
+                                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="communityChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap-tiny">
-                        <canvas id="eventsChart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="eventsChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap">
-                        <canvas id="eventTypeChart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="eventTypeChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
                 </div>
 
                 <div class="chart-box">
                     <h3></h3>
                     <div class="chart-wrap">
                         <canvas id="communityNeedChart"></canvas>
+                        <p class="chart-name"></p>
                     </div>
                     <p class="caption"></p>
                 </div>
 
-                <div class="chart-box">
-                    <h3></h3>
-                    <div class="chart-wrap-tiny">
-                        <canvas id="envSatisChart"></canvas>
+                                <h3 class="subsection-title"></h3>
+                <div class="charts-row">
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="envSatisChart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <div class="chart-wrap-tiny">
-                        <canvas id="backWeb2Chart"></canvas>
+                    <div class="chart-box">
+                        <div class="chart-wrap-tiny">
+                            <canvas id="backWeb2Chart"></canvas>
+                        </div>
+                        <p class="chart-name"></p>
+                        <p class="caption"></p>
                     </div>
-                    <p class="caption"></p>
                 </div>
 
                 <!-- 内容将由渲染器动态生成 -->

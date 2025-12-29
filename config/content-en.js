@@ -17,7 +17,7 @@ const contentEn = {
         },
         {
           type: "paragraph",
-          text: "The \"2025 Web3 Chinese-Speaking Developer Survey Report\" (hereinafter referred to as the Report) is based on a questionnaire survey conducted in Chinese-speaking tech communities in late 2025, with a total of 220 valid samples.",
+          text: "The \"2025 Web3 Chinese-Speaking Developer Survey Report\" (hereinafter referred to as the Report) is based on a questionnaire survey conducted in Chinese-speaking tech communities in late 2025, jointly initiated by <strong><a href=\"https://openbuild.xyz/\" target=\"_blank\">OpenBuild</a></strong>, <strong><a href=\"https://www.gccofficial.org/\" target=\"_blank\">GCC</a></strong>, <strong><a href=\"https://learnblockchain.cn/\" target=\"_blank\">登链</a></strong>, <strong>Creators</strong>, and <strong>OpenCAS</strong>, with data analysis services provided by <strong><a href=\"https://web3insight.ai/\" target=\"_blank\">Web3insight</a></strong>. This survey collected a total of 220 valid samples.",
         },
         {
           type: "paragraph",
@@ -1375,7 +1375,7 @@ const contentEn = {
       {
         type: "list",
         items: [
-          "<strong>Community Partners (in no particular order)</strong>: Thanks to Monad Chinese, Solana Chinese, HOH, Starknet Chinese, Starknet Astro, KeyMapDAO, Alcove, Vana Chinese, Victor Zhang (SmartToken), Maggie (ETHGlobal), Defihack Labs, Henry Lee (KiteAI), 4Seas, BETA UCB, and other communities/projects/contributors for their support (Due to the large number of communities, if there are any omissions, please accept our apologies and feel free to contact us for additions!).",
+          "<strong>Community Partners (in no particular order)</strong>: Thanks to Monad Chinese, Solana Chinese, HOH, Starknet Chinese, Starknet Astro, KeyMapDAO, Alcove, Vana Chinese, Victor Zhang (SmartToken), Maggie (ETHGlobal), Defihack Labs, Henry Lee (KiteAI), 4Seas, BETA UCB, Herstory, and other communities/projects/contributors for their support (Due to the large number of communities, if there are any omissions, please accept our apologies and feel free to contact us for additions!).",
           "<strong>Technical Support</strong>: Thanks to GitHub, Stack Overflow, JetBrains, and other platforms for providing public developer report data, which provided important references for our comparative analysis.",
           "<strong>Open Source Projects</strong>: The main tech stack used in this report includes Chart.js (charts), ChartDataLabels (data labels plugin), and other open source projects. Thanks to the maintainers of these projects.",
           "<strong>All Participants</strong>: Thanks to the 220 developers who took the time to fill out the survey—each of your responses contributed value to this report.",

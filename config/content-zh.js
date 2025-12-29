@@ -16,7 +16,7 @@ const contentZh = {
         },
         {
           type: "paragraph",
-          text: "《2025 Web3 华语开发者调研报告》（下称报告）基于 2025 年末在华语技术社区开展的一次问卷调研，共回收 220 份有效样本。",
+          text: "《2025 Web3 华语开发者调研报告》（下称报告）基于 2025 年末在华语技术社区开展的一次问卷调研，由 <strong><a href=\"https://openbuild.xyz/\" target=\"_blank\">OpenBuild</a></strong>, <strong><a href=\"https://www.gccofficial.org/\" target=\"_blank\">GCC</a></strong>, <strong><a href=\"https://learnblockchain.cn/\" target=\"_blank\">登链</a></strong>, <strong>Creators</strong>, <strong>OpenCAS</strong> 联合发起，<strong><a href=\"https://web3insight.ai/\" target=\"_blank\">Web3insight</a></strong> 提供数据分析服务，本次共回收 220 份有效样本。",
         },
         {
           type: "paragraph",
@@ -1310,7 +1310,7 @@ const contentZh = {
       {
         type: "list",
         items: [
-          "<strong>社区合作伙伴（排名不分先后）</strong>：感谢 Monad 华语、Solana 中文、HOH、Starknet 中文、Starknet Astro、KeyMapDAO、Alcove、Vana 中文、Victor Zhang (SmartToken)、Maggie(ETHGlobal)、Defihack Labs、Henry Lee (KiteAI)、4Seas、BETA UCB 等社区/项目/贡献者的支持（因对接社区较多，如有遗漏，敬请谅解，欢迎随时联系我们补充！）。",
+          "<strong>社区合作伙伴（排名不分先后）</strong>：感谢 Monad 华语、Solana 中文、HOH、Starknet 中文、Starknet Astro、KeyMapDAO、Alcove、Vana 中文、Victor Zhang (SmartToken)、Maggie(ETHGlobal)、Defihack Labs、Henry Lee (KiteAI)、4Seas、BETA UCB、Herstory 等社区/项目/贡献者的支持（因对接社区较多，如有遗漏，敬请谅解，欢迎随时联系我们补充！）。",
           "<strong>技术支持</strong>：感谢 GitHub、Stack Overflow、JetBrains 等平台提供的公开开发者报告数据，为我们的横向对比提供了重要参考。",
           "<strong>开源项目</strong>：本报告使用的主要技术栈包括 Chart.js（图表）、ChartDataLabels（数据标签插件）等开源项目，感谢这些项目的维护者。",
           "<strong>所有参与者</strong>：感谢 220 位花时间填写问卷的开发者，你们每一个人的回答都为这份报告贡献了价值。",

@@ -101,7 +101,7 @@ const contentZh = {
         },
         {
           type: "paragraph",
-          text: "本报告已在 <strong>GitHub</strong> 开源，如果大家对于本报告有任何建议反馈，欢迎参考文末的「如何贡献」章节进行协作贡献。",
+          text: "本报告已在 <strong><a href=\"https://github.com/openbuildxyz/web3-chinese-speaking-devs-report\" target=\"_blank\">GitHub</a></strong> 开源，如果大家对于本报告有任何建议反馈，欢迎参考文末的「如何贡献」章节进行协作贡献。",
         },
         {
           type: "blockquote",

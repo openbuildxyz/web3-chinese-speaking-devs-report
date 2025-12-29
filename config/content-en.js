@@ -102,7 +102,7 @@ const contentEn = {
         },
         {
           type: "paragraph",
-          text: 'This report is open-sourced on <strong>GitHub</strong>. If you have any suggestions or feedback, please refer to the "How to Contribute" section at the end for collaboration.',
+          text: 'This report is open-sourced on <strong><a href="https://github.com/openbuildxyz/web3-chinese-speaking-devs-report" target="_blank">GitHub</a></strong>. If you have any suggestions or feedback, please refer to the "How to Contribute" section at the end for collaboration.',
         },
         {
           type: "blockquote",

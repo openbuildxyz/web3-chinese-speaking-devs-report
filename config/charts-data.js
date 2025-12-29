@@ -409,11 +409,11 @@ const chartDataConfig = {
   coreRepoContribChart: {
     type: "bar",
     labels: {
-      zh: ["ethereum", "MystenLabs", "bnb-chain", "ethereum-optimism", "paritytech", "ava-labs", "base", "OffchainLabs", "aptos-labs", "bitcoin", "matter-labs", "ton-blockchain"],
-      en: ["ethereum", "MystenLabs", "bnb-chain", "ethereum-optimism", "paritytech", "ava-labs", "base", "OffchainLabs", "aptos-labs", "bitcoin", "matter-labs", "ton-blockchain"]
+      zh: ["Ethereum", "SolanaFoundation", "MystenLabs", "BnbChain", "EthereumOptimism", "ParityTech", "AvaLabs", "Base", "OffchainLabs", "AptosLabs", "Bitcoin", "MatterLabs", "TonBlockchain"],
+      en: ["Ethereum", "SolanaFoundation", "MystenLabs", "BnbChain", "EthereumOptimism", "ParityTech", "AvaLabs", "Base", "OffchainLabs", "AptosLabs", "Bitcoin", "MatterLabs", "TonBlockchain"]
     },
-    data: [41, 18, 16, 13, 8, 7, 6, 6, 5, 4, 3, 2],
-    percentages: [2.39, 1.05, 0.93, 0.76, 0.47, 0.41, 0.35, 0.35, 0.29, 0.23, 0.17, 0.12],
+    data: [41, 20, 18, 16, 13, 8, 7, 6, 6, 5, 4, 3, 2],
+    percentages: [2.39, 1.17, 1.05, 0.93, 0.76, 0.47, 0.41, 0.35, 0.35, 0.29, 0.23, 0.17, 0.12],
     color: "#16a34a",
     indexAxis: "y"
   },

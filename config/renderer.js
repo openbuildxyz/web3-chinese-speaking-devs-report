@@ -423,6 +423,61 @@ class ReportRenderer {
       };
     }
 
+    // chainsOverallChart 和 chainsWeb2ObserveChart：水平柱状图（标签太多）
+    if (chartId === 'chainsOverallChart' || chartId === 'chainsWeb2ObserveChart' || chartId === 'chainsStudentObserveChart') {
+      return {
+        plugins: {
+          legend: { display: false },
+          datalabels: { display: false }
+        },
+        indexAxis: 'y',
+        layout: {
+          padding: {
+            left: 10,
+            right: 20,
+            top: 5,
+            bottom: 5
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 80,
+            grid: {
+              color: function(context) {
+                return context.chart.options.scales.y.ticks.font.size <= 11 ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)';
+              }
+            }
+          },
+          y: {
+            ticks: {
+              // 强制显示所有标签，不自动跳过
+              autoSkip: false,
+              maxRotation: 0,
+              minRotation: 0,
+              font: {
+                size: 12,
+                family: '-apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif'
+              },
+              padding: 8
+            },
+            grid: {
+              display: false,
+              drawBorder: false
+            }
+          }
+        },
+        // 增加条形之间的间距
+        elements: {
+          bar: {
+            borderWidth: 0
+          }
+        },
+        // 设置maintainAspectRatio为false，让图表自然适应容器大小
+        maintainAspectRatio: false
+      };
+    }
+
     if (isPie) {
       return {
         plugins: {

@@ -252,7 +252,7 @@ const contentZh = {
         },
         {
           type: "paragraph",
-          text: "对项目方来说，一个现实建议是：<strong>如果你只盯着极少数名校，就会错过一大半潜在的优秀贡献者</strong>。",
+          text: "对项目方来说，一个现实建议是：<strong>如果你只盯着极少数名校，就会错过一大半潜在的贡献者</strong>。",
           afterChart: "schoolChart",
         },
         {

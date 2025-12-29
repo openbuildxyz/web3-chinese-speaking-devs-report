@@ -414,117 +414,22 @@ const contentEn = {
     },
     {
       id: "sec3",
-      title:
-        "3. Web3 Income Structure & Salary Perceptions: Diverse Income Brings Possibility, Also Uncertainty",
-      charts: [
-        {
-          id: "salaryIncomeGroup",
-          title: "3.1 Fixed Annual Salary vs Variable Income",
-          caption:
-            "Figures 10–11: Distribution of fixed annual salary and variable income of surveyed Web3 developers.",
-          charts: ["salaryFixedChart", "salaryVarChart"],
-        },
-        
-        {
-          id: "salaryFixedChart",
-          name: "Fixed Salary",
-        },
-
-        {
-          id: "salaryVarChart",
-          name: "Variable Income",
-        },
-{
-          id: "incomeSatisGroup",
-          title: "3.2 Income Source Composition & Salary Satisfaction",
-          caption:
-            "Figures 12–13: Income source composition and subjective feelings toward Web3 salaries of surveyed Web3 developers.",
-          charts: ["incomeSourceChart", "salarySatisChart"],
-        },
-      
-        {
-          id: "incomeSourceChart",
-          name: "Income Sources",
-        },
-
-        {
-          id: "salarySatisChart",
-          name: "Salary Satisfaction",
-        },
-],
-      content: [
-        {
-          type: "paragraph",
-          text: "This section only covers respondents already working full-time or long-term part-time in Web3.",
-        },
-        {
-          type: "paragraph",
-          text: 'In terms of fixed salary, most Web3 engineers earn slightly above local mid-to-senior Web2 engineers; in terms of variable income, most have some extra earnings, but only a few have reached "mythical" levels.',
-          afterChart: "salaryIncomeGroup",
-        },
-        {
-          type: "paragraph",
-          text: "Compared to traditional internet:",
-          afterChart: "salaryIncomeGroup",
-        },
-        {
-          type: "list",
-          items: [
-            'Web2 developers\' income is mainly locked in "fixed salary + year-end bonus."',
-            'Web3 developers are more like holding a "relatively stable base salary + small high-volatility options" combination.',
-          ],
-          afterChart: "salaryIncomeGroup",
-        },
-        {
-          type: "paragraph",
-          text: "Most people's mainstay is still fixed salary, but nearly half have trading income, and about one-fifth earn supplementary income through freelancing, Airdrops, Grants, etc.",
-          afterChart: "incomeSatisGroup",
-        },
-        {
-          type: "paragraph",
-          text: 'In terms of salary satisfaction, the distribution closely matches general surveys like JetBrains and Stack Overflow: most find it "acceptable," a small minority are very satisfied, and some are explicitly dissatisfied.',
-          afterChart: "incomeSatisGroup",
-        },
-        {
-          type: "paragraph",
-          text: "Diverse income doesn't mean \"earning more money,\" but rather a change in risk structure.",
-          afterChart: "incomeSatisGroup",
-        },
-        {
-          type: "paragraph",
-          text: "Compared to Web2, Web3 transfers some uncertainty originally borne by companies to individuals: project cycles, token volatility, compliance and taxation, labor relationships—all need to be absorbed by developers themselves.",
-          afterChart: "incomeSatisGroup",
-        },
-        {
-          type: "paragraph",
-          text: "This is also why, among those who left, \"job instability\" and \"legal and compliance risks\" are frequently mentioned—the real hesitation isn't just about how much one earns, but whether one can work on technology long-term with peace of mind.",
-          afterChart: "incomeSatisGroup",
-        },
-        {
-          type: "blockquote",
-          text: "Insight 3: Web3's high-yield stories happen mostly to a very small minority, while the corresponding cost is that the entire group must bear higher volatility and uncertainty. For most people, it's more like an \"above-average but not as mythical as the legends\" job.",
-          afterChart: "incomeSatisGroup",
-        },
-      ],
-    },
-    {
-      id: "sec4",
-      title: "4. Geographic Distribution & Global Survival: The Real Spatial Structure of Web3 Developers",
+      title: "3. Geographic Distribution & Global Survival: The Real Spatial Structure of Web3 Developers",
       charts: [
         {
           id: "workModelChart",
 
           name: "Work Model",
-          title: "Web3 Developer Work Models",
-          caption: "Figure 14: Distribution of work models of surveyed Web3 developers.",
+          title: "3.1 Web3 Developer Work Models",
+          caption: "Figure 10: Distribution of work models of surveyed Web3 developers.",
         },
         {
           id: "geoDistGroup",
-          title: "Developer Regional and City Level Distribution",
-          caption: "Figures 15–16: Distribution of surveyed Web3 developers by region and city tier.",
+          title: "3.2 Developer Regional and City Level Distribution",
+          caption: "Figures 11–12: Distribution of surveyed Web3 developers by region and city tier.",
           charts: ["geoRegionChart", "geoCityLevelChart"],
         },
-      
+
         {
           id: "geoRegionChart",
           name: "Regional Distribution",
@@ -554,7 +459,7 @@ const contentEn = {
         {
           type: "heading",
           level: 3,
-          text: "4.1 Geo-Arbitrage: Based in China, Coding for the World",
+          text: "3.1 Geo-Arbitrage: Based in China, Coding for the World",
           afterChart: "workModelChart",
         },
         {
@@ -618,7 +523,7 @@ const contentEn = {
         {
           type: "heading",
           level: 3,
-          text: "4.2 Global Hub Cities: Singapore / Hong Kong / Dubai",
+          text: "3.2 Global Hub Cities: Singapore / Hong Kong / Dubai",
           afterChart: "geoDistGroup",
         },
         {
@@ -677,7 +582,7 @@ const contentEn = {
         {
           type: "heading",
           level: 3,
-          text: "4.3 Digital Nomads: Freedom, Legality, and Tax Boundaries",
+          text: "3.3 Digital Nomads: Freedom, Legality, and Tax Boundaries",
           afterChart: "geoDistGroup",
         },
         {
@@ -740,7 +645,7 @@ const contentEn = {
         {
           type: "heading",
           level: 3,
-          text: "4.4 How Does Geographic Location Affect Career Ceiling?",
+          text: "3.4 How Does Geographic Location Affect Career Ceiling?",
           afterChart: "geoDistGroup",
         },
         {
@@ -759,8 +664,102 @@ const contentEn = {
         },
         {
           type: "blockquote",
-          text: "Insight 4: Web3's globalization hasn't eliminated the significance of \"location,\" but has redefined it.",
+          text: "Insight 3: Web3's globalization hasn't eliminated the significance of \"location,\" but has redefined it.",
           afterChart: "geoDistGroup",
+        },
+      ],
+    },
+    {
+      id: "sec4",
+      title: "4. Web3 Income Structure & Salary Perceptions: Diverse Income Brings Possibility, Also Uncertainty",
+      charts: [
+        {
+          id: "salaryIncomeGroup",
+          title: "4.1 Fixed Annual Salary vs Variable Income",
+          caption:
+            "Figures 13–14: Distribution of fixed annual salary and variable income of surveyed Web3 developers.",
+          charts: ["salaryFixedChart", "salaryVarChart"],
+        },
+
+        {
+          id: "salaryFixedChart",
+          name: "Fixed Salary",
+        },
+
+        {
+          id: "salaryVarChart",
+          name: "Variable Income",
+        },
+{
+          id: "incomeSatisGroup",
+          title: "4.2 Income Source Composition & Salary Satisfaction",
+          caption:
+            "Figures 15–16: Income source composition and subjective feelings toward Web3 salaries of surveyed Web3 developers.",
+          charts: ["incomeSourceChart", "salarySatisChart"],
+        },
+
+        {
+          id: "incomeSourceChart",
+          name: "Income Sources",
+        },
+
+        {
+          id: "salarySatisChart",
+          name: "Salary Satisfaction",
+        },
+],
+      content: [
+        {
+          type: "paragraph",
+          text: "This section only covers respondents already working full-time or long-term part-time in Web3.",
+        },
+        {
+          type: "paragraph",
+          text: 'In terms of fixed salary, most Web3 engineers earn slightly above local mid-to-senior Web2 engineers; in terms of variable income, most have some extra earnings, but only a few have reached "mythical" levels.',
+          afterChart: "salaryIncomeGroup",
+        },
+        {
+          type: "paragraph",
+          text: "Compared to traditional internet:",
+          afterChart: "salaryIncomeGroup",
+        },
+        {
+          type: "list",
+          items: [
+            'Web2 developers\' income is mainly locked in "fixed salary + year-end bonus."',
+            'Web3 developers are more like holding a "relatively stable base salary + small high-volatility options" combination.',
+          ],
+          afterChart: "salaryIncomeGroup",
+        },
+        {
+          type: "paragraph",
+          text: "Most people's mainstay is still fixed salary, but nearly half have trading income, and about one-fifth earn supplementary income through freelancing, Airdrops, Grants, etc.",
+          afterChart: "incomeSatisGroup",
+        },
+        {
+          type: "paragraph",
+          text: 'In terms of salary satisfaction, the distribution closely matches general surveys like JetBrains and Stack Overflow: most find it "acceptable," a small minority are very satisfied, and some are explicitly dissatisfied.',
+          afterChart: "incomeSatisGroup",
+        },
+        {
+          type: "paragraph",
+          text: "Diverse income doesn't mean \"earning more money,\" but rather a change in risk structure.",
+          afterChart: "incomeSatisGroup",
+        },
+        {
+          type: "paragraph",
+          text: "Compared to Web2, Web3 transfers some uncertainty originally borne by companies to individuals: project cycles, token volatility, compliance and taxation, labor relationships—all need to be absorbed by developers themselves.",
+          afterChart: "incomeSatisGroup",
+        },
+        {
+          type: "paragraph",
+          text: "This is also why, among those who left, \"job instability\" and \"legal and compliance risks\" are frequently mentioned—the real hesitation isn't just about how much one earns, but whether one can work on technology long-term with peace of mind.",
+          afterChart: "incomeSatisGroup",
+        },
+        {
+          type: "blockquote",
+          text: "Insight 4: Web3's high-yield stories happen mostly to a very small minority, while the corresponding cost is that the entire group must bear higher volatility and uncertainty. For most people, it's more like an \"above-average but not as mythical as the legends\" job.",
+          afterChart: "incomeSatisGroup",
         },
       ],
     },

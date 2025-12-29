@@ -1,6 +1,6 @@
 // English content configuration
 const contentEn = {
-  title: "2025 Chinese-Speaking Web3 Developer & Open Source Survey Report",
+  title: "2025 Web3 Chinese-Speaking Developer Survey Report",
   subtitle: ``,
   note: "",
 
@@ -17,7 +17,7 @@ const contentEn = {
         },
         {
           type: "paragraph",
-          text: "The \"2025 Web3 Chinese-Speaking Developer Report\" (hereinafter referred to as the Report) is based on a questionnaire survey conducted in Chinese-speaking tech communities in late 2025, with a total of 220 valid samples.",
+          text: "The \"2025 Web3 Chinese-Speaking Developer Survey Report\" (hereinafter referred to as the Report) is based on a questionnaire survey conducted in Chinese-speaking tech communities in late 2025, with a total of 220 valid samples.",
         },
         {
           type: "paragraph",
@@ -101,8 +101,122 @@ const contentEn = {
           ],
         },
         {
+          type: "paragraph",
+          text: 'This report is open-sourced on <strong>GitHub</strong>. If you have any suggestions or feedback, please refer to the "How to Contribute" section at the end for collaboration.',
+        },
+        {
           type: "blockquote",
           text: "Note: All specific percentages are shown in the charts, while the text focuses on trends and insights.",
+        },
+      ],
+    },
+    {
+      id: "tldr",
+      title: "TL;DR",
+      isIntro: true,
+      content: [
+        {
+          type: "paragraph",
+          text: "<strong>Sample Structure</strong>: Among 220 valid responses, nearly half are still in Web2 or on campus but actively observing Web3; the other half are already fully committed to Web3 long-term, with a small minority having exited or planning to exit. For most, Web3 has shifted from a question of 'belief' to 'whether it's worth betting one's career on.'",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Profile & Barriers</strong>: Age is mainly concentrated between 20–35, with bachelor's + master's degrees accounting for nearly 90%, very similar to the global developer profile. The real barrier isn't education, but mastery of <strong>English-first ecosystems</strong>: basic English gets you in, but fluent English collaboration determines your ceiling.",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Geographic Distribution & Career Paths</strong>:",
+        },
+        {
+          type: "list",
+          items: [
+            "Many developers are in Tier-2/new Tier-1 cities in mainland China, writing code for global projects in USD or stablecoins, doing 'geographic arbitrage';",
+            "Those reaching management, protocol core, or startup roles are more concentrated in hub cities like Singapore, Hong Kong, Dubai;",
+            "Some digital nomads roam Southeast Asia, Japan, etc., with high freedom but higher compliance and long-term security risks.",
+            "Web3's globalization hasn't eliminated the significance of 'location,' but transformed it from 'office city' to 'career strategy.'",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Income & Risk</strong>:",
+        },
+        {
+          type: "list",
+          items: [
+            "Fixed annual salaries are generally similar to or slightly above local mid-senior Web2 engineers, but most lack benefits like social security;",
+            "Trading, freelancing, Airdrops, Grants, and other variable income bring imagination, but 'mythical gains' happen only to a very few;",
+            "The industry shifts some volatility and compliance risks that should be borne by companies onto individuals.",
+            "For most, Web3 is more like a 'above-average but more volatile' job, not a continuous wealth-printing machine.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Tech Stack & Chain Preferences</strong>:",
+        },
+        {
+          type: "list",
+          items: [
+            "The foundation remains typical Web2 stack: frontend + full-stack JS dominates, Python/Java/Go handle backend, Rust/C++ do infrastructure and high-performance work;",
+            "EVM + Solidity is the absolute main battlefield and default starting point; Solidity is more like a 'default skill' than an explicit label;",
+            "Move, Solana, ZK, etc. are advanced 'second languages' that bring technical premiums but aren't entry barriers;",
+            "In chain attention, the Ethereum-centric pattern aligns with global data; Solana/Bitcoin form a clear second tier, followed by BNB, Sui, and others.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Motivations, Entry & Exit</strong>:",
+        },
+        {
+          type: "list",
+          items: [
+            "The primary reason for choosing Web3 has shifted from 'belief/getting rich' to <strong>remote work and flexible lifestyle</strong>, with higher salary ranking second, and 'decentralization belief' in the minority;",
+            "Truly effective entry paths: read docs and source code → participate in open source and hackathons → build trust in communities → get first opportunity;",
+            "Transition challenges: lack of systematic learning paths, opaque job opportunities, compliance/legal concerns, English and conceptual barriers;",
+            "Those exiting are more disappointed with current industry form and job stability rather than rejecting blockchain or open source itself; future return is possible.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Open Source Participation Status</strong>:",
+        },
+        {
+          type: "list",
+          items: [
+            "Almost everyone heavily relies on open source components, but very few are long-term core maintainers;",
+            "More people file Issues than write PRs; main motivation is learning and skill improvement, biggest obstacles are time, unclear paths, insufficient confidence, and not finding suitable projects;",
+            "Compared to global developer surveys, this sample has higher proportions who have submitted Issues or PRs, but Chinese-speaking developers' active participation in Web3 core repositories remains low, with overall activity declining significantly in 2025;",
+            "Web3 is experimenting with Grant, Bounty, Token, and reputation incentives to reshape open source, but mechanisms are still experimental.",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Community & Work Environment</strong>:",
+        },
+        {
+          type: "list",
+          items: [
+            "Most developers at least occasionally participate in community activities, many actively join hackathons and tech sharing;",
+            "Compared to courses and tools, communities are expected to provide <strong>job/collaboration opportunities</strong> and <strong>project incubation/funding</strong>;",
+            "Web3 practitioners' overall satisfaction with the environment is between 'neutral and satisfied,' most don't plan to return to Web2 soon, but about a quarter are swinging.",
+            "The industry's core contradiction isn't absolute income, but 'opportunity density × uncertainty.'",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>Overall Assessment</strong>:",
+        },
+        {
+          type: "list",
+          items: [
+            "In profile, Web3 developers heavily overlap with ordinary engineers;",
+            "In career paths, closer to 'engineer freelancer/maker' model;",
+            "In risks, must face not just regulation but also competition from AI as a 'super talent harvester';",
+            "In open source and community, Web3 stands on open source giants' shoulders, but itself is far from mature in license understanding, project openness, and governance structures.",
+          ],
+        },
+        {
+          type: "blockquote",
+          text: "<strong>One-sentence summary</strong>: In 2025, for Chinese-speaking developers, Web3 is neither a utopia nor the end of a bubble, but an ongoing experiment of an engineer's playground and capital testing ground. It still offers opportunities, but only rewards those willing to learn long-term, embrace uncertainty, and continuously build reputation and trust in open source and communities.",
         },
       ],
     },
@@ -1012,7 +1126,7 @@ const contentEn = {
 
           name: "Core Repository Contributions",
           title: "7.5 Chinese-Speaking Developer Contribution to Web3 Core Repositories",
-          caption: "Figure 38: Number and percentage of Chinese-speaking developers in major Web3 project core repositories (hover for details).",
+          caption: "Figure 38: Number and percentage of Chinese-speaking developers in major Web3 project core repositories.",
         },
       ],
       content: [
@@ -1252,7 +1366,7 @@ const contentEn = {
     content: [
       {
         type: "paragraph",
-        text: "This report is jointly initiated by OpenBuild, GCC, 登链, Creators, and OpenCAS, with data analysis services provided by Web3insight.",
+        text: "This report is jointly initiated by <strong><a href=\"https://openbuild.xyz/\" target=\"_blank\">OpenBuild</a></strong>, <strong><a href=\"https://www.gccofficial.org/\" target=\"_blank\">GCC</a></strong>, <strong><a href=\"https://learnblockchain.cn/\" target=\"_blank\">登链</a></strong>, <strong>Creators</strong>, and <strong>OpenCAS</strong>, with data analysis services provided by <strong><a href=\"https://web3insight.ai/\" target=\"_blank\">Web3insight</a></strong>.",
       },
       {
         type: "paragraph",
@@ -1261,7 +1375,7 @@ const contentEn = {
       {
         type: "list",
         items: [
-          "<strong>Community Partners (in no particular order)</strong>: Thanks to Monad Chinese, Solana Chinese, HOH, Starknet Chinese, Starknet Astro, KeyMapDAO, Alcove, Vana Chinese, Victor Zhang (SmartToken), Maggie (ETHGlobal), Defihack Labs, Henry Lee (KiteAI), and other communities/projects/contributors for their support.",
+          "<strong>Community Partners (in no particular order)</strong>: Thanks to Monad Chinese, Solana Chinese, HOH, Starknet Chinese, Starknet Astro, KeyMapDAO, Alcove, Vana Chinese, Victor Zhang (SmartToken), Maggie (ETHGlobal), Defihack Labs, Henry Lee (KiteAI), 4Seas, BETA UCB, and other communities/projects/contributors for their support (Due to the large number of communities, if there are any omissions, please accept our apologies and feel free to contact us for additions!).",
           "<strong>Technical Support</strong>: Thanks to GitHub, Stack Overflow, JetBrains, and other platforms for providing public developer report data, which provided important references for our comparative analysis.",
           "<strong>Open Source Projects</strong>: The main tech stack used in this report includes Chart.js (charts), ChartDataLabels (data labels plugin), and other open source projects. Thanks to the maintainers of these projects.",
           "<strong>All Participants</strong>: Thanks to the 220 developers who took the time to fill out the survey—each of your responses contributed value to this report.",

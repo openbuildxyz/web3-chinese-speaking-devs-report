@@ -1,6 +1,6 @@
 // 中文内容配置
 const contentZh = {
-  title: "2025 华语 Web3 开发者与开源参与调研报告",
+  title: "2025 Web3 华语开发者调研报告",
   subtitle: ``,
   note: "",
   sections: [
@@ -16,7 +16,7 @@ const contentZh = {
         },
         {
           type: "paragraph",
-          text: "《2025 Web3 华语开发者报告》（下称报告）基于 2025 年末在华语技术社区开展的一次问卷调研，共回收 220 份有效样本。",
+          text: "《2025 Web3 华语开发者调研报告》（下称报告）基于 2025 年末在华语技术社区开展的一次问卷调研，共回收 220 份有效样本。",
         },
         {
           type: "paragraph",
@@ -100,8 +100,122 @@ const contentZh = {
           ],
         },
         {
+          type: "paragraph",
+          text: "本报告已在 <strong>GitHub</strong> 开源，如果大家对于本报告有任何建议反馈，欢迎参考文末的「如何贡献」章节进行协作贡献。",
+        },
+        {
           type: "blockquote",
           text: "提示：所有具体百分比均在图表中呈现，正文只给出趋势与洞察。",
+        },
+      ],
+    },
+    {
+      id: "tldr",
+      title: "TL;DR",
+      isIntro: true,
+      content: [
+        {
+          type: "paragraph",
+          text: "<strong>样本结构</strong>：220 份有效问卷中，接近一半仍在 Web2 或校园、但持续观望 Web3；另一半已经在 Web3 全职或长期投入，还有一小撮已经或准备退坑。Web3 对多数人来说，已经从『信不信』变成『值不值得押职业筹码』。",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>画像与门槛</strong>：年龄主要集中在 20–35 岁，本科+硕士占近九成，和全球开发者画像非常接近。真正的门槛不在学历，而在能否玩转<strong>英文一手生态</strong>：会基础英文可以入行，但能流畅用英文协作，才决定上限。",
+        },
+        {
+          type: "paragraph",
+          text: "<strong>地理分布与职业路径</strong>：",
+        },
+        {
+          type: "list",
+          items: [
+            "大量开发者身在内地二线/新一线城市，以美元或稳定币为全球项目写代码，做『地理套利』；",
+            "走到管理层、协议核心或创业角色的人，更集中在新加坡、香港、迪拜等枢纽城市；",
+            "还有一部分数字游民在东南亚、日本等地游走，自由高，但合规和长期保障风险也高。",
+            "Web3 的全球化没有消灭『位置』的意义，而是把它从『办公城市』变成『职业策略』。",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>收入与风险</strong>：",
+        },
+        {
+          type: "list",
+          items: [
+            "固定年薪整体与本地中高级 Web2 工程师相近、略偏上，但大部分缺乏社保等权益；",
+            "交易、外包、Airdrop、Grant 等非固定收入带来想象力，但『神话级收益』只发生在极少数人身上；",
+            "行业把一部分本该由公司承担的波动和合规风险，转移给了个体。",
+            "对大多数人而言，Web3 更像一份『中等偏上、但波动更大』的工作，而不是持续不断的暴富机器。",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>技术栈与公链偏好</strong>：",
+        },
+        {
+          type: "list",
+          items: [
+            "底层还是典型 Web2 栈：前端 + 全栈 JS 为主，Python/Java/Go 负责后端，Rust/C++ 做底层与高性能；",
+            "EVM + Solidity 是绝对主战场，也是默认起点，Solidity 更像『默认技能』而非显性标签；",
+            "Move、Solana、ZK 等是进阶『第二外语』，带来技术溢价但不是入门门槛；",
+            "公链关注度上，以 Ethereum 为核心的格局与全球一致，Solana/Bitcoin 是第二梯队，BNB、Sui 等紧随其后。",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>动机、入门与退坑</strong>：",
+        },
+        {
+          type: "list",
+          items: [
+            "选择 Web3 的首要原因已从『信仰/暴富』转向<strong>远程工作与灵活生活方式</strong>，薪资更高排在其后，『去中心化信仰』只占少数；",
+            "真正有效的入门路径是：看文档和源码 → 参与开源和黑客松 → 在社区里建立信任 → 获得第一份机会；",
+            "转型难点在于：缺乏系统学习路径、工作机会不透明、合规/法律担忧、英语和理念门槛；",
+            "退坑者更多是对当前行业形态和职业稳定性失望，而非否定区块链或开源本身，未来回流仍有可能。",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>开源参与现状</strong>：",
+        },
+        {
+          type: "list",
+          items: [
+            "几乎所有人高度依赖开源组件，但真正长期维护项目的核心贡献者很少；",
+            "推 Issue 的人多，写 PR 的人少；主要动机是学习和技能提升，最大阻碍是时间、路径不清、自信不足和找不到合适项目；",
+            "与全球开发者调查相比，本样本中提交过 Issue 或 PR 的比例更高，但华语开发者在 Web3 核心仓库中的活跃占比仍偏低，且 2025 年整体活跃度出现显著下滑；",
+            "Web3 正在尝试用 Grant、Bounty、Token 和声誉激励重塑开源，但机制仍在实验阶段。",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>社区与从业环境</strong>：",
+        },
+        {
+          type: "list",
+          items: [
+            "多数开发者至少偶尔参与社区活动，不少人积极参加黑客松和技术分享；",
+            "相比课程与工具，大家更期待社区提供的是<strong>就业/合作机会</strong>和<strong>项目孵化/资助</strong>；",
+            "Web3 从业者整体对环境评价在『一般~满意』之间，大部分短期内不打算回 Web2，但约四分之一处于摇摆状态。",
+            "行业的核心矛盾不在于绝对收入，而在于『机会密度 × 不确定性』。",
+          ],
+        },
+        {
+          type: "paragraph",
+          text: "<strong>整体判断</strong>：",
+        },
+        {
+          type: "list",
+          items: [
+            "画像上，Web3 开发者和普通工程师高度重叠；",
+            "职业路径上，更接近『工程师自由职业/创客』模式；",
+            "风险上，不仅要面对监管，也要和 AI 这样的『超级人才收割机』竞争；",
+            "在开源与社区层面，Web3 站在开源巨人的肩膀上，但自身在许可证理解、项目开放程度和治理结构上还远未成熟。",
+          ],
+        },
+        {
+          type: "blockquote",
+          text: "<strong>一句话总结</strong>：2025 年的 Web3，对华语开发者来说既不是乌托邦，也不是泡沫尾声，而是一个仍在试验中的工程师乐园与资本试验场。它仍然提供机会，但只奖励那些愿意长期学习、拥抱不确定性、在开源与社区中持续积累声誉和信任的人。",
         },
       ],
     },
@@ -963,7 +1077,7 @@ const contentZh = {
 
           name: "核心仓库贡献",
           title: "7.5 华语开发者对 Web3 生态核心仓库的贡献活跃占比",
-          caption: "图 35：各主要 Web3 项目核心仓库中华语开发者的数量及占比（鼠标悬停查看详细信息）。",
+          caption: "图 35：各主要 Web3 项目核心仓库中华语开发者的数量及占比。",
         },
       ],
       content: [
@@ -1191,12 +1305,12 @@ const contentZh = {
   acknowledgments: {
     title: "致谢",
     content: [
-      { type: "paragraph", text: "本报告由 OpenBuild, GCC, 登链, Creators, OpenCAS 联合发起，Web3insight 提供数据分析服务。" },
+      { type: "paragraph", text: "本报告由 <strong><a href=\"https://openbuild.xyz/\" target=\"_blank\">OpenBuild</a></strong>, <strong><a href=\"https://www.gccofficial.org/\" target=\"_blank\">GCC</a></strong>, <strong><a href=\"https://learnblockchain.cn/\" target=\"_blank\">登链</a></strong>, <strong>Creators</strong>, <strong>OpenCAS</strong> 联合发起，<strong><a href=\"https://web3insight.ai/\" target=\"_blank\">Web3insight</a></strong> 提供数据分析服务。" },
       { type: "paragraph", text: "本报告的完成离不开以下组织和个人的支持：" },
       {
         type: "list",
         items: [
-          "<strong>社区合作伙伴（排名不分先后）</strong>：感谢 Monad 华语、Solana 中文、HOH、Starknet 中文、Starknet Astro、KeyMapDAO、Alcove、Vana 中文、Victor Zhang (SmartToken)、Maggie(ETHGlobal)、Defihack Labs、Henry Lee (KiteAI) 等社区/项目/贡献者的支持。",
+          "<strong>社区合作伙伴（排名不分先后）</strong>：感谢 Monad 华语、Solana 中文、HOH、Starknet 中文、Starknet Astro、KeyMapDAO、Alcove、Vana 中文、Victor Zhang (SmartToken)、Maggie(ETHGlobal)、Defihack Labs、Henry Lee (KiteAI)、4Seas、BETA UCB 等社区/项目/贡献者的支持（因对接社区较多，如有遗漏，敬请谅解，欢迎随时联系我们补充！）。",
           "<strong>技术支持</strong>：感谢 GitHub、Stack Overflow、JetBrains 等平台提供的公开开发者报告数据，为我们的横向对比提供了重要参考。",
           "<strong>开源项目</strong>：本报告使用的主要技术栈包括 Chart.js（图表）、ChartDataLabels（数据标签插件）等开源项目，感谢这些项目的维护者。",
           "<strong>所有参与者</strong>：感谢 220 位花时间填写问卷的开发者，你们每一个人的回答都为这份报告贡献了价值。",

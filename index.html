@@ -2,7 +2,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="UTF-8" />
-        <title>2025 华语 Web3 开发者与开源参与调研报告</title>
+        <title>2025 Web3 华语开发者调研报告</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
@@ -185,6 +185,9 @@
                 max-width: 960px;
                 margin: 0 auto;
                 padding: 16px 16px 40px;
+                overflow: hidden;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
             }
 
             h1, h2, h3, h4 {
@@ -197,7 +200,22 @@
             h3 { font-size: 17px; margin: 18px 0 8px; }
             h4 { font-size: 15px; margin: 14px 0 6px; }
 
-            p { margin: 8px 0; }
+            p { margin: 8px 0; overflow-wrap: break-word; word-wrap: break-word; }
+
+            a {
+                color: var(--accent-color);
+                text-decoration: none;
+                transition: color 0.2s;
+            }
+
+            a:hover {
+                color: #1d4ed8;
+                text-decoration: underline;
+            }
+
+            [data-theme="dark"] a:hover {
+                color: #60a5fa;
+            }
 
             .section {
                 background: var(--bg-primary);
@@ -206,6 +224,9 @@
                 margin-bottom: 18px;
                 box-shadow: 0 2px 6px var(--shadow-color);
                 transition: background-color 0.3s, box-shadow 0.3s;
+                overflow: hidden;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
             }
 
             .section-header {
@@ -310,15 +331,22 @@
                 width: 100%;
                 margin: 12px 0;
                 line-height: 1.7;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                word-break: break-word;
             }
 
             .dynamic-content p {
                 margin: 12px 0;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
             }
 
             .dynamic-content ul {
                 padding-left: 24px;
                 margin: 12px 0;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
             }
 
             .dynamic-content blockquote {
@@ -326,10 +354,12 @@
                 padding-left: 16px;
                 border-left: 4px solid var(--accent-color);
                 color: var(--text-secondary);
+                overflow-wrap: break-word;
+                word-wrap: break-word;
             }
 
             ul { padding-left: 20px; }
-            li { margin: 4px 0; }
+            li { margin: 4px 0; overflow-wrap: break-word; word-wrap: break-word; }
 
             blockquote {
                 margin: 10px 0;
@@ -339,6 +369,9 @@
                 color: var(--text-secondary);
                 font-size: 14px;
                 transition: background-color 0.3s;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                border-radius: 6px;
             }
 
             @media (max-width: 768px) {
@@ -421,6 +454,7 @@
                 <div class="sidebar-title" id="nav-report-title">报告内容</div>
                 <ul class="nav-links">
                     <li><a href="#sec0" data-i18n="sec0">调研设计与样本说明</a></li>
+                    <li><a href="#tldr" data-i18n="tldr">TL;DR</a></li>
                     <li><a href="#sec1" data-i18n="sec1">一、样本概况</a></li>
                     <li><a href="#sec2" data-i18n="sec2">二、教育与英语</a></li>
                     <li><a href="#sec3" data-i18n="sec3">三、地理分布</a></li>
@@ -472,6 +506,14 @@
 
             <!-- 调研设计与样本说明 -->
             <section class="section" id="sec0">
+                <div class="section-header">
+                    <h2></h2>
+                </div>
+                <!-- 内容将由渲染器动态生成 -->
+            </section>
+
+            <!-- TL;DR -->
+            <section class="section" id="tldr">
                 <div class="section-header">
                     <h2></h2>
                 </div>

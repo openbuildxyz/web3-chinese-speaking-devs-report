@@ -257,6 +257,12 @@
                 max-height: 280px;
             }
 
+            /* 为标签多的水平柱状图增加高度 */
+            canvas.chart-tall {
+                min-height: 450px !important;
+                max-height: 600px !important;
+            }
+
             .subsection-title {
                 font-size: 18px;
                 font-weight: 600;
@@ -655,14 +661,14 @@
                 <div class="charts-row">
                     <div class="chart-box">
                         <div class="chart-wrap">
-                            <canvas id="chainsOverallChart"></canvas>
+                            <canvas id="chainsOverallChart" class="chart-tall"></canvas>
                         </div>
                         <p class="chart-name"></p>
                         <p class="caption"></p>
                     </div>
                     <div class="chart-box">
                         <div class="chart-wrap">
-                            <canvas id="chainsWeb2ObserveChart"></canvas>
+                            <canvas id="chainsWeb2ObserveChart" class="chart-tall"></canvas>
                         </div>
                         <p class="chart-name"></p>
                         <p class="caption"></p>
@@ -673,7 +679,7 @@
                 <div class="charts-row">
                     <div class="chart-box">
                         <div class="chart-wrap">
-                            <canvas id="chainsStudentObserveChart"></canvas>
+                            <canvas id="chainsStudentObserveChart" class="chart-tall"></canvas>
                         </div>
                         <p class="chart-name"></p>
                         <p class="caption"></p>

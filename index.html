@@ -993,11 +993,46 @@
             // 注册 datalabels 插件
             Chart.register(ChartDataLabels);
 
+            // 检测浏览器语言
+            function getBrowserLanguage() {
+                const lang = navigator.language || navigator.userLanguage;
+                // 如果浏览器语言是中文（包括zh-CN, zh-TW等），返回'zh'，否则返回'en'
+                return lang.startsWith('zh') ? 'zh' : 'en';
+            }
+
+            // 从URL获取语言
+            function getLanguageFromURL() {
+                const hash = window.location.hash.substring(1); // 去掉#号
+                if (hash === 'en' || hash === 'zh') {
+                    return hash;
+                }
+                return null;
+            }
+
             // 页面加载完成后初始化
             document.addEventListener('DOMContentLoaded', () => {
                 console.log('=== 开始渲染 ===');
                 console.log('sec0配置:', contentZh.sections.find(s => s.id === 'sec0'));
+
+                // 确定初始语言
+                let initialLang = getLanguageFromURL();
+                if (!initialLang) {
+                    // 如果URL中没有指定语言，根据浏览器语言判断
+                    initialLang = getBrowserLanguage();
+                    // 更新URL但不刷新页面
+                    window.location.hash = initialLang;
+                }
+
+                // 使用确定的语言初始化
+                reportRenderer.currentLang = initialLang;
                 reportRenderer.init();
+
+                // 更新语言切换按钮的初始状态
+                const langToggle = document.getElementById('langToggle');
+                const langBtnText = langToggle.querySelector('.btn-text');
+                if (langBtnText) {
+                    langBtnText.textContent = initialLang === 'zh' ? 'English' : '中文';
+                }
 
                 // 检查渲染结果
                 setTimeout(() => {
@@ -1032,12 +1067,20 @@
                 });
 
                 // 语言切换
-                const langToggle = document.getElementById('langToggle');
-                let isEnglish = false;
-
                 langToggle.addEventListener('click', () => {
-                    isEnglish = !isEnglish;
-                    reportRenderer.switchLanguage(isEnglish ? 'en' : 'zh');
+                    const newLang = reportRenderer.currentLang === 'zh' ? 'en' : 'zh';
+                    // 更新URL hash
+                    window.location.hash = newLang;
+                    // 切换语言
+                    reportRenderer.switchLanguage(newLang);
+                });
+
+                // 监听hash变化（浏览器前进后退按钮）
+                window.addEventListener('hashchange', () => {
+                    const langFromURL = getLanguageFromURL();
+                    if (langFromURL && langFromURL !== reportRenderer.currentLang) {
+                        reportRenderer.switchLanguage(langFromURL);
+                    }
                 });
             });
         </script>

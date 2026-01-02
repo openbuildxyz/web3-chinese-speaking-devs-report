@@ -1,6 +1,9 @@
 # 2025 Web3 华语开发者调研报告
 **本报告由 [OpenBuild](https://openbuild.xyz/), [GCC](https://www.gccofficial.org/), [登链](https://learnblockchain.cn/), Creators, OpenCAS 联合发起，[Web3insight](https://web3insight.ai/) 提供数据分析服务。**
 
+👉直接阅读全文 **[2025 Web3 华语开发者调研报告](https://openbuildxyz.github.io/web3-chinese-speaking-devs-report/)**
+
+
 ## 致谢
 本报告的完成离不开以下组织和个人的支持：
 - 社区合作伙伴（排名不分先后）：感谢 Monad 华语、Solana 中文、HOH、Starknet 中文、Starknet Astro、KeyMapDAO、Alcove、Vana 中文、Victor Zhang (SmartToken)、Maggie(ETHGlobal)、Defihack Labs、Henry Lee (KiteAI)、4Seas、BETA UCB、Herstory 等社区/项目/贡献者的支持（因对接社区较多，如有遗漏，敬请谅解，欢迎随时联系我们补充！）。

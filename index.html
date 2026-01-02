@@ -378,10 +378,12 @@
                 .sidebar {
                     transform: translateX(-100%);
                     transition: transform 0.3s ease;
+                    padding-top: 64px; /* 为顶部工具栏留出空间 */
                 }
 
                 .sidebar.open {
                     transform: translateX(0);
+                    z-index: 1001; /* 确保打开时在顶部工具栏之上 */
                 }
 
                 .main-wrapper {
@@ -445,6 +447,118 @@
                 display: block;
                 opacity: 1;
             }
+
+            /* 顶部工具栏 */
+            .top-toolbar {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: var(--sidebar-width);
+                z-index: 1000;
+                background: var(--bg-primary);
+                border-bottom: 1px solid var(--border-color);
+                padding: 8px 16px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 12px;
+                box-shadow: 0 2px 4px var(--shadow-color);
+                transition: background-color 0.3s, border-color 0.3s;
+            }
+
+            .top-toolbar-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 6px 12px;
+                border: 1px solid var(--border-color);
+                background: var(--bg-secondary);
+                color: var(--text-primary);
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 13px;
+                transition: all 0.2s;
+                text-decoration: none;
+                box-sizing: border-box;
+            }
+
+            /* 重置a标签的默认样式 */
+            .top-toolbar-btn[href] {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .top-toolbar-btn:hover {
+                background: var(--accent-color);
+                color: white;
+                border-color: var(--accent-color);
+            }
+
+            .top-toolbar-btn .btn-icon {
+                font-size: 16px;
+                line-height: 1;
+                flex-shrink: 0;
+            }
+
+            /* PC端SVG图标尺寸 */
+            .top-toolbar-btn svg.btn-icon {
+                width: 16px;
+                height: 16px;
+            }
+
+            /* 调整主内容区的上边距 */
+            .main-wrapper {
+                padding-top: 45px;
+            }
+
+            @media (max-width: 768px) {
+                .top-toolbar {
+                    left: 0;
+                    padding: 8px 10px;
+                    gap: 8px;
+                }
+
+                .top-toolbar-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
+                    min-width: 40px;
+                    width: 40px;
+                    height: 40px;
+                    box-sizing: border-box;
+                }
+
+                .top-toolbar-btn .btn-text {
+                    display: none; /* 移动端只显示图标 */
+                }
+
+                .top-toolbar-btn .btn-icon {
+                    font-size: 20px;
+                    line-height: 1;
+                }
+
+                .top-toolbar-btn svg.btn-icon {
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                }
+
+                /* 语言切换按钮特别突出 */
+                #langToggleTop {
+                    background: var(--accent-color);
+                    color: white;
+                    border-color: var(--accent-color);
+                }
+
+                #langToggleTop:hover {
+                    opacity: 0.9;
+                }
+
+                .main-wrapper {
+                    padding-top: 56px;
+                }
+            }
         </style>
     </head>
     <body>
@@ -496,6 +610,24 @@
 
         <!-- 移动端菜单按钮 -->
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+        <!-- 顶部工具栏 -->
+        <div class="top-toolbar">
+            <a href="https://github.com/openbuildxyz/web3-chinese-speaking-devs-report" target="_blank" class="top-toolbar-btn" id="githubLinkTop">
+                <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+                <span class="btn-text">GitHub</span>
+            </a>
+            <button class="top-toolbar-btn" id="themeToggleTop">
+                <span class="btn-icon">🌙</span>
+                <span class="btn-text">暗色模式</span>
+            </button>
+            <button class="top-toolbar-btn" id="langToggleTop">
+                <span class="btn-icon">🌐</span>
+                <span class="btn-text">English</span>
+            </button>
+        </div>
 
         <div class="main-wrapper">
             <main>
@@ -1027,12 +1159,52 @@
                 reportRenderer.currentLang = initialLang;
                 reportRenderer.init();
 
-                // 更新语言切换按钮的初始状态
-                const langToggle = document.getElementById('langToggle');
-                const langBtnText = langToggle.querySelector('.btn-text');
-                if (langBtnText) {
-                    langBtnText.textContent = initialLang === 'zh' ? 'English' : '中文';
-                }
+                // 更新所有语言切换按钮的初始状态
+                const updateLangButtons = (lang) => {
+                    const langToggles = [document.getElementById('langToggle'), document.getElementById('langToggleTop')];
+                    langToggles.forEach(langToggle => {
+                        if (langToggle) {
+                            const langBtnText = langToggle.querySelector('.btn-text');
+                            if (langBtnText) {
+                                langBtnText.textContent = lang === 'zh' ? 'English' : '中文';
+                            }
+                        }
+                    });
+                };
+                updateLangButtons(initialLang);
+
+                // 更新GitHub按钮文字（保持"GitHub"不变，但预留接口）
+                const updateGitHubButton = (lang) => {
+                    const githubLinks = [document.querySelector('#githubLinkTop .btn-text')];
+                    githubLinks.forEach(btnText => {
+                        if (btnText) {
+                            // GitHub通常不需要翻译，保持英文
+                            btnText.textContent = 'GitHub';
+                        }
+                    });
+                };
+                updateGitHubButton(initialLang);
+
+                // 更新主题按钮函数
+                const updateThemeButtons = (isDark, lang) => {
+                    const themeToggles = [document.getElementById('themeToggle'), document.getElementById('themeToggleTop')];
+                    themeToggles.forEach(themeToggle => {
+                        if (themeToggle) {
+                            const themeIcon = themeToggle.querySelector('.btn-icon');
+                            const themeText = themeToggle.querySelector('.btn-text');
+                            if (themeIcon) {
+                                themeIcon.textContent = isDark ? '☀️' : '🌙';
+                            }
+                            if (themeText) {
+                                themeText.textContent = isDark
+                                    ? (lang === 'zh' ? '亮色模式' : 'Light Mode')
+                                    : (lang === 'zh' ? '暗色模式' : 'Dark Mode');
+                            }
+                        }
+                    });
+                };
+                // 初始化主题按钮状态
+                updateThemeButtons(false, initialLang);
 
                 // 检查渲染结果
                 setTimeout(() => {
@@ -1043,43 +1215,45 @@
                 }, 100);
 
                 // 主题切换
-                const themeToggle = document.getElementById('themeToggle');
                 let isDark = false;
-
-                themeToggle.addEventListener('click', () => {
+                const handleThemeToggle = () => {
                     isDark = !isDark;
                     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-
-                    // 更新图标和文本
-                    const themeIcon = themeToggle.querySelector('.btn-icon');
-                    const themeText = themeToggle.querySelector('.btn-text');
-                    if (themeIcon) {
-                        themeIcon.textContent = isDark ? '☀️' : '🌙';
-                    }
-                    if (themeText) {
-                        const currentLang = reportRenderer.currentLang;
-                        themeText.textContent = isDark
-                            ? (currentLang === 'zh' ? '亮色模式' : 'Dark Mode')
-                            : (currentLang === 'zh' ? '暗色模式' : 'Light Mode');
-                    }
-
+                    updateThemeButtons(isDark, reportRenderer.currentLang);
                     reportRenderer.switchTheme(isDark);
-                });
+                };
+
+                // 为所有主题切换按钮添加事件监听
+                document.getElementById('themeToggle')?.addEventListener('click', handleThemeToggle);
+                document.getElementById('themeToggleTop')?.addEventListener('click', handleThemeToggle);
 
                 // 语言切换
-                langToggle.addEventListener('click', () => {
+                const handleLangToggle = () => {
                     const newLang = reportRenderer.currentLang === 'zh' ? 'en' : 'zh';
                     // 更新URL hash
                     window.location.hash = newLang;
                     // 切换语言
                     reportRenderer.switchLanguage(newLang);
-                });
+                    // 更新所有语言按钮
+                    updateLangButtons(newLang);
+                    // 更新GitHub按钮
+                    updateGitHubButton(newLang);
+                    // 更新主题按钮文本（因为可能需要不同语言）
+                    updateThemeButtons(isDark, newLang);
+                };
+
+                // 为所有语言切换按钮添加事件监听
+                document.getElementById('langToggle')?.addEventListener('click', handleLangToggle);
+                document.getElementById('langToggleTop')?.addEventListener('click', handleLangToggle);
 
                 // 监听hash变化（浏览器前进后退按钮）
                 window.addEventListener('hashchange', () => {
                     const langFromURL = getLanguageFromURL();
                     if (langFromURL && langFromURL !== reportRenderer.currentLang) {
                         reportRenderer.switchLanguage(langFromURL);
+                        updateLangButtons(langFromURL);
+                        updateGitHubButton(langFromURL);
+                        updateThemeButtons(isDark, langFromURL);
                     }
                 });
             });

@@ -816,7 +816,7 @@ const contentZh = {
         },
         {
           type: "paragraph",
-          text: "在问卷设计中，我们没有把「Solidity / web3.js / ethers.js」这类具体语言或库单独列成一个个选项，而是如图 11 所示，采用更贴近真实工作的「生态栈」维度来统计 Web3 技术栈。",
+          text: "在问卷设计中，我们没有把「Solidity / web3.js / ethers.js」这类具体语言或库单独列成一个个选项，而是如图 15 所示，采用更贴近真实工作的「生态栈」维度来统计 Web3 技术栈。",
           afterChart: "web3StackChart",
         },
         {

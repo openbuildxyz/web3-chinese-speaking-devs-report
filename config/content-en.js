@@ -841,7 +841,7 @@ const contentEn = {
         },
         {
           type: "paragraph",
-          text: 'In the survey design, we didn\'t list specific languages or libraries like "Solidity / web3.js / ethers.js" as separate options. Instead, as shown in Figure 11.1, we used the more realistic "ecosystem stack" dimension to categorize Web3 tech stacks.',
+          text: 'In the survey design, we didn\'t list specific languages or libraries like "Solidity / web3.js / ethers.js" as separate options. Instead, as shown in Figure 18, we used the more realistic "ecosystem stack" dimension to categorize Web3 tech stacks.',
           afterChart: "web3StackChart",
         },
         {
